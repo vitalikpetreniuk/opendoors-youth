@@ -1,6 +1,7 @@
 $(function() {
     let $body = $('body');
     let c_select =  $('.custom-select');
+    let c_select_target =  $('.custom-select, .custom-select *');
 
     const swiper = new Swiper('.odCarousel .swiper', {
         loop: true,
@@ -69,6 +70,16 @@ $(function() {
     $('.mobile-overlay .close').on('click tap', function(){
         $body.removeClass('no-scroll');
         $('.mobile-overlay').slideUp();
+    })
+
+
+
+
+    $body.on('click', function(event) {
+        if(!c_select_target.is(event.target))
+        {
+            c_select.removeClass('in-action');
+        }
     })
 
 });
