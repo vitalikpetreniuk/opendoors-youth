@@ -14,10 +14,10 @@
 	
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
 	<!-- Template Basic Images End -->
 	
 	<!-- Custom Browsers Color Start -->
@@ -58,7 +58,7 @@
 					<div class="mo-content">
 						<nav class="mobile-menu">
 							<ul>
-								<li class="active"><a href="#">Home</a></li>
+								<li class="current-menu-item"><a href="#">Home</a></li>
 								<li><a href="#">THE PROBLEM</a></li>
 								<li><a href="#">STORIES</a></li>
 								<li><a href="#">ACT NOW</a></li>
@@ -164,7 +164,7 @@
 				<div class="header_bottom">
 					<nav class="header_bottom-nav">
 						<ul>
-							<li class="active"><a href="#">Home</a></li>
+							<li class="current-menu-item"><a href="#">Home</a></li>
 							<li><a href="#">The problem</a></li>
 							<li><a href="#">Stories</a></li>
 							<li><a href="#">Act now</a></li>
@@ -443,11 +443,18 @@
 					</div>
 
 					<form action="/" method="get" class="subscribe-form">
-						<input type="text" placeholder="Your name">
-						<input type="email" placeholder="Your email">
-						<input type="text" placeholder="Your D.O.B">
-
-						<button type="submit" class="btn filled">Submit</button>
+						<p>
+							<span class="wpcf7-form-control-wrap">
+								<input type="text" placeholder="Your name">
+							</span>
+							<span class="wpcf7-form-control-wrap">
+								<input type="email" placeholder="Your email">
+							</span>
+							<span class="wpcf7-form-control-wrap">
+								<input type="text" placeholder="Your D.O.B">
+							</span>
+							<button type="submit" class="btn filled">Submit</button>
+						</p>
 					</form>
 				</div>
 				<div class="odNeeds needs-top">
@@ -641,7 +648,7 @@
 					<div class="column">
 						<nav class="footer-nav">
 							<ul>
-								<li><a href="/">home</a></li>
+								<li class="current-menu-item"><a href="/">home</a></li>
 								<li><a href="#">the problem</a></li>
 								<li><a href="#">stories</a></li>
 								<li><a href="#">act now</a></li>
