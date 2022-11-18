@@ -1,0 +1,1251 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+#wrapper
+	overflow: hidden
+.promo
+	position: relative
+
+#wrapper .container .odContent .promo .odBraveFaith
+	background: none
+	margin-top: 0
+	padding-top: 0
+
+#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image
+	width: 43%
+	margin-right: 11%
+	.img-note
+		position: absolute
+		right: -59px
+		bottom: -41px
+		width: 223px
+		height: 177px
+
+#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
+	color: #21150B
+	font-weight: 600
+	margin-left: 110px
+	margin-top: -696px
+
+#wrapper .container .odContent .promo .odBraveFaith .pattern
+	left: 36.5%
+	width: auto
+	top: 13px
+
+#wrapper .container .odContent .promo .odBraveFaith .pattern.long
+	left: 24.5%
+	top: 78%
+	max-height: 400px
+	overflow: hidden
+
+.promo .title
+	margin: 0 0 40px
+
+.subtitle-note
+	position: relative
+	background: #F47A87
+	color: #fff
+	font-weight: normal
+	width: 429px
+	padding: 23px 28px
+	margin: 0 0 20px
+
+.subtitle-note:before
+	content: ''
+	position: absolute
+	top: -33px
+	left: 16px
+	width: 54px
+	height: 54px
+	border-radius: 500px
+	background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%)
+
+.subtitle-note strong
+	font-size: 20px
+	line-height: 27px
+	position: absolute
+	top: -18px
+	left: 30px
+	color: #F47A87
+	text-transform: uppercase
+
+#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info .bf-description
+	line-height: 18px
+
+#wrapper .container .odContent .promo .discover
+	bottom: 176px
+
+#wrapper .container .odContent .map-section .odCost
+	display: flex
+	padding-top: 0
+	margin: 67px 15px 0 -15px
+	background: none
+
+.map-section
+	margin: 0 0 165px
+
+.map-section .bf-logo
+	position: absolute
+	bottom: -136px
+	left: 286px
+	width: 235px
+	height: 240px
+
+#wrapper .container .odContent .map-section .odCost .pattern
+	top: 98.2%
+	right: 66px
+
+.map-section .text-block
+	width: 29%
+	background: rgba(95, 46, 104, 0.85)
+	color: #fff
+	padding: 47px 43px 124px 52px
+	font-size: 16px
+	line-height: 30px
+
+#wrapper .container .odContent .map-section .odCost .title
+	line-height: 52px
+	margin-bottom: 28px
+
+.map-section .text-block .custom-select
+	margin: 0 0 27px
+
+.map-section .text-block .custom-select span,
+.map-section .text-block .custom-select ul
+	border-color: #fff
+
+.map-section .text-block .custom-select ul li
+	border-color: rgba(95, 46, 104, 0.85)
+
+.map-section .text-block p
+	margin: 0 0 10px
+
+.custom-list
+	padding: 12px 0
+	li
+		position: relative
+		padding-left: 15px
+		&:before
+			content: ''
+			position: absolute
+			top: 12px
+			left: 6px
+			width: 4px
+			height: 2px
+			background: #F47986
+
+.select-result
+	margin: -5px 0 23px
+
+.select-result-color
+	display: inline-block
+	vertical-align: middle
+	width: 26px
+	height: 26px
+	border-radius: 5px
+	font-size: 0
+	margin-right: 12px
+	&.red
+		background: #C10000
+	&.orange
+		background: #EA6418
+	&.yellow
+		background: #F8D624
+
+.map-section .map-block
+	width: 71%
+
+#wrapper .container .odContent .map-section .odCost .map
+	background: linear-gradient(180deg, #F47A87 0%, #FAB59C 100%)
+	margin: 0 auto
+	min-height: 0
+	height: 579px
+	&:before
+		display: none
+
+.map-section .map .zoom
+	position: absolute
+	top: 0
+	right: 0
+	width: 69px
+	height: 69px
+	background: #6B3267 url(../img/icon-zoom.svg) no-repeat 50% 50%
+	font-size: 0
+	cursor: pointer
+	z-index: 3
+
+.map-info
+	display: flex
+	justify-content: space-between
+	max-width: 740px
+	margin: 0 auto
+	padding: 26px 15px
+	font-size: 16px
+	line-height: 21px
+	.item
+		width: 31%
+	.item-2
+		width: 45%
+		padding-right: 45px
+	.item-3
+		width: 24%
+	h5
+		font-size: 16px
+		line-height: 21px
+		font-weight: 700
+		margin: 0 0 19px
+	.select-result
+		margin-bottom: 20px
+
+.ranking-list
+	counter-reset: li
+	padding: 0
+	margin: 0
+	list-style: none
+	li
+		position: relative
+		padding: 0 0 21px 37px
+		&:before
+			counter-increment: li
+			content: counters(li,".")
+			width: 27px
+			height: 27px
+			color: #fff
+			background: #F47986
+			border-radius: 3px
+			text-align: center
+			line-height: 30px
+			position: absolute
+			top: -5px
+			left: 0
+
+.map-info-slider
+	position: relative
+	padding: 0 0 56px
+
+.map-info-slider .swiper-pagination
+	text-align: left
+
+.map-info-slider .swiper-pagination-bullet
+	width: 15px
+	height: 15px
+	border-radius: 0
+	background: #D9D9D9
+	opacity: 1
+
+.map-info-slider .swiper-pagination-bullet-active
+	background: #51255C
+
+.map-info-slider .swiper-pagination
+	margin: 0 -7px
+
+.map-info-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 0 7px
+
+#wrapper .container .odContent .map-section .odCost .map-info-slider .title
+	display: block
+	color: #51255C
+	font-size: 35px
+	line-height: 45px
+	margin-bottom: 5px
+
+.news-boxes
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	position: relative
+	h3
+		font-size: 24px
+		line-height: 32px
+		font-weight: 800
+		margin: 0 0 15px
+	.item
+		display: flex
+		width: 49.5%
+		min-height: 532px
+		background: #F2F2F2
+		font-size: 14px
+		line-height: 22px
+		padding: 15px
+		margin: 0 0 20px
+		.text
+			width: 57%
+			padding: 45px 18px 20px 15px
+		.img
+			position: relative
+			a
+				display: block
+				width: 266px
+				height: 501px
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+			a:hover:before
+				background: rgba(250,181,156,.6)
+			img
+				width: 100%
+				height: 100%!important
+				object-fit: cover	
+		.btn
+			min-width: 194px
+			margin: 20px 0 0
+			font-weight: 800
+			text-align: center
+	.pattern.long
+		height: 220px
+		bottom: -154px
+		right: 295px
+		overflow: hidden
+
+.title-description
+	width: 650px
+	margin: 23px auto 55px
+	text-align: center
+	font-weight: 800
+	line-height: 22px
+
+#wrapper .container .odContent .odNeeds.news-slider .post
+	text-align: center
+	line-height: 22px
+	font-weight: 600
+
+#wrapper .container .odContent .odNeeds.news-slider .content .post .image
+	margin: 0 0 15px
+
+#wrapper .container .odContent .odNeeds.news-slider .content .post .title
+	margin-bottom: 11px
+
+#wrapper .container .odContent .odNeeds.news-slider .content .post .description
+	margin-bottom: 19px
+
+#wrapper .container .odContent .odNeeds.news-slider .content .post .btn
+	background: #6B3267
+	color: #fff
+	border-left-width: 2px
+	text-align: center
+	padding-left: 30px
+	width: 207px
+	&:before
+		content: ""
+		display: block
+		width: 21px
+		height: 100%
+		background: #fff
+		position: absolute
+		left: 0
+	&:hover
+		background: #fab59c
+
+#wrapper .container .odContent .odNeeds .content .needs-next, 
+#wrapper .container .odContent .odNeeds .content .needs-prev
+	top: 111px	
+
+#wrapper .container .odContent .odNeeds.news-slider .content .needs-prev
+	left: -44px
+
+#wrapper .container .odContent .odNeeds.news-slider .content .needs-next
+	right: -44px
+
+.stories-section .title-description
+	line-height: 18px
+
+#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-prev,
+#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-next
+	top: 111px
+
+.stock-block
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.item
+		display: flex
+		align-items: center
+		width: 49.5%
+		min-height: 265px
+		color: #fff
+		background: linear-gradient(3.32deg, #FBC6A2 2.55%, #F896A0 112.3%)
+		font-size: 14px
+		line-height: 26px
+		font-weight: 600
+		padding: 12px 15px 15px 30px
+		margin: 0 0 20px
+		position: relative
+		.text
+			width: 62%
+			p
+				max-width: 80%
+		.img
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+			img
+				max-width: 325px
+		.btn
+			min-width: 194px
+			margin: -4px 0 0
+			font-weight: 800
+			text-align: center
+			&:hover
+				border-color: #fff
+				color: #fff		
+	.icon-stock
+		position: absolute
+		bottom: -23px
+		right: 172px
+		width: 104px
+		height: 104px
+		border-radius: 500px
+		color: #fff
+		font-size: 24px
+		line-height: 43px
+		font-weight: 800
+		padding: 30px 15px
+		background: linear-gradient(121.27deg, #DF9D06 21.94%, #E2C277 54.96%, #DF9D06 86.24%)
+		transform: rotate(11.67deg)
+	h3
+		font-size: 35px
+		line-height: 42px
+		font-weight: 800
+		margin: 0
+		color: #fff
+		a
+			color: inherit
+#wrapper .container .odContent .odNeeds.blog-slider
+	margin-top: 42px
+#wrapper .container .odContent .odNeeds.blog-slider .content
+	margin: 53px 15px 0
+	.post
+		.title
+			margin-bottom: 8px
+		.description
+			line-height: 25px
+			margin-bottom: 22px
+		.image
+			height: 226px
+.blog-section
+	padding: 0 0 71px
+	position: relative
+	.pattern
+		bottom: 0
+		left: 272px
+
+.blog-slider
+	.text-container
+		padding: 26px 20px 15px 26px
+	.description
+		position: relative
+		z-index: -1
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 178px
+			background: url(../img/blur.png) no-repeat 0 75px
+	.post-info
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-size: 15px
+		font-weight: 700
+		.item
+			display: flex
+			align-items: center
+			width: 50%
+			&:last-child
+				justify-content: flex-end
+		a
+			color: #FD7E98
+			&:hover
+				color: #6B3267
+		.icon-view,
+		.icon-like,
+		.icon-dislike
+			margin-left: 25px
+		.icon-view
+			font-size: 20px
+			line-height: 20px
+		.icon-like a,
+		.icon-dislike a
+			display: block
+			font-size: 0
+			width: 17px
+			height: 17px
+		.icon-like a
+			background: url(../img/icon-like.svg) no-repeat
+			background-size: 100%
+			&:hover
+				background: url(../img/icon-like-hover.svg) no-repeat
+				background-size: 100%
+		.icon-dislike a
+			background: url(../img/icon-dislike.svg) no-repeat
+			background-size: 100%
+			&:hover
+				background: url(../img/icon-dislike-hover.svg) no-repeat
+				background-size: 100%
+	.blog-slider-prev,
+	.blog-slider-next
+		top: 216px
+	.blog-slider-prev
+		left: -60px
+	.blog-slider-next
+		right: -60px
+
+.mark
+	display: inline-block
+	background: #fff
+	color: #6B3267
+	padding: 5px 10px
+
+.videoblog-section
+	padding: 50px 0 0
+	.title
+		margin: 0 0 40px
+	.gallery-slider
+		background: linear-gradient(180deg, #F47B87 0%, #FAB39B 100%)
+		color: #fff
+		padding: 15px 15px 50px
+		font-size: 14px
+		line-height: 18px
+		.slider-for
+			height: 541px
+		.pattern
+			right: 227px
+			top: 477px
+		.slider-nav
+			margin: 0 -15px
+			padding: 20px 15px
+			background: #F47A87
+			.post
+				height: 300px
+				cursor: pointer
+				&:hover
+					h5
+						color: #F47A87
+					.img:before
+						background: rgba(250,181,156,.6)
+				h5
+					font-size: 14px
+					line-height: 18px
+					font-weight: 700
+					text-transform: uppercase
+					color: #6B3267
+					width: 150px
+				.post-time
+					position: absolute
+					bottom: 15px
+					left: 15px
+					color: #ABABAB
+			.img
+				width: 100%
+				height: 208px
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+				img
+					width: 100%
+					height: 100%!important
+					object-fit: cover
+				.datetime
+					position: absolute
+					bottom: 0
+					right: 0
+					background: #6B3267
+					color: #fff
+					padding: 2px 3px 0
+					text-align: center
+					line-height: 15px
+			.post-text
+				display: flex
+				justify-content: space-between
+				background: #fff
+				color: #21150B
+				line-height: 18px
+				.item
+					width: 55%
+					padding: 19px 15px
+					position: relative
+					&:first-child
+						width: 44%
+						&:before
+							display: none
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 1px
+						height: 100%
+						background: #f47a87
+				p
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+		.slider-title
+			font-size: 24px
+			line-height: 32px
+			font-weight: 700
+			padding: 0 30px
+	&.bg-purple
+		.gallery-slider
+			background: linear-gradient(180deg, #6B3267 0%, #AF83AC 100%)
+			.slider-nav
+				background: #AF83AC
+				.img .datetime
+					background: #FD7E98
+		.video-block 
+			a:hover,
+			.mark
+				color: #F47A87
+
+.video-block
+	display: flex
+	justify-content: space-between
+	a
+		color: #D2D7DB
+		text-decoration: underline
+		&:hover
+			color: #6B3267
+			text-decoration: none	
+	.mark
+		color: #6B3267
+		margin: 8px 0 20px
+	h3
+		font-size: 35px
+		line-height: 46px
+		font-weight: 700
+		margin: 0 0 23px
+	.text
+		width: 33%
+		padding: 50px 25px 15px 30px
+		position: relative
+		.post-time
+			position: absolute
+			bottom: -3px
+			right: 15px
+	.video
+		width: 853px
+		height: 487px
+		iframe
+			display: block
+			width: 100%
+			height: 100%
+	.stayInTouch
+		margin: 30px 0
+		ul
+			display: flex
+			align-items: center
+		li
+			margin: 0 8px 5px 0
+		a
+			display: block
+			width: 27px
+			height: 27px
+			background: #fff
+			color: #f7928f
+			line-height: 27px
+			border-radius: 500px
+			text-align: center
+			position: relative
+			&:hover
+				top: -2px
+			svg
+				width: 15px
+				height: 15px
+.act-section
+	.title
+		margin: 0 0 67px
+.news-boxes-links
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin: 0 0 50px
+	position: relative
+	h3
+		font: normal 50px/50px 'LeituraNews-Roman4',sans-serif
+		margin: 0 0 25px
+		a
+			color: inherit
+	.item
+		display: flex
+		width: 49.5%
+		color: #fff
+		background: linear-gradient(180deg, #6B3267 0%, #AF83AC 100%)
+		font-size: 14px
+		line-height: 25px
+		text-align: center
+		margin: 0 0 15px
+		.text
+			width: 50%
+			padding: 38px 15px 15px
+			&.text-vertical-center
+				display: flex
+				align-items: center
+				padding-top: 0
+		.img
+			position: relative
+			> a
+				display: block
+				width: 333px
+				height: 100%
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+			> a:hover:before
+				background: rgba(250,181,156,.6)
+			img
+				width: 100%
+				height: 100%!important
+				object-fit: cover		
+		.bf-logo
+			width: 158px
+			height: 161px
+			margin: 4px auto
+		.btn
+			min-width: 194px
+			margin: 16px 0 0
+			font-weight: 800
+			text-align: center
+			color: #fff
+			border-color: #fff
+			&:hover
+				color: #F47986
+				border-color: #F47986
+		&.vertical
+			flex-wrap: wrap
+			text-align: left
+			.text
+				width: 100%
+				padding: 15px 15px 15px 50px
+				p
+					max-width: 365px
+			.img
+				width: 100%
+				height: 271px
+				> a
+					width: 100%
+					height: 100%
+			.btn
+				margin: 0
+		&.bg-pink
+			background: #F47986
+			.btn
+				&:hover
+					color: #6B3267
+					border-color: #6B3267
+	.pattern
+		&.top
+			top: -39px
+			right: 127px
+		&.bottom
+			bottom: -24px
+			left: 138px
+	&.only-one
+		.item
+			width: 100%
+			background: none
+			text-align: left
+			color: #6B3267
+			.text
+				width: 49.5%
+				background: url(../img/bg-gray.jpg) no-repeat 50% 50%
+				background-size: cover
+				padding: 42px 120px 15px 50px
+			h3
+				margin: 0 0 15px
+				.mark
+					font-style: italic
+					font-weight: 800
+					padding: 10px 10px 0
+			.img
+				width: 50.5%
+				height: 270px
+				> a
+					width: 100%
+			.btn
+				color: #6B3267
+				border-color: #6B3267
+				margin-top: 10px
+				&:hover
+					color: #f47986
+					border-color: #f47986
+		.pattern.long
+			top: 167px
+			left: 37%
+	&.other-boxes
+		.item
+			width: 66.3%
+			text-align: left
+			.text
+				width: 57.5%
+				padding: 142px 20px 20px 50px
+				p
+					max-width: 68%
+			.img
+				> a
+					width: 371px
+		.only-picture
+			width: 32.5%
+			text-align: center
+			.img
+				width: 100%
+			.text
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				padding: 54px 65px
+				p
+					max-width: 100%
+			h3
+				font-size: 86px
+				line-height: 90px
+				margin: 0 0 15px
+@media only screen and (max-width:1439px)
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
+		margin-left: 100px
+		margin-top: -50%
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image
+		width: 40%
+	#wrapper .container .odContent .promo .odBraveFaith .pattern.long
+		top: 90%
+		max-height: 298px
+	.news-boxes h3
+		font-size: 21px
+		line-height: 28px
+	#wrapper .container .odContent .odNeeds.news-slider .content .post .btn
+		width: auto
+	.video-block h3
+		font-size: 32px
+		line-height: 42px
+	#wrapper .container .odContent .map-section .odCost
+		margin-left: 0
+		margin-right: 0
+	.map-section .bf-logo
+		left: 250px
+	.map-section .text-block
+		padding-left: 35px
+		padding-right: 35px
+	#wrapper .container .odContent .map-section .odCost .pattern
+		width: auto
+	.video-block .text
+		padding-left: 15px
+	.news-boxes-links .item .img>a
+		width: 300px
+@media only screen and (max-width:1365px)
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
+		width: 40%
+		margin-top: -40%
+		margin-left: 85px
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image
+		margin-right: 7%
+	.map-section .text-block
+		padding: 40px 20px 70px 20px 
+	.map-section .bf-logo
+		left: 200px
+		bottom: -87px
+		width: 180px
+	.map-section
+		margin: 0 0 115px
+	.news-boxes .item
+		min-height: 420px
+	.news-boxes .item .text
+		width: 60%
+		padding-top: 20px
+		padding-left: 0
+	.news-boxes .item .img
+		width: 40%
+		a
+			width: 100%
+			height: 100%
+	.video-block .text
+		width: 44%
+		padding: 30px 15px 15px 0
+	.videoblog-section .gallery-slider .slider-title
+		padding: 0
+	#wrapper .container .odContent .map-section .odCost .map
+		height: 450px
+	.stock-block
+		.item
+			padding-left: 15px
+			.text
+				p
+					max-width: 88%
+			.img
+				img
+					max-height: 215px
+		h3
+			font-size: 26px
+			line-height: 30px
+		.icon-stock
+			bottom: -40px
+			right: 115px
+	#wrapper .container .odContent .odNeeds.blog-slider .content
+		margin: 30px 0 0
+	.blog-slider .text-container
+		padding: 20px 0 0
+	.blog-section .pattern
+		bottom: -25px
+	.blog-slider
+		.blog-slider-prev,
+		.blog-slider-next
+			top: 90px
+		.blog-slider-prev
+			left: -5px
+		.blog-slider-next
+			right: -5px
+	.videoblog-section.bg-purple .gallery-slider .slider-nav 
+		.slick-list
+			padding: 0 20px!important
+		.post h5
+			width: 100%
+			font-size: 11px
+			line-height: 16px
+	.news-boxes-links
+		.item
+			.img
+				width: 50%
+				>a
+					width: 100%
+			.btn
+				margin: 0
+			&.vertical .text
+				padding-left: 30px
+	.news-boxes-links.only-one .item .text
+		padding-left: 30px
+		padding-right: 70px
+	.news-boxes-links.other-boxes
+		.item
+			.text
+				padding-left: 30px
+			&.only-picture .text
+				padding: 50px 30px
+@media only screen and (max-width:1023px)
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
+		margin-left: 0
+		margin-top: -55%
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image
+		top: 0
+		width: 50%
+		.img-note
+			right: -22px
+			width: 180px
+	#wrapper .container .odContent .map-section .odCost
+		flex-wrap: wrap
+	.map-section
+		margin: 0
+	.map-section .text-block,
+	.map-section .map-block
+		width: 100%
+	.map-section .text-block
+		padding: 30px 15px
+	.map-section .bf-logo,
+	#wrapper .container .odContent .map-section .odCost .pattern,
+	.news-boxes .pattern.long,
+	#wrapper .container .odContent .pattern
+		display: none
+	.news-boxes .item .text
+		width: 56%
+		padding: 15px 10px 0 0
+	.news-boxes .item .img
+		width: 44%
+	.news-boxes h3
+		font-size: 15px
+		line-height: 24px
+	.news-boxes .item .btn
+		min-width: 180px
+		font-size: 16px
+		margin: 0
+	.title-description,
+	.videoblog-section .title
+		margin-bottom: 20px
+	#wrapper .container .odContent .odNeeds.news-slider .content .post .btn
+		font-size: 16px
+	.videoblog-section .gallery-slider .slider-for
+		height: auto
+		margin: 0 0 30px
+	.videoblog-section .gallery-slider .slider-nav .post-text .item
+		padding: 15px 10px
+	.videoblog-section .gallery-slider .slider-nav .post h5
+		width: 100%
+		font-size: 11px
+		line-height: 16px
+	.videoblog-section .gallery-slider .slider-nav .post .post-time
+		bottom: 10px
+		left: 10px
+	.video-block
+		flex-wrap: wrap
+		.text,
+		.video
+			width: 100%
+		.text
+			padding: 0
+			.post-time
+				bottom: 27px
+				right: 0
+		.stayInTouch
+			margin: 20px 0
+	.stock-block .item .img
+		top: auto
+		bottom: 0
+		transform: translateY(0)
+		img
+			max-height: 150px
+	.stock-block .icon-stock
+		font-size: 20px
+		line-height: 33px
+		width: 90px
+		height: 90px
+		bottom: -20px
+		right: 55px
+	.stock-block .item .text
+		width: 72%
+	.blog-section
+		padding-bottom: 20px
+	.act-section .title
+		margin: 0 0 40px
+	.news-boxes-links
+		.item
+			width: 100%
+	.news-boxes-links.only-one .item .text
+		padding: 20px 30px
+	.news-boxes-links.only-one .item .img
+		height: auto
+	.news-boxes-links.other-boxes .item .img>a
+		width: 100%
+	.news-boxes-links.only-one .item h3
+		font-size: 41px
+	.news-boxes-links.other-boxes .item .text
+		padding-left: 15px
+	.news-boxes-links.other-boxes .item.only-picture .text
+		padding: 50px 15px
+	.news-boxes-links.other-boxes .item .text p
+		max-width: 100%
+	.news-boxes-links .item.vertical .text p
+		max-width: 470px
+@media only screen and (max-width:767px)
+	#wrapper .container .odContent .promo .odBraveFaith
+		display: flex
+		flex-wrap: wrap
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section
+		width: 100%
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right
+		order: 2
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image,
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info,
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section:nth-child(2) .bf-info
+		width: 100%
+		margin: 0
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info,
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section:nth-child(2) .bf-info
+		text-align: left
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section:nth-child(2)
+		margin: 0
+	#wrapper .container .odContent .map-section .odCost
+		margin: 30px 0 0
+	#wrapper .container .odContent .map-section .odCost .title
+		line-height: 32px
+		margin-bottom: 15px
+	#wrapper .container .odContent .map-section .odCost .map
+		height: auto
+	.map-section .map .zoom
+		width: 50px
+		height: 50px
+	.map-info
+		padding: 20px 0
+	.map-info .item,
+	.map-info .item-3
+		width: 30%
+	.map-info .item-2
+		width: 40%
+		padding-right: 20px
+	.title-description
+		width: 100%
+		max-width: 650px
+	.news-boxes
+		flex-wrap: wrap
+		.item
+			width: 100%
+	.video-block .video
+		min-height: 350px
+		height: auto
+	.videoblog-section .gallery-slider .slider-nav .post h5
+		font-size: 12px
+	.stock-block .item
+		width: 100%
+	.stock-block .item .img img
+		max-height: 180px
+	.stories-section
+		padding: 0 15px
+	.news-boxes-links
+		margin: 0
+		h3
+			font-size: 45px
+			line-height: 45px
+			margin: 0 0 15px
+	.news-boxes-links.other-boxes
+		.item
+			width: 100%
+	.news-boxes-links.only-one
+		.item
+			flex-wrap: wrap
+			.text,
+			.img
+				width: 100%
+			.img
+				order: -1
+	.news-boxes-links.other-boxes .item .text
+		padding: 90px 15px
+	.news-boxes-links .item.vertical .text
+		padding-left: 15px
+	.news-boxes-links.only-one .item .text
+		padding: 20px 15px
+	.news-boxes-links.other-boxes .item,
+	.news-boxes-links.only-one .item,
+	.news-boxes-links .item.vertical
+		text-align: center
+@media only screen and (max-width:500px)
+	.map-info
+		flex-wrap: wrap
+		padding-bottom: 6px
+		.item
+			width: 100%
+	.news-boxes
+		.item
+			flex-wrap: wrap
+			.text,
+			.img
+				width: 100%
+			.text
+				padding: 15px 0
+			.img
+				height: 400px
+				order: -1
+		h3
+			font-size: 21px
+			line-height: 28px
+	.video-block h3
+		font-size: 30px
+		line-height: 36px
+	.videoblog-section
+		padding: 30px 0 0
+		.gallery-slider
+			padding: 30px 15px
+			.slider-title
+				font-size: 20px
+			.slider-nav
+				padding: 15px 10px
+				.slick-list
+					padding: 0!important
+				.post h5
+					font-size: 11px
+	.news-boxes .item .img
+		height: 470px
+	.stock-block
+		.item
+			flex-wrap: wrap
+			.text
+				width: 100%
+			.img
+				position: relative
+				bottom: auto
+				width: 100%
+				margin-bottom: 30px
+				text-align: right
+				order: -1
+				img
+					display: inline-block
+					margin-right: -15px
+					max-height: 100%
+		.icon-stock
+			right: 140px
+	#wrapper .container .odContent .odNeeds.blog-slider
+		margin-top: 30px
+	.videoblog-section .gallery-slider .slider-nav .post-text .item:first-child
+		width: 51%
+	.videoblog-section .gallery-slider .slider-nav .post-text
+		font-size: 12px
+		line-height: 16px
+	#wrapper .container .odContent .odNeeds.blog-slider .content,
+	#wrapper .container .odContent .odNeeds .content
+		margin-top: 20px
+	.act-section .title
+		margin: 0 0 20px
+	.news-boxes-links
+		.item
+			flex-wrap: wrap
+			.img,
+			.text
+				width: 100%
+			.text
+				padding: 30px 15px
+			.img
+				height: 270px
+	.news-boxes-links.only-one .item .img,
+	.news-boxes-links .item.vertical .img
+		height: 270px
+	.news-boxes-links.other-boxes .only-picture .img
+		height: 500px
+	.news-boxes-links .item.vertical .text,
+	.news-boxes-links .item .text.text-vertical-center,
+	.news-boxes-links.other-boxes .item .text
+		padding: 30px 15px
+	.news-boxes-links.only-one .item h3
+		font-size: 38px
+	.news-boxes-links.other-boxes .item .text
+		width: 100%
+	.news-boxes-links.other-boxes .item .img
+		order: -1
