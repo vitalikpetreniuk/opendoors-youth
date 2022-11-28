@@ -39,6 +39,61 @@ b, strong
 	font-weight: bold
 #wrapper
 	overflow: hidden
+
+#wrapper .container header .header_bottom .header_bottom-nav .sub-menu,
+.header_bottom-nav .sub-menu
+	display: none
+	position: absolute
+	top: 100%
+	left: 50%
+	width: 407px
+	background: #fff
+	border: 1px solid #000
+	border-top: 0
+	transform: translateX(-50%)
+	color: #ABABAB
+	z-index: 10
+
+#wrapper .container header .header_bottom .header_bottom-nav > ul > li:hover .sub-menu,
+.header_bottom-nav > ul > li:hover .sub-menu
+	display: flex
+	flex-wrap: wrap
+
+.header_bottom-nav .sub-menu li
+	width: 50%
+
+#wrapper .container header .header_bottom .header_bottom-nav .sub-menu a,
+#wrapper .container header .header_bottom .header_bottom-nav ul li.current-menu-item .sub-menu a,
+.header_bottom-nav .sub-menu a
+	display: block
+	padding: 15px
+	color: inherit
+	font-size: 14px
+	line-height: 18px
+	height: auto
+	text-transform: none
+	&:hover
+		color: #6B3267
+		background: rgba(107, 50, 103, 0.12)
+
+#wrapper .container header .header_bottom .header_bottom-nav .sub-menu li
+	padding: 0
+	border-top: 1px solid #000
+
+#wrapper .container header .header_bottom .header_bottom-nav .sub-menu .current-menu-item:after
+	display: none
+
+#wrapper .container header .header_bottom .header_bottom-nav ul li.current-menu-item .sub-menu .current-menu-item a,
+#wrapper .container header .header_bottom .header_bottom-nav .sub-menu .current-menu-item a
+	color: #6B3267
+	background: rgba(107, 50, 103, 0.12)
+
+.mobile-menu .sub-menu
+	display: none
+
+.mobile-menu > ul > li:hover .sub-menu
+	display: block
+
 .promo
 	position: relative
 
@@ -286,9 +341,6 @@ b, strong
 	margin-bottom: 5px
 
 .news-boxes
-	display: flex
-	flex-wrap: wrap
-	justify-content: space-between
 	position: relative
 	h3
 		font-size: 24px
@@ -297,7 +349,6 @@ b, strong
 		margin: 0 0 15px
 	.item
 		display: flex
-		width: 49.5%
 		min-height: 532px
 		background: #F2F2F2
 		font-size: 14px
@@ -320,6 +371,7 @@ b, strong
 					left: 0
 					width: 100%
 					height: 100%
+					transition: .3s
 			a:hover:before
 				background: rgba(250,181,156,.6)
 			img
@@ -331,6 +383,9 @@ b, strong
 			margin: 20px 0 0
 			font-weight: 800
 			text-align: center
+	.news-boxes-prev,
+	.news-boxes-next
+		display: none
 	.pattern.long
 		height: 220px
 		bottom: -154px
@@ -457,7 +512,9 @@ b, strong
 	margin: 53px 15px 0
 	.post
 		.title
-			margin-bottom: 8px
+			margin-bottom: 0
+			line-height: 36px
+			text-transform: uppercase
 		.description
 			line-height: 25px
 			margin-bottom: 22px
@@ -467,15 +524,27 @@ b, strong
 	padding: 0 0 71px
 	position: relative
 	.pattern
-		bottom: 0
+		bottom: -25px
 		left: 272px
+		img:last-child
+			display: none
 
 .blog-slider
+	.post
+		cursor: pointer
+		&:hover
+			.text-container
+				background: #F2F2F2
+			.description:after
+				background: url(../img/blur-gray.png) no-repeat 0 75px
 	.text-container
-		padding: 26px 20px 15px 26px
+		padding: 23px 20px 15px 26px
+		transition: .3s
+	.title
+		position: relative
+		z-index: 2
 	.description
 		position: relative
-		z-index: -1
 		&:after
 			content: ''
 			position: absolute
@@ -484,6 +553,7 @@ b, strong
 			width: 100%
 			height: 178px
 			background: url(../img/blur.png) no-repeat 0 75px
+			transition: .3s
 	.post-info
 		display: flex
 		justify-content: space-between
@@ -543,101 +613,10 @@ b, strong
 	padding: 50px 0 0
 	.title
 		margin: 0 0 40px
-	.gallery-slider
-		background: linear-gradient(180deg, #F47B87 0%, #FAB39B 100%)
-		color: #fff
-		padding: 15px 15px 50px
-		font-size: 14px
-		line-height: 18px
-		.slider-for
-			height: 541px
-		.pattern
-			right: 227px
-			top: 477px
-		.slider-nav
-			margin: 0 -15px
-			padding: 20px 15px
-			background: #F47A87
-			.post
-				height: 300px
-				cursor: pointer
-				&:hover
-					h5
-						color: #F47A87
-					.img:before
-						background: rgba(250,181,156,.6)
-				h5
-					font-size: 14px
-					line-height: 18px
-					font-weight: 700
-					text-transform: uppercase
-					color: #6B3267
-					width: 150px
-				.post-time
-					position: absolute
-					bottom: 15px
-					left: 15px
-					color: #ABABAB
-			.img
-				width: 100%
-				height: 208px
-				position: relative
-				&:before
-					content: ""
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
-				img
-					width: 100%
-					height: 100%!important
-					object-fit: cover
-				.datetime
-					position: absolute
-					bottom: 0
-					right: 0
-					background: #6B3267
-					color: #fff
-					padding: 2px 3px 0
-					text-align: center
-					line-height: 15px
-			.post-text
-				display: flex
-				justify-content: space-between
-				background: #fff
-				color: #21150B
-				line-height: 18px
-				.item
-					width: 55%
-					padding: 19px 15px
-					position: relative
-					&:first-child
-						width: 44%
-						&:before
-							display: none
-					&:before
-						content: ''
-						position: absolute
-						top: 0
-						left: 0
-						width: 1px
-						height: 100%
-						background: #f47a87
-				p
-					display: -webkit-box
-					-webkit-line-clamp: 3
-					-webkit-box-orient: vertical
-					overflow: hidden
-		.slider-title
-			font-size: 24px
-			line-height: 32px
-			font-weight: 700
-			padding: 0 30px
 	&.bg-purple
 		.gallery-slider
 			background: linear-gradient(180deg, #6B3267 0%, #AF83AC 100%)
-			.slider-nav
+			.mySwiper
 				background: #AF83AC
 				.img .datetime
 					background: #FD7E98
@@ -645,7 +624,120 @@ b, strong
 			a:hover,
 			.mark
 				color: #F47A87
-
+.gallery-slider
+	width: 100%
+	position: relative
+	background: linear-gradient(180deg, #F47B87 0%, #FAB39B 100%)
+	color: #fff
+	padding: 15px 15px 50px
+	font-size: 14px
+	line-height: 18px
+	.button-prev,
+	.button-next
+		width: 12px
+		height: 27px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 1
+	.button-prev
+		left: -33px
+		background: url(../img/prev-accent.svg) no-repeat center
+		background-size: 16px 29px
+	.button-next
+		right: -33px
+		background: url(../img/next-accent.svg) no-repeat center
+		background-size: 16px 29px
+	.content
+		position: relative
+	.mySwiper2
+		height: 541px
+	.pattern
+		right: 227px
+		top: 477px
+	.mySwiper
+		margin: 0 -15px
+		padding: 20px 15px
+		background: #F47A87
+	.post
+		height: 300px
+		cursor: pointer
+		&:hover
+			h5
+				color: #F47A87
+			.img:before
+				background: rgba(250,181,156,.6)
+		h5
+			font-size: 14px
+			line-height: 18px
+			font-weight: 700
+			text-transform: uppercase
+			color: #6B3267
+			width: 150px
+		.post-time
+			position: absolute
+			bottom: 15px
+			left: 15px
+			color: #ABABAB
+	.img
+		width: 100%
+		height: 208px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			transition: .3s
+		img
+			width: 100%
+			height: 100%!important
+			object-fit: cover
+		.datetime
+			position: absolute
+			bottom: 0
+			right: 0
+			background: #6B3267
+			color: #fff
+			padding: 2px 3px 0
+			text-align: center
+			line-height: 15px
+	.post-text
+		display: flex
+		justify-content: space-between
+		background: #fff
+		color: #21150B
+		line-height: 18px
+		.item
+			width: 55%
+			padding: 19px 15px
+			position: relative
+			&:first-child
+				width: 44%
+				&:before
+					display: none
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 1px
+				height: 100%
+				background: #f47a87
+		p
+			display: -webkit-box
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+			overflow: hidden
+	.slider-title
+		font-size: 24px
+		line-height: 32px
+		font-weight: 700
+		padding: 0 30px
+	.fancybox
+		display: none
 .video-block
 	display: flex
 	justify-content: space-between
@@ -714,6 +806,8 @@ b, strong
 		margin: 0 0 25px
 		a
 			color: inherit
+			span
+				display: none
 	.item
 		display: flex
 		width: 49.5%
@@ -743,12 +837,15 @@ b, strong
 					left: 0
 					width: 100%
 					height: 100%
+					transition: .3s
 			> a:hover:before
 				background: rgba(250,181,156,.6)
 			img
 				width: 100%
 				height: 100%!important
-				object-fit: cover		
+				object-fit: cover
+		.img-mobile
+			display: none		
 		.bf-logo
 			width: 158px
 			height: 161px
@@ -854,6 +951,314 @@ b, strong
 				font-size: 86px
 				line-height: 90px
 				margin: 0 0 15px
+.news-inner-section
+	max-width: 1095px
+	margin: 0 auto
+	~ .odNeeds.needs-top
+		margin-bottom: 50px
+.visual-section
+	margin: 0 0 38px
+	position: relative
+	.text
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		color: #fff
+	.btn-back
+		position: absolute
+		top: 35px
+		left: 54px
+		color: inherit
+		padding: 6px
+		padding-left: 21px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			background: url(../img/arrow-left.svg) no-repeat
+			background-size: 100%
+			width: 12px
+			height: 29px
+			transition: .3s
+		&:hover
+			color: #FAB59C
+			&:before
+				background: url(../img/arrow-left-hover.svg) no-repeat
+				background-size: 100%
+	.stayInTouch
+		position: absolute
+		top: 25px
+		right: 22px
+		li
+			text-align: center
+			margin: 0 0 20px
+		a svg g rect
+			transition: .3s
+		a:hover svg g rect
+			fill: #FAB59C
+	.inner-text
+		position: absolute
+		bottom: 20px
+		left: 0
+		width: 100%
+		max-width: 1110px
+		padding: 10px 20px 10px 53px
+		.top-text
+			position: relative
+			padding-left: 22px
+			margin: 0 0 4px 8px
+			img
+				width: 14px
+				position: absolute
+				top: 0
+				left: 0
+	h1
+		font: normal 86px/86px 'LeituraNews-Roman4',sans-serif
+	.list-links
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		padding: 7px 14px
+		display: flex
+		justify-content: flex-end
+		color: rgba(255, 255, 255, 0.38)
+		li
+			margin-left: 3px
+		a
+			color: inherit
+			&:hover
+				color: #fff
+#wrapper .container .odContent .news-description-block .pattern
+	position: static
+	width: 291px
+	margin: 0 0 26px
+.news-description-block
+	display: flex
+	justify-content: space-between
+	.content-block
+		width: 80%
+	.new
+		line-height: 25px
+		color: #272C49
+		margin: 10px 0 50px
+		&:first-child
+			.title
+				margin: 0 0 20px
+			.post-info
+				padding-bottom: 27px
+				.design
+					font-size: 16px
+					line-height: 25px
+		p
+			margin: 0 0 25px
+		.post-info
+			display: flex
+			justify-content: space-between
+			align-items: center
+			font-size: 16px
+			font-weight: 700
+			padding: 10px 0
+			.item
+				display: flex
+				align-items: center
+				width: 50%
+				&:last-child
+					justify-content: flex-end
+			a
+				color: #FD7E98
+				&:hover
+					color: #6B3267
+			time
+				color: #FD7E98
+			.design
+				font-size: 24px
+				line-height: 38px
+				color: #FD7E98
+			.icon-view,
+			.icon-like,
+			.icon-dislike
+				margin-left: 30px
+			.icon-view
+				font-size: 21px
+				line-height: 21px
+			.icon-like a,
+			.icon-dislike a
+				display: block
+				font-size: 0
+				width: 17px
+				height: 17px
+			.icon-like a
+				background: url(../img/icon-like.svg) no-repeat
+				background-size: 100%
+				&:hover
+					background: url(../img/icon-like-hover.svg) no-repeat
+					background-size: 100%
+			.icon-dislike a
+				background: url(../img/icon-dislike.svg) no-repeat
+				background-size: 100%
+				&:hover
+					background: url(../img/icon-dislike-hover.svg) no-repeat
+					background-size: 100%
+	.title
+		line-height: 52px
+		margin: 0 0 27px
+	.aside-block
+		width: 19%
+		.banner
+			background: #F2F2F2
+			color: #AF83AC
+			text-align: center
+			margin: 0 0 20px
+			>a:hover
+				opacity: .8
+			&-info
+				padding: 15px 9px
+			h3
+				font-size: 24px
+				line-height: 32px
+				font-weight: 800
+				text-transform: uppercase
+				margin: 0 0 13px
+			.btn
+				font-weight: 800
+.banner-list
+	column-count: 2
+	column-fill: auto
+	height: 230px
+	color: #AF83AC
+	font-size: 12px
+	line-height: 15px
+	text-transform: uppercase
+	text-align: left
+	margin: 0 0 4px
+	li
+		padding-left: 10px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 5px
+			left: 0
+			width: 2px
+			height: 2px
+			border-radius: 50px
+			background: #AF83AC
+	a
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+.bg-pink-box
+	background: url(../img/bg-pink-box.jpg) no-repeat
+	background-size: cover
+	padding: 41px 15px
+	margin: 50px 0
+	.title
+		margin: 0 0 30px
+	.inner-text
+		display: flex
+		justify-content: space-between
+		.image
+			width: 43.7%
+			height: 315px
+			img
+				width: 100%
+				height: 100% !important
+				object-fit: cover
+		.text
+			display: flex
+			justify-content: space-between
+			width: 54.8%
+			.boxes
+				width: 49%
+				.box
+					background: #fff
+					color: #6B3267
+					text-align: center
+					padding: 30px 25px
+					margin: 0 0 37px
+					position: relative
+					&:last-child
+						margin: 0
+					.num
+						position: absolute
+						top: -28px
+						left: 50%
+						transform: translateX(-50%)
+						background: #F47A87
+						color: #fff
+						width: 54px
+						height: 54px
+						border-radius: 50px
+						font-size: 20px
+						line-height: 54px
+						text-align: center
+.bg-gray-box
+	background: url(../img/bg-gray-large.jpg) no-repeat
+	background-size: cover
+	padding: 15px
+	margin: 53px 0
+	.title
+		margin: 0 0 19px
+	.inner-text
+		display: flex
+		justify-content: space-between
+		.image
+			width: 38.7%
+			height: 501px
+			img
+				width: 100%
+				height: 100% !important
+				object-fit: cover
+		.text
+			width: 60%
+			padding: 18px 15px
+		.list
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			line-height: 22px
+			font-weight: 700
+			li
+				width: 48%
+				margin: 0 0 39px
+			p
+				margin: 0 0 5px
+			.mark
+				background: none
+				padding: 0
+		.btn
+			width: 194px
+			text-align: center
+.news-gallery
+	display: flex
+	flex-wrap: wrap
+	img
+		width: auto
+		margin: 0 15px 15px 0
+.btn-scroll
+	font-size: 0
+	background: url(../img/btn-scroll.png) no-repeat
+	width: 52px
+	height: 52px
+	position: fixed
+	bottom: 20px
+	right: 15px
+	cursor: pointer
+	display: none
+	transition: .3s
+	z-index: 60
+	&:hover
+		opacity: .8
+
+
+/* MODAL */
+.modal
+	display: none
+
 @media only screen and (max-width:1439px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
 		margin-left: 100px
@@ -885,6 +1290,11 @@ b, strong
 		padding-left: 15px
 	.news-boxes-links .item .img>a
 		width: 300px
+	#wrapper .container .odContent .odNeeds.blog-slider .content .post .title
+		line-height: 29px
+	.blog-slider .text-container
+		padding: 20px 15px 15px
+
 @media only screen and (max-width:1365px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
 		width: 40%
@@ -892,6 +1302,9 @@ b, strong
 		margin-left: 85px
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image
 		margin-right: 7%
+	.subtitle-note
+		width: 100%
+		padding: 20px 15px
 	.map-section .text-block
 		padding: 40px 20px 70px 20px 
 	.map-section .bf-logo
@@ -935,10 +1348,6 @@ b, strong
 			right: 115px
 	#wrapper .container .odContent .odNeeds.blog-slider .content
 		margin: 30px 0 0
-	.blog-slider .text-container
-		padding: 20px 0 0
-	.blog-section .pattern
-		bottom: -25px
 	.blog-slider
 		.blog-slider-prev,
 		.blog-slider-next
@@ -947,13 +1356,15 @@ b, strong
 			left: -5px
 		.blog-slider-next
 			right: -5px
-	.videoblog-section.bg-purple .gallery-slider .slider-nav 
-		.slick-list
-			padding: 0 20px!important
+	.gallery-slider 
 		.post h5
 			width: 100%
 			font-size: 11px
 			line-height: 16px
+	.gallery-slider .button-prev
+		left: -20px
+	.gallery-slider .button-next
+		right: -20px
 	.news-boxes-links
 		.item
 			.img
@@ -973,6 +1384,19 @@ b, strong
 				padding-left: 30px
 			&.only-picture .text
 				padding: 50px 30px
+	.visual-section h1
+		font-size: 80px
+		line-height: 80px
+	.news-description-block
+		.content-block
+			width: 76%
+		.aside-block
+			width: 22%
+	.bg-pink-box
+		margin: 20px 0
+	.news-gallery img
+		max-width: 275px
+
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
 		margin-left: 0
@@ -1014,18 +1438,18 @@ b, strong
 		margin-bottom: 20px
 	#wrapper .container .odContent .odNeeds.news-slider .content .post .btn
 		font-size: 16px
-	.videoblog-section .gallery-slider .slider-for
+	.videoblog-section .gallery-slider .mySwiper2
 		height: auto
 		margin: 0 0 30px
-	.videoblog-section .gallery-slider .slider-nav .post-text .item
+	.gallery-slider .post-text .item
 		padding: 15px 10px
-	.videoblog-section .gallery-slider .slider-nav .post h5
+	.gallery-slider .post .post-time
+		bottom: 10px
+		left: 10px
+	.gallery-slider .post h5
 		width: 100%
 		font-size: 11px
 		line-height: 16px
-	.videoblog-section .gallery-slider .slider-nav .post .post-time
-		bottom: 10px
-		left: 10px
 	.video-block
 		flex-wrap: wrap
 		.text,
@@ -1054,7 +1478,15 @@ b, strong
 	.stock-block .item .text
 		width: 72%
 	.blog-section
-		padding-bottom: 20px
+		padding: 0 0 80px
+	#wrapper .container .odContent .blog-section .pattern
+		display: block
+		bottom: 9px
+		left: 15px
+		img
+			display: none
+			&:last-child
+				display: block
 	.act-section .title
 		margin: 0 0 40px
 	.news-boxes-links
@@ -1076,14 +1508,73 @@ b, strong
 		max-width: 100%
 	.news-boxes-links .item.vertical .text p
 		max-width: 470px
+	.visual-section
+		.btn-back
+			top: 20px
+			left: 15px
+		.stayInTouch
+			top: 20px
+			right: 15px
+		h1
+			font-size: 50px
+			line-height: 55px
+		.inner-text
+			padding: 10px 15px
+	.news-description-block
+		.title
+			line-height: 37px
+			margin: 0 0 15px
+		.content-block
+			width: 70%
+		.aside-block
+			width: 28%
+		.new
+			margin: 0 0 30px
+			&:first-child .title
+				margin: 0 0 15px
+			p
+				margin: 0 0 10px
+			.post-info .design
+				font-size: 20px
+				line-height: 30px
+	#wrapper .container .odContent .odNeeds.blog-slider .content .post .title
+		font-size: 16px
+		line-height: 22px
+	.blog-slider .post-info .icon-dislike, .blog-slider .post-info .icon-like, .blog-slider .post-info .icon-view
+		margin-left: 10px
+	.blog-slider .post-info .icon-view
+		font-size: 15px
+	.bg-pink-box .inner-text .text .boxes .box
+		padding: 30px 10px 20px
+	.bg-gray-box .inner-text .text
+		padding: 0
+	.bg-gray-box .inner-text .image
+		height: 435px
+	.news-gallery img
+		max-width: 190px
+		max-height: 115px
+
 @media only screen and (max-width:767px)
+	.mobile .mobile-overlay .mo-content .mobile-menu ul li .sub-menu a,
+	.mobile .mobile-overlay .mo-content .mobile-menu ul li.current-menu-item .sub-menu a
+		text-transform: none
+		color: #fff
+	.mobile .mobile-overlay .mo-content .mobile-menu ul li.current-menu-item .sub-menu .current-menu-item a
+		color: #fab59c
+	.mobile .mobile-overlay .mo-content .mobile-menu ul li.current-menu-item .sub-menu .current-menu-item
+		background: none
+	.mobile .mobile-overlay .mo-content .mobile-menu ul .sub-menu
+		margin: 0
+	.promo .title
+		margin: 0 0 34px
 	#wrapper .container .odContent .promo .odBraveFaith
-		display: flex
-		flex-wrap: wrap
+		padding: 0
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section
-		width: 100%
+		width: 56%
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right
-		order: 2
+		width: 44%
+		padding-left: 0
+		margin: 0 0 0 auto
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image,
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info,
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section:nth-child(2) .bf-info
@@ -1092,46 +1583,158 @@ b, strong
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info,
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section:nth-child(2) .bf-info
 		text-align: left
+		margin: -173px 0 0
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section:nth-child(2)
 		margin: 0
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image
+		height: 175px
+		overflow: hidden
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image img
+		width: 100%
+		height: 100%!important
+		object-fit: cover
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info .bf-description
+		display: none
+	#wrapper .container .odContent .promo .odBraveFaith .bf-description.mobile
+		font-weight: 600
+		padding: 0 15px
+		margin: 0 0 15px
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image .img-note
+		display: none
+	.subtitle-note
+		height: 113px
+		padding: 31px 15px
+		margin: 0 0 30px
+		&:before
+			width: 44px
+			height: 44px
+			top: -28px
+			left: -10px
+		strong
+			font-size: 16px
+			line-height: 21px
+			left: 2px
+			top: -14px
 	#wrapper .container .odContent .map-section .odCost
-		margin: 30px 0 0
+		margin: 25px -15px 0
 	#wrapper .container .odContent .map-section .odCost .title
 		line-height: 32px
 		margin-bottom: 15px
+		text-align: center
+		margin: 0 0 19px
 	#wrapper .container .odContent .map-section .odCost .map
-		height: auto
+		height: 350px
+		svg
+			height: 350px
+	.map-section .text-block
+		font-size: 14px
+		line-height: 26px
+		padding: 23px 15px
 	.map-section .map .zoom
-		width: 50px
-		height: 50px
+		display: none
+	.map-section .text-block p
+		margin: 0 0 4px
+	.map-section .text-block .custom-select
+		margin: 0 0 17px
 	.map-info
-		padding: 20px 0
-	.map-info .item,
-	.map-info .item-3
-		width: 30%
-	.map-info .item-2
-		width: 40%
-		padding-right: 20px
+		flex-wrap: wrap
+		font-size: 14px
+		line-height: 18px
+		padding: 20px 15px
+		border: 1px solid #D9D9D9
+		max-width: 100%
+		margin: 0 0 35px
+		.item
+			width: 50%
+		.item-2
+			padding-right: 0
+		.item-3
+			width: 100%
+	#wrapper .container .odContent .map-section .odCost .map-info-slider
+		font-size: 16px
+		line-height: 20px
+		padding: 0 0 45px
+		.title
+			font-size: 20px
+			line-height: 26px
+			text-align: left
+			margin-bottom: 8px
 	.title-description
 		width: 100%
 		max-width: 650px
+	#wrapper .container .odContent .map-section .odCost .pattern.mobile
+		display: block
+		top: auto
+		right: -11px
+		bottom: 95px
 	.news-boxes
-		flex-wrap: wrap
+		padding: 0 37px
 		.item
-			width: 100%
-	.video-block .video
-		min-height: 350px
-		height: auto
-	.videoblog-section .gallery-slider .slider-nav .post h5
-		font-size: 12px
-	.stock-block .item
-		width: 100%
-	.stock-block .item .img img
-		max-height: 180px
+			width: 302px
+			min-height: 190px
+			padding: 5px 10px 5px 25px
+			margin: 0 auto
+			.text
+				width: 80%
+				padding-top: 33px
+			.btn
+				min-width: 139px
+				height: 32px
+				line-height: 32px
+				padding: 0 13px
+			.img
+				height: 178px
+				margin: 0 0 0 auto
+				img
+					object-fit: contain
+		h3
+			font-size: 14px
+			line-height: 19px
+			margin: 0 0 25px
+		p
+			display: none
+		.news-boxes-prev,
+		.news-boxes-next
+			display: block
+			top: 70px
+		.news-boxes-prev
+			left: 7px
+		.news-boxes-next
+			right: 7px
+	.video-block
+		.video
+			height: 350px
+			position: absolute
+			top: 0
+			left: 0
+		.text
+			padding-top: 380px
+	.gallery-slider
+		.post h5
+			font-size: 12px
+		.button-prev
+			left: 0
+		.button-next
+			right: 0
+	.stock-block
+		.item
+			display: block
+			width: 48%
+			.text
+				width: 100%
+				p
+					display: none
+			.img img
+				max-height: 135px
+		h3
+			font-size: 25px
+			margin: 0 0 20px
 	.stories-section
 		padding: 0 15px
 	.news-boxes-links
 		margin: 0
+		.item .img
+			width: 50%
 		h3
 			font-size: 45px
 			line-height: 45px
@@ -1156,96 +1759,394 @@ b, strong
 	.news-boxes-links.other-boxes .item,
 	.news-boxes-links.only-one .item,
 	.news-boxes-links .item.vertical
-		text-align: center
+		.text
+			text-align: center
+			padding: 30px 15px
+			p
+				max-width: 100%
+	.news-boxes-links.only-one .item .btn
+		margin: 0
+	.news-boxes-links.other-boxes .only-picture .img
+		height: 540px
+	#wrapper .container .odContent .odNeeds.news-slider .content .post .description
+		display: none
+	#wrapper .container .odContent .odNeeds.news-slider .content .post .btn
+		width: 100%
+		font-size: 14px
+	#wrapper .container .odContent .odNeeds.news-slider .content .post .title
+		font-size: 16px
+		line-height: 21px
+	#wrapper .container .odContent .odNeeds.news-slider .content .post .image
+		height: 158px
+	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-next, 
+	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-prev
+		top: 54px
+	.visual-section
+		margin: 0 0 20px
+		h1
+			font-size: 35px
+			line-height: 37px
+		.inner-text
+			max-width: 445px
+	.news-description-block
+		flex-wrap: wrap
+		padding: 0 15px
+		.content-block,
+		.aside-block
+			width: 100%
+		.aside-block
+			display: none
+			&.mobile
+				display: flex
+				justify-content: space-between
+				.banner
+					width: 33.3%
+					margin: 0 0 36px
+					&-info
+						width: 100%
+						margin: 0
+		.title
+			line-height: 26px
+		.new
+			p
+				margin: 0 0 25px
+			.post-info
+				.icon-dislike,
+				.icon-like,
+				.icon-view
+					margin-left: 20px
+	.news-description-block .new:first-child .post-info
+		padding: 10px 0
+	.bg-pink-box,
+	.bg-gray-box
+		.title
+			margin: 0 0 20px
+		.inner-text
+			flex-wrap: wrap
+			.image,
+			.text
+				width: 100%
+			.image
+				height: auto
+				margin: 0 0 34px
+	.bg-gray-box
+		padding-top: 50px
+	.bg-gray-box .inner-text .image
+		display: none
+	.news-gallery img
+		margin: 0 5px 5px 0
+		max-width: 180px
+		max-height: 115px
+
 @media only screen and (max-width:500px)
 	.map-info
-		flex-wrap: wrap
 		padding-bottom: 6px
-		.item
-			width: 100%
-	.news-boxes
-		.item
-			flex-wrap: wrap
-			.text,
-			.img
-				width: 100%
-			.text
-				padding: 15px 0
-			.img
-				height: 400px
-				order: -1
+	.video-block
+		.video
+			height: 197px
+		.text
+			padding-top: 218px
 		h3
-			font-size: 21px
-			line-height: 28px
-	.video-block h3
-		font-size: 30px
-		line-height: 36px
+			font-size: 16px
+			line-height: 21px
+			margin: 0 0 10px
+		.mark
+			margin: 6px 0 16px
 	.videoblog-section
 		padding: 30px 0 0
 		.gallery-slider
-			padding: 30px 15px
+			padding: 18px 15px 81px
 			.slider-title
-				font-size: 20px
-			.slider-nav
-				padding: 15px 10px
-				.slick-list
+				display: none
+			.mySwiper2
+				margin: 0
+			.mySwiper
+				padding: 0 30px
+				background: none
+				.swiper-slide
 					padding: 0!important
-				.post h5
-					font-size: 11px
-	.news-boxes .item .img
-		height: 470px
-	.stock-block
-		.item
-			flex-wrap: wrap
-			.text
-				width: 100%
+			.post
+				height: auto
+				h5
+					font-size: 14px
+					line-height: 18px
 			.img
-				position: relative
-				bottom: auto
-				width: 100%
-				margin-bottom: 30px
-				text-align: right
-				order: -1
-				img
-					display: inline-block
-					margin-right: -15px
-					max-height: 100%
-		.icon-stock
-			right: 140px
+				height: 111px
+			.post-text .item:last-child
+				display: none
+		&.bg-purple .gallery-slider .mySwiper
+			background: none
 	#wrapper .container .odContent .odNeeds.blog-slider
 		margin-top: 30px
-	.videoblog-section .gallery-slider .slider-nav .post-text .item:first-child
-		width: 51%
-	.videoblog-section .gallery-slider .slider-nav .post-text
+	.gallery-slider .post-text
+		.item
+			padding: 10px 10px 13px
+			&:first-child
+				width: 100%
+	.gallery-slider .post-text
 		font-size: 12px
 		line-height: 16px
+	.gallery-slider .post .post-time
+		bottom: 6px
+		left: 10px
+	.gallery-slider
+		.button-prev
+			left: -6px
+			background-size: 12px 21px
+		.button-next
+			right: -6px
+			background-size: 12px 21px
+		.fancybox
+			display: block
+			background: url(../img/btn-fancybox.svg) no-repeat
+			background-size: 100%
+			font-size: 0
+			width: 21px
+			height: 16px
+			position: absolute
+			bottom: 45px
+			right: 30px
 	#wrapper .container .odContent .odNeeds.blog-slider .content,
-	#wrapper .container .odContent .odNeeds .content
+	#wrapper .container .odContent .odNeeds .content,
+	#wrapper .container .odContent .odNeeds.needs-top .content
 		margin-top: 20px
 	.act-section .title
 		margin: 0 0 20px
-	.news-boxes-links
+	.news-boxes-links,
+	.news-boxes-links.other-boxes
 		.item
-			flex-wrap: wrap
-			.img,
+			font-size: 12px
+			line-height: 22px
+			height: 210px
+			margin: 0 0 27px
+			overflow: hidden
 			.text
-				width: 100%
-			.text
-				padding: 30px 15px
+				width: 72%
+				padding: 20px 15px
+				text-align: left
 			.img
-				height: 270px
-	.news-boxes-links.only-one .item .img,
-	.news-boxes-links .item.vertical .img
-		height: 270px
-	.news-boxes-links.other-boxes .only-picture .img
-		height: 500px
-	.news-boxes-links .item.vertical .text,
-	.news-boxes-links .item .text.text-vertical-center,
-	.news-boxes-links.other-boxes .item .text
-		padding: 30px 15px
-	.news-boxes-links.only-one .item h3
-		font-size: 38px
-	.news-boxes-links.other-boxes .item .text
-		width: 100%
-	.news-boxes-links.other-boxes .item .img
-		order: -1
+				width: 28%
+				height: 210px
+			&.vertical
+				.img
+					width: 28%
+					height: 210px
+					img
+						display: none
+					.img-mobile
+						display: block
+				.text
+					width: 72%
+					padding: 20px 15px
+					text-align: left
+					order: -1
+			.btn
+				min-width: 167px
+				font-size: 16px
+		&.only-one
+			.item
+				h3
+					font-size: 16px
+					.mark
+						padding: 3px 3px 0
+				.img
+					width: 28%
+					height: 210px
+					order: -1
+					img
+						display: none
+					.img-mobile
+						display: block
+				.text
+					width: 72%
+					text-align: left
+					padding: 20px 15px
+		h3
+			font-size: 16px
+			line-height: 16px
+			a span
+				display: inline-block
+				text-transform: uppercase
+			.bf-logo
+				display: none
+	.news-boxes-links.other-boxes 
+		.item
+			&.only-picture
+				.img
+					width: 100%
+					height: 210px
+					img
+						display: none
+					.img-mobile
+						display: block
+				.text
+					width: 65%
+					padding: 20px 15px
+				h3
+					font-size: 16px
+					line-height: 16px
+	.stock-block
+		.item
+			min-height: 175px
+			.img
+				bottom: 0
+				img
+					max-height: 74px
+			.btn
+				min-width: 139px
+				height: 32px
+				font-size: 16px
+				line-height: 32px
+		h3
+			font-size: 14px
+			line-height: 21px
+			margin: 0 0 11px
+		.icon-stock
+			right: 45px
+			width: 53px
+			height: 53px
+			font-size: 12px
+			line-height: 12px
+			padding: 23px 9px
+	.blog-slider .description
+		display: none
+	#wrapper .container .odContent .odNeeds.blog-slider .content .post .image
+		height: 92px
+	#wrapper .container .odContent .odNeeds.blog-slider .content .post .title
+		font-size: 16px
+		margin-bottom: 5px
+	#wrapper .container .odContent .odNeeds .swiper
+		margin: 0 24px
+	.blog-slider .blog-slider-prev,
+	.blog-slider .blog-slider-next
+		top: 22px
+	.blog-slider .blog-slider-prev
+		left: -6px
+	.blog-slider .blog-slider-next
+		right: -6px
+	.blog-slider .text-container
+		padding: 11px 0 0
+	.blog-slider .post-info,
+	.blog-slider .post-info .icon-view
+		font-size: 12px
+		line-height: 14px
+	.blog-slider .post-info .icon-dislike, 
+	.blog-slider .post-info .icon-like, 
+	.blog-slider .post-info .icon-view
+		margin-left: 7px
+	.visual-section
+		.visual-image
+			min-height: 232px
+			object-fit: cover
+		.btn-back
+			padding: 0 0 0 13px
+			&:before
+				width: 7px
+				height: 16px
+		.stayInTouch
+			top: 14px
+			right: 23px
+			li
+				margin: 0 0 6px
+			svg
+				width: 16px
+		.inner-text
+			bottom: 23px
+			max-width: 210px
+			.top-text
+				font-size: 12px
+				line-height: 22px
+				padding-left: 14px
+				margin: 0 0 8px
+				img
+					top: 3px
+		h1
+			font-size: 16px
+			line-height: 19px
+		.list-links
+			justify-content: center
+			font-size: 12px
+			line-height: 22px
+			padding: 3px
+			li
+				margin: 0 1px
+	.news-description-block
+		.new
+			.post-info
+				flex-wrap: wrap
+				font-size: 12px
+				line-height: 19px
+				padding: 0
+				.icon-view,
+				.icon-like,
+				.icon-dislike
+					margin-left: 30px
+				.design
+					font-size: 14px
+					line-height: 22px
+			&:first-child
+				.post-info
+					padding-top: 2px
+					.item
+						width: 100%
+						&:last-child
+							justify-content: flex-start
+					.design
+						font-size: 12px
+						line-height: 19px
+		.aside-block
+			.banner
+				text-align: left
+				&-info
+					padding: 15px
+		.banner-list
+			column-count: 3
+			height: 130px
+			margin: 0 0 10px
+	.news-inner-section ~ .blog-section
+		padding: 0 0 40px
+	.bg-pink-box
+		background: url(../img/bg-pink-box-mob.jpg) no-repeat
+		background-size: cover
+		padding: 31px 15px 46px
+		margin-bottom: 0
+		.inner-text
+			.image
+				height: 170px
+			.text .boxes .box
+				padding: 30px 20px 15px
+	.bg-gray-box
+		background: url(../img/bg-gray-mob.jpg) no-repeat
+		background-size: cover
+		margin: 0
+		.title
+			text-align: center
+		.inner-text
+			.list li
+				width: 80%
+			.btn
+				width: 139px
+				font-size: 16px
+	.news-gallery img
+		max-width: 135px
+		max-height: 82px
+	.modal .gallery-slider
+		padding: 0
+	.modal .gallery-slider .post
+		height: auto
+		margin: 0 0 15px
+	.modal .gallery-slider .img
+		height: 129px
+	.modal .gallery-slider .post-text
+		font-size: 14px
+		line-height: 18px
+	.modal .gallery-slider .post-text .item
+		padding: 18px 15px
+	.modal .gallery-slider .post-text .item:first-child
+		width: 50%
+	.modal .gallery-slider .post h5
+		font-size: 14px
+		line-height: 18px
+	.modal .gallery-slider .post .post-time
+		bottom: 12px
+		left: 15px

@@ -35,9 +35,42 @@ $(function() {
         $('.needs-top .swiper .needs-next').trigger('click');
     })
 
-    const newsSlider = new Swiper('.news-slider .swiper', {
+    const newsBoxesSlider = new Swiper('.news-boxes .swiper', {
         loop: true,
         slidesPerView: 1,
+        breakpoints: {
+            // when window width is >= 320px
+            1366: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            }
+        },
+        navigation: {
+            nextEl: '.news-boxes-next',
+            prevEl: '.news-boxes-prev',
+        }
+    });
+
+    $('.news-boxes-prev').on('click', function(){
+        $('.news-boxes .swiper .news-boxes-prev').trigger('click');
+    })
+
+    $('.news-boxes-next').on('click', function(){
+        $('.news-boxes .swiper .news-boxes-next').trigger('click');
+    })
+
+    const newsSlider = new Swiper('.news-slider .swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 15,
         breakpoints: {
             // when window width is >= 320px
             1366: {
@@ -50,6 +83,10 @@ $(function() {
             },
             768: {
                 slidesPerView: 4,
+                spaceBetween: 15
+            },
+            320: {
+                slidesPerView: 2,
                 spaceBetween: 15
             }
         },
@@ -81,9 +118,17 @@ $(function() {
         slidesPerView: 1,
         breakpoints: {
             // when window width is >= 320px
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 44
+            },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 25
+                spaceBetween: 15
+            },
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 15
             }
         },
         navigation: {
@@ -144,39 +189,51 @@ $(function() {
         }
     })
 
-    /* Slick Slider */
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        adaptiveHeight: true,
-        asNavFor: '.slider-nav'
+    /* Btn-scroll-up */
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('.btn-scroll').fadeIn();
+        } else {
+            $('.btn-scroll').fadeOut();
+        }
     });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        arrows: true,
-        dots: false,
-        centerMode: true,
-        focusOnSelect: true,
-        responsive: [
-            {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+    $('.btn-scroll').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 200);
+        return false;
     });
+
+    /* Fancybox */
+    $('.fancybox').fancybox();
+
+    /* Gallery Slider */
+    // const gallerySlider = new Swiper('.gallery-slider .mySwiper', {
+    //     loop: true,
+    //     spaceBetween: 15,
+    //     slidesPerView: 3,
+    //     freeMode: true,
+    //     watchSlidesProgress: true
+    // });
+
+    // const gallerySliderNav = new Swiper('.gallery-slider .mySwiper2', {
+    //     loop: true,
+    //     spaceBetween: 15,
+    //     navigation: {
+    //         nextEl: '.button-next',
+    //         prevEl: '.button-prev',
+    //     },
+    //     thumbs: {
+    //       swiper: swiper,
+    //     },
+    // });
+
+    // $('.gallery-slider .button-prev').on('click', function(){
+    //     $('.blog-slider .swiper .button-prev').trigger('click');
+    // })
+
+    // $('.gallery-slider .button-next').on('click', function(){
+    //     $('.blog-slider .swiper .button-next').trigger('click');
+    // })
 
 });
