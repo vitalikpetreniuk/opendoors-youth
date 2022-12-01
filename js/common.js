@@ -227,6 +227,13 @@ $(function() {
       return false;
     });
 
+    /* UI Spinner */
+    if ($('.spinner').length) {
+        $('.spinner').spinner({
+            min: 1,
+        })
+    }
+
 
 
 

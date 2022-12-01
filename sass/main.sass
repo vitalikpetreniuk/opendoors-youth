@@ -1566,6 +1566,230 @@ b, strong
 		&:hover
 			background: #FBC6A2
 			border-color: #FBC6A2
+.title.center
+	text-align: center
+.btn-go
+	color: #6B3267
+	margin: -11px 0 19px
+	.btn-back
+		display: inline-block
+		color: inherit
+		padding: 6px
+		padding-left: 21px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			background: url(../img/arrow-left-purple.svg) no-repeat
+			background-size: 100%
+			width: 12px
+			height: 29px
+			transition: .3s
+		&:hover
+			color: #FAB59C
+			&:before
+				left: -2px
+				background: url(../img/arrow-left-pink.svg) no-repeat
+				background-size: 100%
+.basket-form
+	padding: 29px 0
+	.basket-list
+		color: #ABABAB
+		li
+			display: flex
+			justify-content: space-between
+			padding: 40px 0
+			border-top: 1px solid #ABABAB
+			background: #fff
+			min-height: 191px
+			&:last-child
+				border-bottom: 1px solid #ABABAB
+		.basket-title-description
+			border: none
+			padding: 0
+			text-transform: uppercase
+			font-size: 12px
+			min-height: 0
+			p
+				margin: 0 0 3px
+			.basket-total
+				min-height: 0
+		.basket-product
+			width: 10%
+		.basket-description
+			width: 35%
+			.color-text
+				color: #75747B
+				margin: 0 0 18px
+		.basket-quantity
+			width: 32%
+		.basket-total
+			min-height: 106px
+			position: relative
+		.wrap-img
+			display: block
+			text-decoration: none
+			color: inherit
+			width: 100px
+			margin: 0 24px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				transition: .3s
+			&:hover:before
+				background: rgba(250,181,156,.6)
+			img
+				text-align: center
+		.title
+			display: block
+			font-size: 16px
+			line-height: 16px
+			text-transform: none
+			color: #121212
+			margin: 0 0 20px
+			a
+				text-decoration: none
+				color: inherit
+				&:hover
+					color: #f47a87
+		.custom-checkbox
+			margin: 0 0 10px
+			.checkbox-container
+				padding: 0
+				.checkmark
+					&.black
+						background: #000
+					&.purple
+						background: #6B3267
+					&.pink
+						background: #F47A87
+					&.blue
+						background: #3C5A9A
+					&.white
+						background: #fff
+				input:checked~.checkmark
+					&:after
+						display: none
+					&.black
+						border-color: #000
+					&.purple
+						border-color: #6B3267
+					&.pink
+						border-color: #F47A87
+					&.blue
+						border-color: #3C5A9A
+					&.white
+						border-color: #ccc
+			&.color
+				.checkbox-container
+					padding-left: 19px
+				.checkmark
+					border: 1px solid #F2F2F2
+					width: 17px
+					height: 17px
+			&.size
+				margin: 0
+				.checkbox-container
+					padding-left: 30px
+					&:hover input~.checkmark
+						background: #6B3267
+						color: #fff
+					input:checked~.checkmark
+						background: #6B3267
+						border-color: #6B3267
+						color: #fff
+				.checkmark
+					background: #fff
+					border: 1px solid #6B3267
+					color: #6B3267
+					text-align: center
+					font-size: 14px
+					line-height: 19px
+					font-weight: 600
+					width: 26px
+					height: 18px
+		.basket-del
+			display: block
+			background: url(../img/icon-clouse-pink.svg) no-repeat
+			background-size: 100%
+			font-size: 0
+			width: 20px
+			height: 20px
+			&:hover
+				background: url(../img/icon-clouse-purple.svg) no-repeat
+				background-size: 100%
+		.price
+			position: absolute
+			bottom: 0
+			right: 0
+			color: #F47A87
+			letter-spacing: 0.025em
+			font-size: 26px
+			line-height: 14px
+			font-weight: 600
+	.basket-result
+		text-align: right
+		p
+			margin: 0 0 12px
+		.btn
+			width: 214px
+			background: #6B3267
+			color: #fff
+			border-left-width: 2px
+			text-align: left
+			padding-left: 35px
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 23px
+				height: 100%
+				background: #fff
+			&:hover
+				border-color: #fab59c
+				background: #fab59c
+				color: #fff
+	.price-result
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		padding: 32px 0 18px
+		.text
+			color: #21150B
+			font-size: 14px
+			line-height: 14px
+			margin-right: 15px
+		.cost
+			color: #F47A87
+			font-size: 26px
+			line-height: 26px
+			font-weight: 800
+			letter-spacing: 0.025em
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1936,7 +2160,15 @@ b, strong
 					max-height: 650px
 					width: auto
 			.text
-				width: 55%	
+				width: 55%
+	.basket-form
+		.basket-list
+			.basket-product
+				width: 15%
+			.basket-description
+				width: 40%
+			.wrap-img
+				margin: 0
 
 @media only screen and (max-width:767px)
 	.mobile .mobile-overlay .mo-content .mobile-menu ul li .sub-menu a,
@@ -2347,6 +2579,61 @@ b, strong
 	#wrapper .container .odContent .odDouble .odPrayers.pink-block
 		padding: 15px 30px 50px
 		margin-bottom: 15px
+	.btn-go
+		padding: 0 15px
+	.basket-form
+		.basket-list
+			.basket-title-description
+				display: none
+			li
+				flex-wrap: wrap
+				padding: 22px 15px
+				min-height: 176px
+				position: relative
+			.basket-product
+				width: 20%
+			.basket-description
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 76%
+				.color-text
+					margin: 0
+			.basket-quantity
+				width: 100%
+			.basket-total
+				position: absolute
+				top: 22px
+				right: 15px
+				min-height: 113px
+				.price
+					right: 13px
+			.wrap-img
+				width: 73px
+				height: 73px
+				img
+					width: 100%
+					height: 100% !important
+					object-fit: cover
+			.title
+				font-size: 14px
+				line-height: 14px
+				margin: 0 0 7px
+			.custom-checkbox
+				margin: 0 0 15px
+				&.size
+					margin: 0 -3px 13px
+			.basket-del
+				width: 13px
+				height: 13px
+		.basket-result
+			padding: 0 15px
+			.btn
+				width: 167px
+				font-size: 16px
+				text-align: center
+		.price-result
+			padding: 23px 0 7px
 
 @media only screen and (max-width:500px)
 	.map-info
