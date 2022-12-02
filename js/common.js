@@ -113,6 +113,44 @@ $(function() {
         }
     });
 
+    const productInfoSlider = new Swiper('.product-info-slider .swiper', {
+        loop: true,
+        slidesPerView: 1,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+
+    const goodsSlider = new Swiper('.goods-slider .swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 15,
+        breakpoints: {
+            // when window width is >= 320px
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 15
+            }
+        },
+        navigation: {
+            nextEl: '.goods-slider-next',
+            prevEl: '.goods-slider-prev',
+        },
+        pagination: {
+            el: '.goods-swiper-pagination',
+            clickable: true,
+        }
+    });
+
+    $('.goods-slider-prev').on('click', function(){
+        $('.goods-slider .swiper .goods-slider-prev').trigger('click');
+    })
+
+    $('.goods-slider-next').on('click', function(){
+        $('.goods-slider .swiper .goods-slider-next').trigger('click');
+    })
+
     const blogSlider = new Swiper('.blog-slider .swiper', {
         loop: true,
         slidesPerView: 1,

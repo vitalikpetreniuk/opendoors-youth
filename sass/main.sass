@@ -1279,6 +1279,12 @@ b, strong
 	padding: 26px 0
 .brave-faith-section .promo .title
 	margin: 0 0 22px
+#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1
+	width: 194px
+	height: 185px
+#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2
+	width: 190px
+	height: 171px
 .promo .bf-image .smile-1,
 #wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-1
 	position: absolute
@@ -1397,6 +1403,9 @@ b, strong
 	.text-short
 		max-width: 435px
 		margin: 33px 0
+	.user-form
+		input
+			text-align: center
 /* FORM */
 .user-form
 	.mark
@@ -1527,7 +1536,7 @@ b, strong
 	+ p span
 		background: #6B3267
 #wrapper .container .odContent .brave-faith-section .odDouble .odStories
-	width: 55%
+	width: 58%
 	position: relative
 	margin: 58px 0 0
 	.pattern
@@ -1545,9 +1554,9 @@ b, strong
 		p
 			margin: 0 0 23px
 		.image
-			width: 53%
+			width: 50%
 		.text
-			width: 40%
+			width: 47%
 	.btn.more
 		background: #6b3267
 		color: #fff
@@ -1739,8 +1748,9 @@ b, strong
 		p
 			margin: 0 0 12px
 		.btn
-			width: 214px
+			width: 195px
 			&.more
+				width: 214px
 				background: #6B3267
 				color: #fff
 				border-left-width: 2px
@@ -1767,6 +1777,7 @@ b, strong
 			color: #21150B
 			font-size: 14px
 			line-height: 14px
+			font-weight: 600
 			margin-right: 15px
 		.cost
 			color: #F47A87
@@ -1775,15 +1786,386 @@ b, strong
 			font-weight: 800
 			letter-spacing: 0.025em
 .product-info-section
+	display: flex
+	justify-content: space-between
+	max-width: 1095px
+	margin: 0 auto 81px
 	.product-info-slider
-		width: 720px
-
+		width: 430px
 	.product-info-text
-		width: 44%
-		padding: 0 0 0 17px
+		width: 57%
+	.basket-form
+		.basket-list
+			li
+				border: none
+				padding: 25px 0
+			.basket-description .color-text
+				margin: 0 0 23px
+			.custom-checkbox.size
+				margin: 0 0 36px
+			.price
+				font-size: 40px
+				line-height: 22px
+				right: -6px
+		.basket-result
+			padding: 5px 0
+			.btn + .btn
+				margin-left: 20px
 .product-info-slider
+	position: relative
+	.swiper-slide
+		position: relative
+		img
+			width: 429px
+			height: 544px !important
+			object-fit: cover
+	.swiper-pagination
+		bottom: -27px
+	.swiper-pagination-bullet
+		width: 11px
+		height: 11px
+		border: 1px solid #6B3267
+		background: #fff
+		border-radius: 0
+		opacity: 1
+	.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+		margin: 0 1px
+	.swiper-pagination-bullet-active
+		background: #6B3267
+	.icon-like
+		position: absolute
+		top: 18px
+		left: 18px
+		width: 13px
+		height: 13px
+		background: url(../img/icon-heart.svg) no-repeat
+		background-size: 100%
+		font-size: 0
 .product-info-text
+	.basket-form
+		padding: 0
+		.title
+			margin: 0 0 30px
+		p
+			line-height: 22px
+.added-goods-modal
+	position: fixed
+	bottom: 0
+	right: 0
+	z-index: 65
+	width: 352px
+	min-height: 234px
+	background: #FAB59C
+	color: #fff
+	font-size: 16px
+	line-height: 22px
+	.added-goods-modal-content
+		padding: 50px 28px 15px
+		position: relative
+	.title
+		text-align: center
+		font-size: 20px
+		line-height: 26px
+		font-weight: 700
+		color: #fff
+		margin: 0 -10px 20px
+	.inner-text
+		display: flex
+		.image
+			margin-right: 15px
+			img
+				width: 100px
+				height: 100px !important
+				object-fit: cover
+		.title
+			font-size: 16px
+			line-height: 16px
+			letter-spacing: 0.025em
+			text-transform: none
+			margin: 0 0 10px
+		.custom-checkbox-list
+			margin: 0 0 7px
+		.price
+			font-size: 20px
+			line-height: 32px
+			font-weight: 600
+	.btn-back
+		position: absolute
+		bottom: -11px
+		right: 11px
+		color: #6B3267
+		font-size: 14px
+		padding: 6px
+		padding-right: 16px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 0
+			background: url(../img/arrow-right-purple.svg) no-repeat
+			background-size: 100%
+			width: 12px
+			height: 29px
+			transition: .3s
+		&:hover
+			color: #fff
+			&:before
+				right: -2px
+				background: url(../img/arrow-right-white.svg) no-repeat
+				background-size: 100%
+	.btn-clouse
+		position: absolute
+		top: 0
+		right: 0
+		width: 38px
+		height: 38px
+		font-size: 0
+		background: #fff url(../img/icon-clouse-pink.svg) no-repeat
+		background-position: 50% 50%
+		border: 2px solid #FAB59C
+		&:hover
+			opacity: 0.8
 
+
+
+
+
+#wrapper .container .odContent .odNeeds.goods-slider .content
+	margin-top: 50px
+.goods-slider
+	position: relative
+	.goods-post
+		display: flex
+		justify-content: space-between
+		background: #F2F2F2
+		line-height: 22px
+		height: 267px
+		>div
+			width: 50%
+		.image
+			width: 48.5%
+			a
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					transition: .3s
+				&:hover:before
+					background: rgba(250,181,156,.6)
+				img
+					width: 100%
+					height: 100% !important
+					object-fit: cover
+				.icon-like
+					position: absolute
+					top: 6px
+					left: 7px
+					width: 13px
+					height: 13px
+					background: url(../img/icon-heart.svg) no-repeat
+					background-size: 100%
+					font-size: 0
+				.custom-checkbox-list
+					position: absolute
+					bottom: 17px
+					left: 50%
+					transform: translateX(-50%)
+		.text-container
+			padding: 30px 10px
+			position: relative
+		.title
+			font-size: 20px
+			line-height: 26px
+			font-weight: 600
+			margin: 0 0 10px
+		.price
+			display: flex
+			align-items: baseline
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			padding: 22px 8px
+			.price-new
+				font-size: 40px
+				line-height: 40px
+				font-weight: 600
+				color: #F47A87
+			.price-old
+				font-size: 16px
+				line-height: 16px
+				font-weight: 600
+				color: #ABABAB
+				text-decoration: line-through
+	.swiper
+		margin: 0 0 28px
+	.swiper-pagination-bullet
+		width: 11px
+		height: 11px
+		border: 1px solid #6B3267
+		background: #fff
+		border-radius: 0
+		opacity: 1
+	.swiper-pagination-horizontal.swiper-pagination-bullets
+		text-align: center
+		.swiper-pagination-bullet
+			margin: 0 1px
+	.swiper-pagination-bullet-active
+		background: #6B3267
+	.goods-slider-prev, 
+	.goods-slider-next
+		top: 113px
+.custom-checkbox-list
+	display: flex
+	&.color
+		font-size: 0
+		li
+			width: 17px
+			height: 17px
+			border: 1px solid #F2F2F2
+			margin-right: 2px
+			&.active
+				&.black
+					border-color: #000
+				&.purple
+					border-color: #6B3267
+				&.pink
+					border-color: #F47A87
+				&.blue
+					border-color: #3C5A9A
+				&.white
+					border-color: #fff
+			&.black
+				background: #000
+			&.purple
+				background: #6B3267
+			&.pink
+				background: #F47A87
+			&.blue
+				background: #3C5A9A
+			&.white
+				background: #fff
+	&.size
+		li
+			width: 26px
+			height: 18px
+			font-size: 14px
+			line-height: 19px
+			font-weight: 600
+			text-align: center
+			border: 1px solid #6B3267
+			background: none
+			color: #6B3267
+			margin-right: 4px
+			&.active
+				background: #6B3267
+				color: #fff
+#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-1
+	top: auto
+	bottom: -60px
+	left: -57px
+#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-2
+	bottom: auto
+	top: 46px
+.letter-writing-section
+	.promo .title
+		margin: 0 0 12px
+#wrapper .container .odContent .letter-writing-section .promo
+	margin: 0 0 100px
+	.odBraveFaith
+		.bf-section .bf-info
+			margin-top: -730px
+			.bf-description.first-text
+				margin: 0
+		.pattern.long
+			left: 17%
+			top: 79%
+.getting-started
+	display: flex
+	align-items: center
+	max-width: 1095px
+	margin: 0 auto 129px
+	.title
+		margin: 0 0 27px
+	.image
+		width: 563px
+		height: 655px
+		margin-right: 104px
+		position: relative
+		.logo-brave-circle
+			position: absolute
+			bottom: -82px
+			left: -92px
+	.text
+		width: 39%
+		padding-top: 75px
+.logo-brave-circle
+	width: 230px
+.custom-mark-list
+	li
+		margin: 0 0 30px
+		&:last-child
+			margin: 0
+	p
+		margin: 0 0 18px
+	.title
+		font-size: 20px
+		line-height: 27px
+		color: #F47A87
+		margin: 0 0 20px 15px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: -15px
+			transform: translateY(-50%)
+			background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%)
+			width: 54px
+			height: 54px
+			border-radius: 500px
+			margin: -3px 0 0
+		span
+			position: relative
+#wrapper .container .odContent .letter-writing-section .odDouble .odPrayers.pink-block
+	.pattern
+		&:first-child
+			top: -174px
+			right: auto
+			left: -193px
+			transform: rotate(90deg)
+		&:last-child
+			top: auto
+			bottom: -118px
+			right: -23px
+			z-index: -1
+.odPrayers.pink-block
+	z-index: 1
+	.shot-text
+		max-width: 260px
+		font-size: 20px
+		line-height: 27px
+		font-weight: 600
+		margin: 27px 0 0
+		position: relative
+		p
+			margin: 52px 0 23px
+			a
+				text-decoration: underline
+				&:hover
+					color: #6B3267
+					text-decoration: none
+		.stamps
+			position: absolute
+			width: 181px
+			top: 5px
+			right: -172px
+#wrapper .container .odContent .letter-writing-section .odSubscribe
+	margin: 77px 0
 
 
 
@@ -1957,11 +2339,14 @@ b, strong
 		margin: 20px 0
 	.news-gallery img
 		max-width: 275px
-	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-1, .promo .bf-image .smile-1
+	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1,
+	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2
 		width: 160px
+	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-1, 
+	.promo .bf-image .smile-1
 		left: -50px
-	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-2, .promo .bf-image .smile-2
-		width: 160px
+	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-2, 
+	.promo .bf-image .smile-2
 		bottom: 0
 	#wrapper .container .odContent .brave-faith-section .promo .odBraveFaith .pattern
 		bottom: -55px
@@ -1978,8 +2363,16 @@ b, strong
 			right: 0
 	#wrapper .container .odContent .brave-faith-section .odDouble
 		margin-bottom: 30px
-	#wrapper .container .odContent .brave-faith-section .odDouble .odStories .post .text
-		width: 44%
+	.product-info-section .product-info-text
+		width: 54%
+	.goods-slider .goods-post
+		.title
+			font-size: 18px
+			line-height: 24px
+		.price
+			flex-wrap: wrap
+			>div
+				width: 100%
 
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2179,6 +2572,26 @@ b, strong
 				width: 40%
 			.wrap-img
 				margin: 0
+	.product-info-section
+		justify-content: flex-start
+		.product-info-slider
+			width: 345px
+			.swiper-slide img
+				width: 100%
+		.product-info-text
+			width: auto
+			padding-left: 20px
+			.basket-form
+				.title
+					margin: 0 0 15px
+				.basket-list .basket-description
+					width: 60%
+				.basket-result .btn
+					width: 175px
+					+.btn
+						margin-left: 10px
+	#wrapper .container .odContent .odNeeds.goods-slider .content
+		margin-top: 28px
 
 @media only screen and (max-width:767px)
 	.mobile .mobile-overlay .mo-content .mobile-menu ul li .sub-menu a,
@@ -2484,9 +2897,9 @@ b, strong
 		overflow: visible
 	#wrapper .container .odContent .brave-faith-section .promo .odBraveFaith .bf-section .bf-info
 		margin-top: -260px
-	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-1, 
+	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1, 
 	.promo .bf-image .smile-1,
-	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-2, 
+	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2, 
 	.promo .bf-image .smile-2
 		height: auto!important
 		width: 56px
@@ -2644,6 +3057,84 @@ b, strong
 				text-align: center
 		.price-result
 			padding: 23px 0 7px
+	.product-info-section
+		flex-wrap: wrap
+		margin-bottom: 30px
+		.product-info-slider
+			width: 100%
+			.icon-like
+				left: auto
+				top: 21px
+				right: 23px
+			.swiper-pagination
+				bottom: -33px
+		.product-info-text
+			padding: 42px 15px 17px
+			.title ~ p
+				display: none
+			.basket-form
+				.basket-list
+					color: #21150B
+					li
+						padding: 5px 0
+					.basket-description
+						flex-wrap: wrap
+						width: 100%
+						.color-text
+							margin: 0 0 14px
+					.custom-checkbox.size
+						margin: 0 10px 51px
+					.basket-total
+						min-height: 100%
+						top: auto
+						bottom: 10px
+						right: -15px
+				.basket-result
+					padding: 11px 0
+					.btn
+						width: 167px
+						&.more
+							text-align: center
+			.text.mobile
+				width: 100%
+	.goods-card .btn-go
+		margin: 20px 0 -47px
+		position: relative
+		z-index: 10
+	.goods-slider
+		.goods-post
+			flex-wrap: wrap
+			height: auto
+			background: none
+			>div,
+			.image
+				width: 100%
+			.image
+				a
+					display: block
+					height: 220px
+					.custom-checkbox-list
+						bottom: 10px
+						margin: 0
+			.text-container
+				text-align: center
+				padding: 13px 5px
+				.description
+					display: none
+			.title
+				font-size: 16px
+				line-height: 21px
+			.custom-checkbox-list
+				justify-content: center
+				margin: 0 0 15px
+			.price
+				position: static
+				padding: 0
+				.price-new
+					font-size: 16px
+					line-height: 16px
+				.price-old
+					font-size: 12px	
 
 @media only screen and (max-width:500px)
 	.map-info
@@ -2951,6 +3442,10 @@ b, strong
 				width: 100%
 				height: 100%!important
 				object-fit: cover
+	.product-info-slider .swiper-slide img
+		height: 356px !important
+	.added-goods-modal
+		width: 100%
 	.modal .gallery-slider
 		padding: 0
 	.modal .gallery-slider .post
