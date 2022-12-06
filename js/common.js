@@ -128,9 +128,17 @@ $(function() {
         spaceBetween: 15,
         breakpoints: {
             // when window width is >= 320px
+            1199: {
+                slidesPerView: 5,
+                spaceBetween: 5
+            },
             1024: {
+                slidesPerView: 4,
+                spaceBetween: 5
+            },
+            768: {
                 slidesPerView: 3,
-                spaceBetween: 15
+                spaceBetween: 5
             }
         },
         navigation: {
@@ -238,7 +246,7 @@ $(function() {
     $('.btn-scroll').click(function () {
         $('body,html').animate({
             scrollTop: 0
-        }, 200);
+        }, 600);
         return false;
     });
 
@@ -272,6 +280,13 @@ $(function() {
         })
     }
 
+    /* Tabs */
+    $('.tabset .tab-control').on('click', 'li:not(.active)', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.tabset').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+        return false;
+    });
 
 
 

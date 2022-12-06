@@ -42,19 +42,22 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 }
 .fancybox-content{
 	width: 100%;
-	padding: 40px 15px 20px;
+	max-width: 1095px;
+	padding: 15px;
 	background: linear-gradient(180deg, #F47B87 0%, #FAB39B 100%)
 }
 .fancybox-is-open .fancybox-bg{
   background: rgba(0,0,0,.85);
 }
 .fancybox-slide--html .fancybox-close-small{
-  background: url(../img/btn-fancybox-clouse.svg) no-repeat;
-  background-size: 100%;
-  width: 15px;
-  height: 15px;
-  top: 10px;
-  right: 10px;
+  background: #fff url(../img/icon-clouse-pink.svg) no-repeat;
+  background-position: 50% 50%;
+  border: 2px solid #fab59c;
+  width: 38px;
+  height: 38px;
+  top: 0;
+  right: 0;
+  opacity: 1;
 }
 .fancybox-close-small svg{
   display: none;
@@ -1113,7 +1116,7 @@ ul{
 	width:100%;
 	height:38px;
 	margin-right:10px;
-	padding:4px 15px 0;
+	padding:5px 15px 0;
 	border:2px solid #6b3267;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
@@ -1472,6 +1475,7 @@ ul{
 #wrapper .container .odContent .odDouble .odPrayers .content .title{
 	color: #fff;
 }
+@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
 	.title{
 		 font-size:34px

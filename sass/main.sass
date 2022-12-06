@@ -1279,10 +1279,12 @@ b, strong
 	padding: 26px 0
 .brave-faith-section .promo .title
 	margin: 0 0 22px
-#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1
+#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1,
+.smile-1
 	width: 194px
 	height: 185px
-#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2
+#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2,
+.smile-2
 	width: 190px
 	height: 171px
 .promo .bf-image .smile-1,
@@ -1362,6 +1364,11 @@ b, strong
 				height: 3px
 				border-radius: 50px
 				background: #F47A87
+	p.list-mark
+		margin-left: 57px
+	.smile-1
+		width: 241px
+		margin: -60px 0 -92px -175px
 /* ACCORDION */
 .accordion
 	font-size: 20px
@@ -1403,9 +1410,6 @@ b, strong
 	.text-short
 		max-width: 435px
 		margin: 33px 0
-	.user-form
-		input
-			text-align: center
 /* FORM */
 .user-form
 	.mark
@@ -1439,7 +1443,7 @@ b, strong
 		color: #6B3267
 		border: 2px solid #6B3267
 		width: 350px
-		padding: 0 15px
+		padding: 4px 15px 0
 		font-size: 20px
 		line-height: 35px
 		&::-webkit-input-placeholder
@@ -1462,6 +1466,24 @@ b, strong
 			color: #6B3267 !important
 	.btn
 		min-width: 207px
+		background: #6b3267
+		color: #fff
+		border-color: #6b3267
+		border-left-width: 2px
+		padding-left: 36px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 23px
+			height: 100%
+			background: #fff
+		&:hover
+			background: #fbc6a2
+			border-color: #fbc6a2
+			color: #fff
 /* Custom Checkbox */
 .custom-checkbox
 	display: flex
@@ -1642,6 +1664,7 @@ b, strong
 			text-decoration: none
 			color: inherit
 			width: 100px
+			height: 100%
 			margin: 0 24px
 			position: relative
 			&:before
@@ -1655,7 +1678,9 @@ b, strong
 			&:hover:before
 				background: rgba(250,181,156,.6)
 			img
-				text-align: center
+				width: 100%
+				height: 100% !important
+				object-fit: cover
 		.title
 			display: block
 			font-size: 16px
@@ -1935,16 +1960,15 @@ b, strong
 .goods-slider
 	position: relative
 	.goods-post
-		display: flex
-		justify-content: space-between
-		background: #F2F2F2
 		line-height: 22px
-		height: 267px
-		>div
-			width: 50%
+		width: 207px
+		margin: 0 auto
 		.image
-			width: 48.5%
+			height: 267px
 			a
+				display: block
+				width: 100%
+				height: 100%
 				position: relative
 				&:before
 					content: ''
@@ -1975,21 +1999,21 @@ b, strong
 					left: 50%
 					transform: translateX(-50%)
 		.text-container
-			padding: 30px 10px
+			padding: 20px 10px
+			text-align: center
 			position: relative
 		.title
 			font-size: 20px
 			line-height: 26px
 			font-weight: 600
 			margin: 0 0 10px
+		.custom-checkbox-list
+			justify-content: center
 		.price
 			display: flex
 			align-items: baseline
-			position: absolute
-			bottom: 0
-			left: 0
-			width: 100%
-			padding: 22px 8px
+			justify-content: center
+			padding: 20px 0
 			.price-new
 				font-size: 40px
 				line-height: 40px
@@ -2146,7 +2170,6 @@ b, strong
 .odPrayers.pink-block
 	z-index: 1
 	.shot-text
-		max-width: 260px
 		font-size: 20px
 		line-height: 27px
 		font-weight: 600
@@ -2154,18 +2177,183 @@ b, strong
 		position: relative
 		p
 			margin: 52px 0 23px
+			max-width: 260px
 			a
 				text-decoration: underline
 				&:hover
 					color: #6B3267
 					text-decoration: none
+		.btn
+			min-width: 194px
+			&:hover
+				color: #fff
+				border-color: #fff
 		.stamps
 			position: absolute
 			width: 181px
 			top: 5px
-			right: -172px
+			right: -61px
 #wrapper .container .odContent .letter-writing-section .odSubscribe
 	margin: 77px 0
+.give-form
+	background: #F2F2F2
+	padding: 60px 15px 30px 55px
+	.give-form-container
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.title
+		font-size: 20px
+		line-height: 26px
+		margin: 0 0 4px
+	.card-info
+		width: 450px
+		order: 1
+		ul
+			font-size: 20px
+			line-height: 30px
+			text-transform: uppercase
+			color: #6B3267
+	.tabset
+		width: 60%
+		.tab-nav
+			display: flex
+			flex-wrap: wrap
+			margin: 40px -8px
+			li
+				margin: 0 8px 12px
+			a
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 110px
+				height: 66px
+				background: #fff
+				img
+					width: auto
+		.tab-body
+			margin: 87px 0 30px
+			margin-right: -240px
+			.title
+				margin: 0 0 28px
+	.card-info-form
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.item
+			&:first-child
+				width: 65%
+				padding-right: 25px
+			&:last-child
+				width: 35%
+	.last-text
+		font-size: 16px
+		line-height: 24px
+		color: #AF83AC
+/* Tabs */
+.tabset
+	position: relative
+	a
+		display: block
+		text-decoration: none
+		color: inherit
+		border: 2px solid #F2F2F2
+		&:hover
+			border-color: #6B3267
+	li.active a
+		border: 2px solid #6B3267
+	.tab
+		display: none
+		&.active
+			display: block
+.give-section
+	.columns-info
+		margin-top: 40px
+		position: relative
+		z-index: 1
+	.article-column .pattern
+		top: 86.2%
+		right: 116px
+	.form-column
+		padding-right: 68px
+		padding-bottom: 78px
+.note-block
+	text-align: center
+	.title
+		margin: 0 0 17px
+	p
+		max-width: 650px
+		margin: 0 auto 57px
+.notes
+	display: flex
+	justify-content: space-between
+	max-width: 875px
+	margin: 0 auto
+	text-align: left
+.blockquote
+	padding-left: 63px
+	p
+		margin: 0
+	.mark
+		background: none
+		padding: 0
+		color: #AF83AC
+.user-form.category
+	margin-top: 53px
+	.custom-select
+		margin-bottom: 62px
+		span
+			border: 2px solid #6b3267
+			border-left-width: 23px
+			min-width: 350px
+			&:after
+				display: block
+				background: url(../img/arrow-down-purple.svg) no-repeat center
+				background-size: contain
+	.wrap-input
+		display: flex
+	input
+		width: 86px
+		line-height: 27px
+	.category-text
+		width: 445px
+		border: 2px solid #6b3267
+		border-left: 0
+		padding: 4px 15px
+		font-size: 20px
+		line-height: 27px
+		color: #6B3267
+		i
+			font-style: normal
+	.custom-checkbox
+		margin: 0
+		.checkbox-container
+			margin-bottom: 4px
+	.small-text
+		font-size: 12px
+		line-height: 22px
+		margin: 0
+	p.mark
+		font-size: 16px
+		line-height: 29px
+		font-weight: 600
+		margin-bottom: 38px
+#wrapper .container .odContent .give-section .odBraveFaith
+	margin-top: -139px
+	padding-top: 134px
+#wrapper .container .odContent .give-section .odBraveFaith .bf-section.right .bf-info
+	margin-bottom: 221px
+#wrapper .container .odContent .give-section .odBraveFaith .bf-logo
+	top: 295px
+	left: 47%
+.news-collection
+	.posts
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.post
+			width: 32%
+			margin: 0 0 20px
 
 
 
@@ -2197,11 +2385,63 @@ b, strong
 
 
 
+
+
+
+
+
+.letter-box
+	background: #F2F2F2
+	color: rgba(33, 21, 11, 0.62)
+	font-size: 14px
+	line-height: 25px
+	padding: 10px
+	margin: 55px 0
+	position: relative
+	.inner-text
+		border: 1px dashed #ABABAB
+		padding: 35px 62px
+		padding-right: 165px
+		p
+			margin: 0 0 25px
+	.stamps
+		position: absolute
+		top: -30px
+		right: -52px
+		width: 211px
 
 /* MODAL */
 .modal
 	display: none
-
+.modal-text-block
+	background: #fff
+	padding: 58px 66px
+	font-size: 16px
+	line-height: 29px
+	.title
+		margin: 0 0 46px
+	p
+		margin: 0 0 20px 30px
+	.shot-text
+		max-width: 660px
+	.strong-text
+		max-width: 100%
+		font-weight: 600
+		margin-left: 0
+p.list-mark
+	color: #F47A87
+	margin: 0 0 10px 100px
+	padding-left: 15px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 11px
+		left: 0
+		width: 3px
+		height: 3px
+		border-radius: 50px
+		background: #F47A87
 @media only screen and (max-width:1439px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
 		margin-left: 100px
@@ -2237,6 +2477,15 @@ b, strong
 		line-height: 29px
 	.blog-slider .text-container
 		padding: 20px 15px 15px
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-section .bf-info
+		margin-top: -565px
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-2
+		right: -80px
+	.give-form
+		.card-info
+			width: 300px
+		.tabset
+			width: 68%
 
 @media only screen and (max-width:1365px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2340,7 +2589,9 @@ b, strong
 	.news-gallery img
 		max-width: 275px
 	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1,
-	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2
+	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2,
+	.smile-1,
+	.smile-2
 		width: 160px
 	#wrapper .container .odContent .brave-faith-section .odBraveFaith .bf-section.right .bf-image .smile-1, 
 	.promo .bf-image .smile-1
@@ -2373,6 +2624,38 @@ b, strong
 			flex-wrap: wrap
 			>div
 				width: 100%
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-2
+		top: -15px
+		right: -47px
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-section .bf-info
+		margin-top: -360px
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .pattern.long
+		left: 0
+	.getting-started .image
+		margin-right: 35px
+	.getting-started
+		.text
+			padding-top: 0
+		.image .logo-brave-circle
+			left: -40px
+	#wrapper .container .odContent .brave-faith-section .odDouble .odStories
+		width: 55%
+	.odPrayers.pink-block .shot-text
+		p
+			max-width: 230px
+		.stamps
+			right: -45px
+	.give-form
+		padding-left: 15px
+		.tabset .tab-body
+			margin-top: 60px
+			margin-right: -308px
+	.notes .subtitle-note
+		margin: 0 7px 20px
+	.give-section .form-column
+		padding-right: 15px
+	.article-column .smile-1
+		margin: -41px 0 -105px -75px
 
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2592,6 +2875,51 @@ b, strong
 						margin-left: 10px
 	#wrapper .container .odContent .odNeeds.goods-slider .content
 		margin-top: 28px
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-section .bf-info
+		margin-top: -430px
+	#wrapper .container .odContent .letter-writing-section .promo
+		margin: 0 0 70px
+	.logo-brave-circle
+		width: 190px
+	.getting-started
+		margin-bottom: 50px
+		.image
+			width: 350px
+			height: 410px
+			margin-right: 20px
+		.text
+			width: 53%
+	.odPrayers.pink-block .shot-text
+		padding-right: 30px
+		p
+			margin: 20px 0
+			max-width: 290px
+		.stamps
+			right: -25px
+	.give-form
+		padding: 40px 15px
+		.card-info
+			width: 100%
+			margin: 0 0 30px
+			order: -1
+		.tabset
+			width: 100%
+			.tab-nav
+				margin: 20px -4px
+				li
+					margin: 0 4px 10px
+			.tab-body
+				margin: 0 0 20px
+				.title
+					margin: 0 0 10px
+	.give-section .column:last-child
+		order: -1
+	.user-form.category .custom-select
+		margin-bottom: 20px
+	.give-section .form-column
+		padding-bottom: 45px
+	.modal-text-block
+		padding: 40px 20px
 
 @media only screen and (max-width:767px)
 	.mobile .mobile-overlay .mo-content .mobile-menu ul li .sub-menu a,
@@ -2897,9 +3225,9 @@ b, strong
 		overflow: visible
 	#wrapper .container .odContent .brave-faith-section .promo .odBraveFaith .bf-section .bf-info
 		margin-top: -260px
-	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-1, 
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image .smile-1, 
 	.promo .bf-image .smile-1,
-	#wrapper .container .odContent .odBraveFaith .bf-section.right .bf-image .smile-2, 
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section.right .bf-image .smile-2, 
 	.promo .bf-image .smile-2
 		height: auto!important
 		width: 56px
@@ -3103,16 +3431,11 @@ b, strong
 		z-index: 10
 	.goods-slider
 		.goods-post
-			flex-wrap: wrap
-			height: auto
-			background: none
-			>div,
+			width: auto
+			max-width: 267px
 			.image
-				width: 100%
-			.image
+				height: 220px
 				a
-					display: block
-					height: 220px
 					.custom-checkbox-list
 						bottom: 10px
 						margin: 0
@@ -3134,7 +3457,148 @@ b, strong
 					font-size: 16px
 					line-height: 16px
 				.price-old
-					font-size: 12px	
+					font-size: 12px
+	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info .bf-description.first-text
+		display: block
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-section.right .bf-image
+		overflow: visible
+		margin: 0 0 15px
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-2
+		right: -20px
+		top: auto
+		bottom: -20px
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-1
+		bottom: auto
+		top: -15px
+		left: -33px
+	.letter-writing-section .promo .title
+		margin: 0 0 6px
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-section .bf-info .bf-description,
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-description
+		line-height: 25px
+		margin: 0 0 20px
+	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .bf-section .bf-info .bf-description.first-text
+		margin: 0 0 15px
+	#wrapper .container .odContent .letter-writing-section .promo
+		margin: 0 0 20px
+	.getting-started
+		flex-wrap: wrap
+		line-height: 25px
+		padding: 0 15px
+		margin-bottom: 0
+		.title
+			margin: 0 0 9px
+		.image
+			width: 149px
+			height: auto
+			margin-right: 10px
+			.logo-brave-circle
+				width: 67px
+				bottom: -33px
+				left: -25px
+		.text
+			padding-top: 13px
+	.logo-brave-circle
+		width: 67px
+	.custom-mark-list
+		display: none
+		width: 100%
+		line-height: 18px
+		margin: 50px 0
+		li
+			margin: 0 0 35px
+		.title
+			font-size: 16px
+			line-height: 21px
+			margin: 0 0 14px 15px
+			&:before
+				width: 44px
+				height: 44px
+	.odPrayers.pink-block .shot-text
+		p
+			max-width: 260px
+		.stamps
+			right: -10px
+	.modal-text-block
+		.title,
+		p
+			margin: 0 0 25px
+	p.list-mark
+		margin: 0 0 10px 6px
+	.letter-box
+		margin: 34px 0
+		.inner-text
+			padding: 20px
+			p
+				margin: 0 0 25px
+				&:last-child
+					margin-bottom: 6px
+		.stamps
+			width: 153px
+			top: auto
+			bottom: -60px
+			right: -35px
+	.give-form
+		padding: 26px 15px
+		.title,
+		.card-info ul
+			font-size: 16px
+			line-height: 20px
+		.title
+			margin: 0
+		.card-info
+			margin: 0 0 20px
+		.card-info-form .item
+			&:first-child,
+			&:last-child
+				width: 100%
+				padding: 30px 0 0
+			&:first-child
+				padding: 0
+	.note-block
+		padding: 0 15px
+		p
+			margin-bottom: 36px
+		.subtitle-note
+			height: 131px
+			padding: 22px 15px
+	.give-section .columns-info
+		margin-top: 0
+	.user-form.category
+		margin-top: 30px
+	.user-form.category .category-text
+		font-size: 16px
+		line-height: 24px
+	.user-form.category .custom-select span
+		min-width: 365px
+	.user-form.category .small-text
+		font-size: 10px
+		line-height: 18px
+	.user-form.category p.mark
+		font-size: 14px
+		line-height: 25px
+		margin-bottom: 21px
+	.article-column .smile-1
+		display: none
+	.article-column p.list-mark
+		margin-left: 10px
+	.blockquote
+		padding: 0
+	#wrapper .container .odContent .give-section .odBraveFaith
+		padding-top: 162px
+	#wrapper .container .odContent .give-section .odBraveFaith .bf-logo
+		top: 169px
+		left: 70%
+	.btn.inverted
+		font-size: 16px
+	#wrapper .container .odContent .give-section .odBraveFaith .bf-section.right .bf-info
+		margin-bottom: -105px
+	#wrapper .container .odContent .give-section .odBraveFaith .bf-section .bf-info
+		max-width: 250px
+		margin: 0 0 0 auto
+	#wrapper .container .odContent .give-section .odBraveFaith .bf-section:nth-child(2) .bf-image img
+		left: -106px
+		bottom: -215px		
 
 @media only screen and (max-width:500px)
 	.map-info
@@ -3446,6 +3910,16 @@ b, strong
 		height: 356px !important
 	.added-goods-modal
 		width: 100%
+	.odPrayers.pink-block .shot-text .stamps
+		top: 60px
+		right: -35px
+	.modal-text-block
+		padding: 15px
+		font-size: 14px
+		line-height: 25px
+		.title
+			font-size: 16px
+			line-height: 21px
 	.modal .gallery-slider
 		padding: 0
 	.modal .gallery-slider .post
