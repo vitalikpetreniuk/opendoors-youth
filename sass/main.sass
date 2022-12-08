@@ -114,7 +114,6 @@ b, strong
 
 #wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
 	color: #21150B
-	font-weight: 600
 	margin-left: 110px
 	margin-top: -696px
 
@@ -396,7 +395,6 @@ b, strong
 	width: 650px
 	margin: 23px auto 55px
 	text-align: center
-	font-weight: 800
 	line-height: 22px
 
 #wrapper .container .odContent .odNeeds.news-slider .post
@@ -801,8 +799,10 @@ b, strong
 	justify-content: space-between
 	margin: 0 0 50px
 	position: relative
-	h3
+	h3, h3.title
 		font: normal 50px/50px 'LeituraNews-Roman4',sans-serif
+		color: inherit
+		text-transform: none
 		margin: 0 0 25px
 		a
 			color: inherit
@@ -1635,8 +1635,11 @@ b, strong
 			border-top: 1px solid #ABABAB
 			background: #fff
 			min-height: 191px
+			transition: .3s
 			&:last-child
 				border-bottom: 1px solid #ABABAB
+			&:hover
+				background: #F2F2F2
 		.basket-title-description
 			border: none
 			padding: 0
@@ -1658,6 +1661,7 @@ b, strong
 			width: 32%
 		.basket-total
 			min-height: 106px
+			margin-right: 15px
 			position: relative
 		.wrap-img
 			display: block
@@ -1824,6 +1828,8 @@ b, strong
 			li
 				border: none
 				padding: 25px 0
+				&:hover
+					background: none
 			.basket-description .color-text
 				margin: 0 0 23px
 			.custom-checkbox.size
@@ -2141,6 +2147,7 @@ b, strong
 		line-height: 27px
 		color: #F47A87
 		margin: 0 0 20px 15px
+		text-decoration-line: none
 		position: relative
 		&:before
 			content: ''
@@ -2198,6 +2205,7 @@ b, strong
 .give-form
 	background: #F2F2F2
 	padding: 60px 15px 30px 55px
+	margin: 28px 0
 	.give-form-container
 		display: flex
 		flex-wrap: wrap
@@ -2346,14 +2354,62 @@ b, strong
 #wrapper .container .odContent .give-section .odBraveFaith .bf-logo
 	top: 295px
 	left: 47%
+#wrapper .container .odContent .pray-section .promo .odBraveFaith .pattern
+	top: 16px
+	left: 27.7%
+#wrapper .container .odContent .pray-section .promo .odBraveFaith .pattern.long
+	left: 24.9%
+	top: 89%
+#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-section .bf-info .bf-description
+	line-height: 21px
+.pray-section
+	.promo
+		margin: 0 0 82px
+		.title
+			margin: 0 0 12px
+		.bf-info .mark
+			font-size: 14px
+			font-weight: normal
+			text-transform: none
 .news-collection
+	margin: 0 0 110px
+	.title
+		margin: 0 0 48px
 	.posts
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
 		.post
-			width: 32%
+			width: 32.5%
+			margin: 0 0 36px
+		.title
+			font-size: 20px
+			line-height: 27px
+			font-weight: 600
+			text-transform: none
+			margin: 0 0 9px
+		.image
+			margin: 0 0 12px
+		.date
+			font-size: 18px
+			line-height: 29px
+			font-weight: 600
+			color: #ABABAB
+			margin: 0 0 5px
+		.description
 			margin: 0 0 20px
+		.btn
+			font-weight: 600
+#wrapper .container .odContent .pray-section .brave-faith-section .odDouble .odStories .pattern
+	top: -96px
+	left: auto
+	right: -7px
+#wrapper .container .odContent .pray-section .odSubscribe
+	margin-top: 81px
+#wrapper .container .odContent .pray-section .odNeeds.needs-top
+	margin-top: 76px
+	.content
+		margin-top: 23px
 
 
 
@@ -2486,6 +2542,8 @@ p.list-mark
 			width: 300px
 		.tabset
 			width: 68%
+	.accordion
+		padding-right: 60px
 
 @media only screen and (max-width:1365px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2918,10 +2976,22 @@ p.list-mark
 		margin-bottom: 20px
 	.give-section .form-column
 		padding-bottom: 45px
+	.pray-section .promo,
+	.news-collection .title,
+	.news-collection
+		margin: 0 0 20px
+	.news-collection .posts .btn
+		font-size: 16px
+	.accordion
+		padding-right: 0
 	.modal-text-block
 		padding: 40px 20px
 
 @media only screen and (max-width:767px)
+	#wrapper .container header .header_top .header_top-line
+		display: none
+		&.index-page
+			display: block
 	.mobile .mobile-overlay .mo-content .mobile-menu ul li .sub-menu a,
 	.mobile .mobile-overlay .mo-content .mobile-menu ul li.current-menu-item .sub-menu a
 		text-transform: none
@@ -3092,6 +3162,7 @@ p.list-mark
 				p
 					display: none
 			.img img
+				width: auto
 				max-height: 135px
 		h3
 			font-size: 25px
@@ -3357,8 +3428,9 @@ p.list-mark
 				top: 22px
 				right: 15px
 				min-height: 113px
+				margin: 0
 				.price
-					right: 13px
+					right: 0
 			.wrap-img
 				width: 73px
 				height: 73px
@@ -3598,7 +3670,44 @@ p.list-mark
 		margin: 0 0 0 auto
 	#wrapper .container .odContent .give-section .odBraveFaith .bf-section:nth-child(2) .bf-image img
 		left: -106px
-		bottom: -215px		
+		bottom: -215px
+	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-section .bf-info .bf-description,
+	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-description.mobile
+		line-height: 25px
+		&.mark
+			display: block
+	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-description.mobile
+		margin: 0 0 24px
+	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-section.right .bf-image
+		margin: 0 0 10px
+	.news-collection
+		margin: 0 0 6px
+		.title
+			margin: 0 0 12px
+		.posts
+			padding: 0 15px
+			.post
+				width: 49%
+				margin: 0
+			.date,
+			.title
+				font-size: 12px
+				line-height: 19px
+			.date
+				margin: 0
+			.image
+				margin: 0 0 4px
+			.description,
+			.btn
+				display: none
+	.ranking-list
+		column-count: 2
+		column-fill: auto
+		height: 150px
+		li
+			padding-top: 7px
+			&:before
+				top: 0
 
 @media only screen and (max-width:500px)
 	.map-info
@@ -3913,6 +4022,10 @@ p.list-mark
 	.odPrayers.pink-block .shot-text .stamps
 		top: 60px
 		right: -35px
+	.user-form.category .custom-select span
+		min-width: 359px
+	.user-form.category .category-text
+		width: 273px
 	.modal-text-block
 		padding: 15px
 		font-size: 14px

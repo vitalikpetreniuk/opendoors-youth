@@ -315,7 +315,8 @@ ul{
 	font-family:DINNextLTPro-Bold,sans-serif;
 	font-size:40px;
 	text-transform:uppercase;
-	color:#6b3267
+	color:#6b3267;
+	text-decoration-line: underline;
 }
 #wrapper{
 	background:url(../img/pattern.png) repeat left top;
@@ -510,6 +511,7 @@ ul{
 	font-size:40px;
 	height:40px;
 	text-transform:uppercase;
+	text-decoration-line: underline;
 	text-decoration-thickness:2px;
 	text-underline-offset:6px
 }

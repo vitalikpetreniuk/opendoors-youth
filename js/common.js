@@ -104,6 +104,35 @@ $(function() {
         $('.news-slider .swiper .news-slider-next').trigger('click');
     })
 
+    const videoSlider = new Swiper('.video-slider .swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 15,
+        breakpoints: {
+            // when window width is >= 320px
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 15
+            },
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            }
+        },
+        navigation: {
+            nextEl: '.button-next',
+            prevEl: '.button-prev',
+        }
+    });
+
+    $('.button-prev').on('click', function(){
+        $('.video-slider .swiper .button-prev').trigger('click');
+    })
+
+    $('.button-next').on('click', function(){
+        $('.video-slider .swiper .button-next').trigger('click');
+    })
+
     const mapInfoSlider = new Swiper('.map-info-slider .swiper', {
         loop: true,
         slidesPerView: 1,
