@@ -173,7 +173,12 @@ b, strong
 
 .map-section
 	margin: 0 0 165px
-
+	>.title
+		text-align: center
+#wrapper .container .odContent .worldwatch-list-section .map-section
+	margin-bottom: 108px
+#wrapper .container .odContent .worldwatch-list-section .map-section .odCost
+	margin-top: 30px
 .map-section .bf-logo
 	position: absolute
 	bottom: -136px
@@ -811,7 +816,7 @@ b, strong
 				height: 15px
 .act-section
 	.title
-		margin: 0 0 67px
+		margin: 0 0 51px
 .news-boxes-links
 	display: flex
 	flex-wrap: wrap
@@ -838,7 +843,7 @@ b, strong
 		margin: 0 0 15px
 		.text
 			width: 50%
-			padding: 38px 15px 15px
+			padding: 38px 25px 15px
 			&.text-vertical-center
 				display: flex
 				align-items: center
@@ -871,7 +876,6 @@ b, strong
 			margin: 4px auto
 		.btn
 			min-width: 194px
-			margin: 16px 0 0
 			font-weight: 800
 			text-align: center
 			color: #fff
@@ -893,8 +897,6 @@ b, strong
 				> a
 					width: 100%
 					height: 100%
-			.btn
-				margin: 0
 		&.bg-pink
 			background: #F47986
 			.btn
@@ -918,7 +920,7 @@ b, strong
 				width: 49.5%
 				background: url(../img/bg-gray.jpg) no-repeat 50% 50%
 				background-size: cover
-				padding: 42px 120px 15px 50px
+				padding: 20px 120px 10px 50px
 			h3
 				margin: 0 0 15px
 				.mark
@@ -927,13 +929,12 @@ b, strong
 					padding: 10px 10px 0
 			.img
 				width: 50.5%
-				height: 270px
+				min-height: 270px
 				> a
 					width: 100%
 			.btn
 				color: #6B3267
 				border-color: #6B3267
-				margin-top: 10px
 				&:hover
 					color: #f47986
 					border-color: #f47986
@@ -967,9 +968,12 @@ b, strong
 				p
 					max-width: 100%
 			h3
-				font-size: 86px
-				line-height: 90px
+				font-size: 40px
+				line-height: 40px
 				margin: 0 0 15px
+				&.title-large
+					font-size: 86px
+					line-height: 90px
 .news-inner-section
 	max-width: 1095px
 	margin: 0 auto
@@ -1977,13 +1981,10 @@ b, strong
 		&:hover
 			opacity: 0.8
 
-
-
-
-
 #wrapper .container .odContent .odNeeds.goods-slider .content
 	margin-top: 50px
-.goods-slider
+.goods-slider,
+.goods-slider-collection
 	position: relative
 	.goods-post
 		line-height: 22px
@@ -2032,17 +2033,15 @@ b, strong
 			font-size: 20px
 			line-height: 26px
 			font-weight: 600
-			margin: 0 0 10px
 		.custom-checkbox-list
 			justify-content: center
 		.price
 			display: flex
 			align-items: baseline
 			justify-content: center
-			padding: 20px 0
 			.price-new
-				font-size: 40px
-				line-height: 40px
+				font-size: 24px
+				line-height: 38px
 				font-weight: 600
 				color: #F47A87
 			.price-old
@@ -2069,6 +2068,23 @@ b, strong
 	.goods-slider-prev, 
 	.goods-slider-next
 		top: 113px
+.goods-slider-collection .goods-post-collection,
+.goods-post-collection
+	display: flex
+	flex-wrap: wrap
+	>div
+		width: 20%
+		padding: 0 35px 30px
+	.goods-post .text-container
+		padding: 12px 10px
+.goods-slider-collection .goods-slider-next,
+.goods-slider-collection .goods-slider-prev
+	display: none
+#wrapper .container .odContent .odNeeds.goods-slider-collection
+	margin-top: 4px
+.goods-post-collection
+	padding: 25px 0 0
+	margin: 0 -35px
 .custom-checkbox-list
 	display: flex
 	&.color
@@ -2552,6 +2568,12 @@ p.list-mark
 			width: 68%
 	.accordion
 		padding-right: 60px
+	.goods-post-collection
+		margin: 0 -20px
+	.goods-post-collection>div, 
+	.goods-slider-collection .goods-post-collection>div
+		padding-left: 20px
+		padding-right: 20px
 
 @media only screen and (max-width:1365px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2715,6 +2737,12 @@ p.list-mark
 		padding-right: 15px
 	.article-column .smile-1
 		margin: -41px 0 -105px -75px
+	.goods-post-collection
+		margin: 0 -10px
+	.goods-post-collection>div, 
+	.goods-slider-collection .goods-post-collection>div
+		padding-left: 10px
+		padding-right: 10px
 
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2981,6 +3009,16 @@ p.list-mark
 		font-size: 16px
 	.accordion
 		padding-right: 0
+	.goods-post-collection
+		padding: 0
+	.goods-post-collection>div, 
+	.goods-slider-collection .goods-post-collection>div
+		width: 25%
+		padding-bottom: 10px
+	.goods-slider-collection .goods-post .title
+		font-size: 18px
+	#wrapper .container .odContent .worldwatch-list-section .map-section
+		margin: 0
 	.modal-text-block
 		padding: 40px 20px
 
@@ -3785,6 +3823,12 @@ p.list-mark
 			padding-top: 7px
 			&:before
 				top: 0
+	.goods-post-collection>div, 
+	.goods-slider-collection .goods-post-collection>div
+		width: 50%
+		max-width: 207px
+	#wrapper .container .odContent .odNeeds.goods-slider-collection .swiper
+		margin: 0
 
 @media only screen and (max-width:500px)
 	.map-info
@@ -3839,7 +3883,11 @@ p.list-mark
 				text-align: left
 			.img
 				width: 28%
-				height: 210px
+				min-height: 210px
+			h3,
+			&.title
+				font-size: 16px
+				line-height: 16px
 			&.vertical
 				.img
 					width: 28%
@@ -3864,7 +3912,7 @@ p.list-mark
 						padding: 3px 3px 0
 				.img
 					width: 28%
-					height: 210px
+					min-height: 210px
 					order: -1
 					img
 						display: none
@@ -3874,7 +3922,8 @@ p.list-mark
 					width: 72%
 					text-align: left
 					padding: 20px 15px
-		h3
+		h3,
+		&.title
 			font-size: 16px
 			line-height: 16px
 			a span
@@ -3895,7 +3944,8 @@ p.list-mark
 				.text
 					width: 65%
 					padding: 20px 15px
-				h3
+				h3,
+				&.title
 					font-size: 16px
 					line-height: 16px
 	.stock-block
@@ -4059,6 +4109,26 @@ p.list-mark
 		min-width: 345px
 	.user-form.category .category-text
 		width: 273px
+	#wrapper .container .odContent .odNeeds.goods-slider-collection .content
+		margin-top: 30px
+	.goods-slider-collection .goods-post .image
+		height: 196px
+	.goods-post-collection
+		margin: 0 -5px
+	.goods-post-collection>div, 
+	.goods-slider-collection .goods-post-collection>div
+		max-width: 163px
+		padding: 0 5px 10px
+	.goods-slider-collection .goods-post .title
+		font-size: 16px
+		line-height: 21px
+	.goods-slider .goods-post .price .price-new, 
+	.goods-slider-collection .goods-post .price .price-new
+		font-size: 16px
+		line-height: 26px
+	.goods-slider .goods-post .price .price-old, 
+	.goods-slider-collection .goods-post .price .price-old
+		font-size: 12px
 	.modal-text-block
 		padding: 15px
 		font-size: 14px

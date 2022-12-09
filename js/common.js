@@ -197,6 +197,36 @@ $(function() {
         $('.goods-slider .swiper .goods-slider-next').trigger('click');
     })
 
+    const goodsSliderCollection = new Swiper('.goods-slider-collection .swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 15,
+        autoHeight: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 15
+            }
+        },
+        navigation: {
+            nextEl: '.goods-slider-next',
+            prevEl: '.goods-slider-prev',
+        },
+        pagination: {
+            el: '.goods-swiper-pagination',
+            clickable: true,
+        }
+    });
+
+    $('.goods-slider-prev').on('click', function(){
+        $('.goods-slider .swiper .goods-slider-prev').trigger('click');
+    })
+
+    $('.goods-slider-next').on('click', function(){
+        $('.goods-slider .swiper .goods-slider-next').trigger('click');
+    })
+
     const blogSlider = new Swiper('.blog-slider .swiper', {
         loop: true,
         slidesPerView: 1,
