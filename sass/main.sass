@@ -621,7 +621,8 @@ b, strong
 	.blog-slider-next
 		right: -60px
 .blog-slider-pagination,
-.needs-pagination
+.needs-pagination,
+.needs-pagination-2
 	display: none
 .mark
 	display: inline-block
@@ -1392,6 +1393,8 @@ b, strong
 	.smile-1
 		width: 241px
 		margin: -60px 0 -92px -175px
+		position: relative
+		z-index: 1
 /* ACCORDION */
 .accordion
 	font-size: 20px
@@ -1432,7 +1435,7 @@ b, strong
 		margin: 0 0 45px
 	.text-short
 		max-width: 435px
-		margin: 33px 0
+		margin: 15px 0
 /* FORM */
 .user-form
 	.mark
@@ -2454,6 +2457,7 @@ b, strong
 		font-weight: 600
 		width: 195px
 		margin-top: 8px
+		text-align: center
 .comment-block
 	display: flex
 	flex-wrap: wrap
@@ -2626,6 +2630,10 @@ p.list-mark
 	.goods-slider-collection .goods-post-collection>div
 		padding-left: 20px
 		padding-right: 20px
+	.form-column .pattern
+		right: -15px
+	.comment-block .text
+		width: 60%
 
 @media only screen and (max-width:1365px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2795,6 +2803,20 @@ p.list-mark
 	.goods-slider-collection .goods-post-collection>div
 		padding-left: 10px
 		padding-right: 10px
+	#wrapper .container .odContent .secret-section .promo .odBraveFaith .bf-section .bf-info
+		margin-top: -480px
+	.form-column .pattern
+		right: -50px
+	.article-column .pattern
+		top: 87%
+	.comment-block
+		margin: 60px 0
+		.text
+			width: 54%
+			padding: 40px 15px 0 0
+			.smile-1
+				left: -20px
+				bottom: -105px
 
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -3071,6 +3093,23 @@ p.list-mark
 		font-size: 18px
 	#wrapper .container .odContent .worldwatch-list-section .map-section
 		margin: 0
+	.secret-section .promo
+		padding: 0
+	#wrapper .container .odContent .secret-section .promo .odBraveFaith .bf-section .bf-info
+		margin-top: -420px
+	.comment-block
+		.text
+			padding-top: 0
+			.smile-1
+				left: auto
+				right: -130px
+				bottom: auto
+				top: 100px
+		.image
+			width: 45%
+			height: 100%
+		.author
+			margin: 0
 	.modal-text-block
 		padding: 40px 20px
 
@@ -3416,20 +3455,24 @@ p.list-mark
 		.blog-slider-next
 			display: none
 	#wrapper .container .odContent .odNeeds.needs-top .swiper,
+	#wrapper .container .odContent .odNeeds.needs-top-2 .swiper,
 	#wrapper .container .odContent .odNeeds.news-slider .swiper
 		margin: 0
 	#wrapper .container .odContent .odNeeds.needs-top .content .needs-prev,
 	#wrapper .container .odContent .odNeeds.needs-top .content .needs-next,
+	#wrapper .container .odContent .odNeeds.needs-top-2 .content .needs-prev-2,
+	#wrapper .container .odContent .odNeeds.needs-top-2 .content .needs-next-2,
 	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-prev,
 	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-next,
 	.news-boxes .news-boxes-prev,
 	.news-boxes .news-boxes-next
 		display: none
 	.blog-slider-pagination,
-	.needs-pagination
+	.needs-pagination,
+	.needs-pagination-2
 		display: block
 		text-align: center
-		margin-top: 27px
+		margin: 20px 0
 		.swiper-pagination-bullet
 			width: 11px
 			height: 11px
@@ -3881,6 +3924,62 @@ p.list-mark
 		max-width: 207px
 	#wrapper .container .odContent .odNeeds.goods-slider-collection .swiper
 		margin: 0
+	.secret-section .promo
+		padding: 14px 0 8px
+	.secret-section .promo .bf-info .mark
+		line-height: 21px
+		text-transform: none
+	.secret-section .promo .bf-info p
+		margin: 0 0 20px
+	#wrapper .container .odContent .secret-section .odBraveFaith .bf-section.right .bf-image .smile-1
+		top: -24px
+		left: -26px
+	#wrapper .container .odContent .secret-section .odBraveFaith .bf-section.right .bf-image .smile-2
+		right: 17px
+		bottom: -23px
+	#wrapper .container .odContent .secret-section .promo .odBraveFaith .bf-description.mobile
+		line-height: 21px
+		margin: -4px 0 21px
+	.download-block
+		line-height: 21px
+		margin-bottom: 80px
+		.title
+			margin: 0 0 16px
+		p
+			margin: 0 0 21px
+		.btn
+			display: block
+			margin: 0 auto
+	.comment-block
+		margin: 32px 0 81px
+		.text
+			width: 100%
+			padding: 0 15px
+			font-size: 14px
+			line-height: 21px
+			.title
+				text-align: center
+				margin: 0 0 22px
+			.smile-1
+				display: none
+		p
+			margin: 0 0 21px
+		.image
+			width: 220px
+			height: 218px
+			padding: 7px
+			margin: 0 auto 20px
+			order: -1
+			position: relative
+			.smile-1
+				position: absolute
+				width: 70px
+				height: auto !important
+				top: 104px
+				left: -34px
+	#wrapper .container .odContent .secret-section .odNeeds.news-slider
+		margin-bottom: 53px
+
 
 @media only screen and (max-width:500px)
 	.map-info
@@ -3919,6 +4018,8 @@ p.list-mark
 	#wrapper .container .odContent .odNeeds .content,
 	#wrapper .container .odContent .odNeeds.needs-top .content
 		margin-top: 20px
+	#wrapper .container .odContent .odNeeds.needs-top-2
+		margin-top: 69px
 	.act-section .title
 		margin: 0 0 20px
 	.news-boxes-links,

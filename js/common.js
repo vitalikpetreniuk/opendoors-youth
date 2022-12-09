@@ -40,6 +40,35 @@ $(function() {
         $('.needs-top .swiper .needs-next').trigger('click');
     })
 
+    const needs2 = new Swiper('.needs-top-2 .swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 15,
+        breakpoints: {
+            // when window width is >= 320px
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 15
+            }
+        },
+        navigation: {
+            nextEl: '.needs-next-2',
+            prevEl: '.needs-prev-2',
+        },
+        pagination: {
+            el: '.needs-pagination-2',
+            clickable: true,
+        }
+    });
+
+    $('.needs-prev-2').on('click', function(){
+        $('.needs-top-2 .swiper .needs-prev-2').trigger('click');
+    })
+
+    $('.needs-next-2').on('click', function(){
+        $('.needs-top-2 .swiper .needs-next-2').trigger('click');
+    })
+
     const newsBoxesSlider = new Swiper('.news-boxes .swiper', {
         loop: true,
         slidesPerView: 1,
