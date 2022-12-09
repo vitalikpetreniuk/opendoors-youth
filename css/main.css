@@ -2410,8 +2410,21 @@ ul{
 		 margin:0 30px
 	}
 	#wrapper .container .odContent .odNeeds .content .post .image{
-		 height:51.5vw;
+		 height:108px;
 		 overflow:hidden
+	}
+	#wrapper .container .odContent .odNeeds .content .post .title,
+	#wrapper .container .odContent .odNeeds .content .post .date{
+		font-size: 12px;
+		line-height: 16px;
+	}
+	#wrapper .container .odContent .odNeeds .content .post .date{
+		margin-top: 5px;
+		margin-bottom: 2px;
+	}
+	#wrapper .container .odContent .odNeeds .content .post .description,
+	#wrapper .container .odContent .odNeeds.needs-top .content .post .btn{
+		display: none
 	}
 	#wrapper .container .odContent .odNeeds .content .post .image a{
 		 display:block;

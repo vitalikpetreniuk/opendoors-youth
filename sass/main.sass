@@ -261,8 +261,23 @@ b, strong
 	height: 69px
 	background: #6B3267 url(../img/icon-zoom.svg) no-repeat 50% 50%
 	font-size: 0
-	cursor: pointer
 	z-index: 3
+	.fancybox
+		display: block
+		width: 100%
+		height: 100%
+#modal-map .map
+	svg
+		position: relative
+		z-index: 2
+		display: block
+		width: 100%
+		margin-bottom: 0
+		path
+			fill: #6b3267
+			cursor: pointer
+			&:hover
+				fill: #87bcd2
 
 .map-info
 	display: flex
@@ -600,7 +615,9 @@ b, strong
 		left: -60px
 	.blog-slider-next
 		right: -60px
-
+.blog-slider-pagination,
+.needs-pagination
+	display: none
 .mark
 	display: inline-block
 	background: #fff
@@ -630,6 +647,8 @@ b, strong
 	padding: 15px 15px 50px
 	font-size: 14px
 	line-height: 18px
+	.video-slider
+		margin-top: 46px
 	.button-prev,
 	.button-next
 		width: 12px
@@ -1832,12 +1851,13 @@ b, strong
 					background: none
 			.basket-description .color-text
 				margin: 0 0 23px
+			.basket-total
+				margin-right: 0
 			.custom-checkbox.size
 				margin: 0 0 36px
 			.price
 				font-size: 40px
 				line-height: 22px
-				right: -6px
 		.basket-result
 			padding: 5px 0
 			.btn + .btn
@@ -2105,48 +2125,36 @@ b, strong
 	.promo .title
 		margin: 0 0 12px
 #wrapper .container .odContent .letter-writing-section .promo
-	margin: 0 0 100px
+	margin: 0 0 21px
 	.odBraveFaith
 		.bf-section .bf-info
 			margin-top: -730px
 			.bf-description.first-text
 				margin: 0
 		.pattern.long
-			left: 17%
+			left: 8.5%
 			top: 79%
 .getting-started
-	display: flex
-	align-items: center
-	max-width: 1095px
-	margin: 0 auto 129px
+	max-width: 670px
+	margin: 0 auto 106px
 	.title
-		margin: 0 0 27px
-	.image
-		width: 563px
-		height: 655px
-		margin-right: 104px
-		position: relative
-		.logo-brave-circle
-			position: absolute
-			bottom: -82px
-			left: -92px
+		margin: 0 0 50px
 	.text
-		width: 39%
 		padding-top: 75px
-.logo-brave-circle
-	width: 230px
+		text-align: center
 .custom-mark-list
 	li
-		margin: 0 0 30px
+		margin: 0 0 50px
 		&:last-child
 			margin: 0
 	p
 		margin: 0 0 18px
 	.title
+		display: inline-block
 		font-size: 20px
 		line-height: 27px
 		color: #F47A87
-		margin: 0 0 20px 15px
+		margin: 0 0 18px 15px
 		text-decoration-line: none
 		position: relative
 		&:before
@@ -2689,13 +2697,6 @@ p.list-mark
 		margin-top: -360px
 	#wrapper .container .odContent .letter-writing-section .promo .odBraveFaith .pattern.long
 		left: 0
-	.getting-started .image
-		margin-right: 35px
-	.getting-started
-		.text
-			padding-top: 0
-		.image .logo-brave-circle
-			left: -40px
 	#wrapper .container .odContent .brave-faith-section .odDouble .odStories
 		width: 55%
 	.odPrayers.pink-block .shot-text
@@ -2941,12 +2942,8 @@ p.list-mark
 		width: 190px
 	.getting-started
 		margin-bottom: 50px
-		.image
-			width: 350px
-			height: 410px
-			margin-right: 20px
 		.text
-			width: 53%
+			padding-top: 40px
 	.odPrayers.pink-block .shot-text
 		padding-right: 30px
 		p
@@ -3105,9 +3102,9 @@ p.list-mark
 		right: -11px
 		bottom: 95px
 	.news-boxes
-		padding: 0 37px
+		padding: 0 15px
 		.item
-			width: 302px
+			width: 345px
 			min-height: 190px
 			padding: 5px 10px 5px 25px
 			margin: 0 auto
@@ -3138,6 +3135,8 @@ p.list-mark
 			left: 7px
 		.news-boxes-next
 			right: 7px
+	.videoblog-section:last-child
+		margin-bottom: -40px
 	.video-block
 		.video
 			height: 350px
@@ -3147,12 +3146,44 @@ p.list-mark
 		.text
 			padding-top: 380px
 	.gallery-slider
+		.video-slider
+			margin-top: 20px
 		.post h5
-			font-size: 12px
-		.button-prev
-			left: 0
+			font-size: 14px
+			line-height: 18px
+			display: -webkit-box
+			-webkit-line-clamp: 1
+			-webkit-box-orient: vertical
+			overflow: hidden
+		.button-prev,
 		.button-next
-			right: 0
+			display: none
+		.fancybox
+			display: block
+			background: url(../img/btn-fancybox.svg) no-repeat
+			background-size: 100%
+			font-size: 0
+			width: 21px
+			height: 16px
+			position: absolute
+			bottom: 45px
+			right: 30px
+			z-index: 1
+		.post-text
+			font-size: 12px
+			line-height: 16px
+			.item
+				height: 50px
+				padding: 10px 10px 13px
+				&:first-child
+					width: 100%
+				&:last-child
+					display: none
+		.post
+			height: auto
+			.post-time
+				bottom: 6px
+				left: 10px
 	.stock-block
 		.item
 			display: block
@@ -3281,6 +3312,45 @@ p.list-mark
 		display: none
 	#wrapper .container .odContent .brave-faith-section .odEvent .content .description p
 		line-height: 22px
+	.blog-slider .description,
+	#wrapper .container .odContent .blog-section .pattern
+		display: none
+	.blog-slider .text-container
+		padding: 11px 0 0
+	#wrapper .container .odContent .odNeeds.blog-slider .content .post .title
+		margin-bottom: 5px
+	.blog-section
+		padding: 0 0 5px
+	.blog-slider
+		.blog-slider-prev,
+		.blog-slider-next
+			display: none
+	#wrapper .container .odContent .odNeeds.needs-top .swiper,
+	#wrapper .container .odContent .odNeeds.news-slider .swiper
+		margin: 0
+	#wrapper .container .odContent .odNeeds.needs-top .content .needs-prev,
+	#wrapper .container .odContent .odNeeds.needs-top .content .needs-next,
+	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-prev,
+	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-next,
+	.news-boxes .news-boxes-prev,
+	.news-boxes .news-boxes-next
+		display: none
+	.blog-slider-pagination,
+	.needs-pagination
+		display: block
+		text-align: center
+		margin-top: 27px
+		.swiper-pagination-bullet
+			width: 11px
+			height: 11px
+			border: 1px solid #6b3267
+			background: #fff
+			border-radius: 0
+			opacity: 1
+		.swiper-pagination-bullet-active
+			background: #6b3267
+		.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+			margin: 0 1px
 	.brave-faith-section .odEvent .btn
 		margin: 0
 		font-size: 16px
@@ -3332,7 +3402,8 @@ p.list-mark
 	.accordion
 		li>p
 			margin: 0
-	.form-column
+	.form-column,
+	.give-section .form-column
 		font-size: 14px
 		line-height: 25px
 		padding: 38px 30px
@@ -3401,6 +3472,10 @@ p.list-mark
 	#wrapper .container .odContent .odDouble .odPrayers.pink-block
 		padding: 15px 30px 50px
 		margin-bottom: 15px
+	.brave-faith-section:last-child
+		margin-bottom: -40px
+	#wrapper .container .odContent .brave-faith-section:last-child .odDouble .odPrayers.pink-block
+		margin-bottom: 0
 	.btn-go
 		padding: 0 15px
 	.basket-form
@@ -3489,10 +3564,12 @@ p.list-mark
 						top: auto
 						bottom: 10px
 						right: -15px
+						.price
+							right: 15px
 				.basket-result
 					padding: 11px 0
 					.btn
-						width: 167px
+						width: 165px
 						&.more
 							text-align: center
 			.text.mobile
@@ -3554,29 +3631,19 @@ p.list-mark
 	#wrapper .container .odContent .letter-writing-section .promo
 		margin: 0 0 20px
 	.getting-started
-		flex-wrap: wrap
 		line-height: 25px
 		padding: 0 15px
 		margin-bottom: 0
 		.title
-			margin: 0 0 9px
-		.image
-			width: 149px
-			height: auto
-			margin-right: 10px
-			.logo-brave-circle
-				width: 67px
-				bottom: -33px
-				left: -25px
+			margin: 0 0 45px
+			text-align: center
 		.text
+			text-align: left
 			padding-top: 13px
-	.logo-brave-circle
-		width: 67px
 	.custom-mark-list
-		display: none
 		width: 100%
 		line-height: 18px
-		margin: 50px 0
+		margin: 30px 0
 		li
 			margin: 0 0 35px
 		.title
@@ -3658,24 +3725,34 @@ p.list-mark
 		padding: 0
 	#wrapper .container .odContent .give-section .odBraveFaith
 		padding-top: 162px
+		&:last-child
+			margin-bottom: -40px
 	#wrapper .container .odContent .give-section .odBraveFaith .bf-logo
 		top: 169px
 		left: 70%
 	.btn.inverted
 		font-size: 16px
 	#wrapper .container .odContent .give-section .odBraveFaith .bf-section.right .bf-info
-		margin-bottom: -105px
+		margin-bottom: 0
+		width: 100%
+		max-width: 50%
 	#wrapper .container .odContent .give-section .odBraveFaith .bf-section .bf-info
 		max-width: 250px
 		margin: 0 0 0 auto
-	#wrapper .container .odContent .give-section .odBraveFaith .bf-section:nth-child(2) .bf-image img
-		left: -106px
-		bottom: -215px
+	.no-mobile
+		display: none
 	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-section .bf-info .bf-description,
 	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-description.mobile
 		line-height: 25px
+		font-weight: normal
 		&.mark
 			display: block
+	.bf-description.mark
+		color: #f47a87
+		&.mobile
+			margin: 0 0 24px
+	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-description.mark
+		margin: 0
 	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-description.mobile
 		margin: 0 0 24px
 	#wrapper .container .odContent .pray-section .promo .odBraveFaith .bf-section.right .bf-image
@@ -3736,47 +3813,12 @@ p.list-mark
 				background: none
 				.swiper-slide
 					padding: 0!important
-			.post
-				height: auto
-				h5
-					font-size: 14px
-					line-height: 18px
 			.img
 				height: 111px
-			.post-text .item:last-child
-				display: none
 		&.bg-purple .gallery-slider .mySwiper
 			background: none
 	#wrapper .container .odContent .odNeeds.blog-slider
 		margin-top: 30px
-	.gallery-slider .post-text
-		.item
-			padding: 10px 10px 13px
-			&:first-child
-				width: 100%
-	.gallery-slider .post-text
-		font-size: 12px
-		line-height: 16px
-	.gallery-slider .post .post-time
-		bottom: 6px
-		left: 10px
-	.gallery-slider
-		.button-prev
-			left: -6px
-			background-size: 12px 21px
-		.button-next
-			right: -6px
-			background-size: 12px 21px
-		.fancybox
-			display: block
-			background: url(../img/btn-fancybox.svg) no-repeat
-			background-size: 100%
-			font-size: 0
-			width: 21px
-			height: 16px
-			position: absolute
-			bottom: 45px
-			right: 30px
 	#wrapper .container .odContent .odNeeds.blog-slider .content,
 	#wrapper .container .odContent .odNeeds .content,
 	#wrapper .container .odContent .odNeeds.needs-top .content
@@ -3879,24 +3921,15 @@ p.list-mark
 			font-size: 12px
 			line-height: 12px
 			padding: 23px 9px
-	.blog-slider .description
-		display: none
 	#wrapper .container .odContent .odNeeds.blog-slider .content .post .image
-		height: 92px
+		height: 108px
 	#wrapper .container .odContent .odNeeds.blog-slider .content .post .title
-		font-size: 16px
-		margin-bottom: 5px
+		font-size: 12px
+		margin-bottom: 0
 	#wrapper .container .odContent .odNeeds .swiper
 		margin: 0 24px
-	.blog-slider .blog-slider-prev,
-	.blog-slider .blog-slider-next
-		top: 22px
-	.blog-slider .blog-slider-prev
-		left: -6px
-	.blog-slider .blog-slider-next
-		right: -6px
 	.blog-slider .text-container
-		padding: 11px 0 0
+		padding: 3px 0 0
 	.blog-slider .post-info,
 	.blog-slider .post-info .icon-view
 		font-size: 12px
@@ -4023,7 +4056,7 @@ p.list-mark
 		top: 60px
 		right: -35px
 	.user-form.category .custom-select span
-		min-width: 359px
+		min-width: 345px
 	.user-form.category .category-text
 		width: 273px
 	.modal-text-block

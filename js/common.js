@@ -13,7 +13,8 @@ $(function() {
 
     const needs = new Swiper('.needs-top .swiper', {
         loop: true,
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 15,
         breakpoints: {
             // when window width is >= 320px
             768: {
@@ -24,6 +25,10 @@ $(function() {
         navigation: {
             nextEl: '.needs-next',
             prevEl: '.needs-prev',
+        },
+        pagination: {
+            el: '.needs-pagination',
+            clickable: true,
         }
     });
 
@@ -93,6 +98,10 @@ $(function() {
         navigation: {
             nextEl: '.news-slider-next',
             prevEl: '.news-slider-prev',
+        },
+        pagination: {
+            el: '.news-slider-pagination',
+            clickable: true,
         }
     });
 
@@ -110,7 +119,7 @@ $(function() {
         spaceBetween: 15,
         breakpoints: {
             // when window width is >= 320px
-            768: {
+            1024: {
                 slidesPerView: 3,
                 spaceBetween: 15
             },
@@ -209,6 +218,10 @@ $(function() {
         navigation: {
             nextEl: '.blog-slider-next',
             prevEl: '.blog-slider-prev',
+        },
+        pagination: {
+            el: '.blog-slider-pagination',
+            clickable: true,
         }
     });
 
