@@ -2154,19 +2154,25 @@ b, strong
 			left: 8.5%
 			top: 79%
 .getting-started
-	max-width: 670px
+	max-width: 795px
 	margin: 0 auto 106px
 	.title
 		margin: 0 0 50px
 	.text
 		padding-top: 75px
 		text-align: center
+	.btn
+		font-weight: 600
+		width: 195px
+		margin-top: 8px
+		text-align: center
 .custom-mark-list
 	li
 		margin: 0 0 50px
 		&:last-child
 			margin: 0
-	p
+	p,
+	p:last-child
 		margin: 0 0 18px
 	.title
 		display: inline-block
@@ -2453,11 +2459,6 @@ b, strong
 	max-width: 1095px
 	.title
 		margin: 0 0 26px
-	.btn
-		font-weight: 600
-		width: 195px
-		margin-top: 8px
-		text-align: center
 .comment-block
 	display: flex
 	flex-wrap: wrap
@@ -2490,7 +2491,44 @@ b, strong
 			width: 100%
 			height: 100% !important
 			object-fit: cover
-	
+#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-image
+	width: 51.2%
+	max-height: 100%
+	padding-left: 112px
+	transform: translateY(0)
+	.smile-1
+		position: absolute
+		top: auto
+		bottom: -82px
+		left: 20px
+		width: 227px
+#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-info
+	margin-top: -750px
+	padding: 0 0 0 24px
+	position: relative
+	.bf-description
+		line-height: 18px
+.brave-faith-section .promo.left-image
+	padding: 0 0 18px
+	.title
+		margin: 0 0 10px
+#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .pattern
+	bottom: -111px
+.article-column p strong
+	display: block
+.nano-section .columns-info
+	margin-bottom: 100px
+.nano-section .article-column .pattern
+	top: auto
+	bottom: -38px
+	right: 52px
+.nano-section .form-column .pattern
+	top: 16.8%
+	right: -44px
+	transform: rotate(-90deg)
+.custom-checkbox.only-list .checkbox-container
+	width: 100%
+	margin-bottom: 19px
 
 
 
@@ -2817,6 +2855,15 @@ p.list-mark
 			.smile-1
 				left: -20px
 				bottom: -105px
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-image
+		padding-left: 83px
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-info
+		padding-left: 50px
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .pattern
+		width: 320px
+	.nano-section .article-column .pattern
+		bottom: -50px
+		right: 30px
 
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -3110,6 +3157,15 @@ p.list-mark
 			height: 100%
 		.author
 			margin: 0
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-image
+		padding-left: 0
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-info
+		padding-left: 35px
+		margin-top: -500px
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-image .smile-1
+		bottom: -60px
+		left: -30px
+		width: 170px
 	.modal-text-block
 		padding: 40px 20px
 
@@ -3947,9 +4003,9 @@ p.list-mark
 			margin: 0 0 16px
 		p
 			margin: 0 0 21px
-		.btn
-			display: block
-			margin: 0 auto
+	.getting-started .btn
+		display: block
+		margin: 0 auto
 	.comment-block
 		margin: 32px 0 81px
 		.text
@@ -3979,6 +4035,33 @@ p.list-mark
 				left: -34px
 	#wrapper .container .odContent .secret-section .odNeeds.news-slider
 		margin-bottom: 53px
+	.brave-faith-section .promo.left-image .odBraveFaith
+		display: flex
+		justify-content: space-between
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-info
+		margin: 0
+		padding-left: 15px
+	#wrapper .container .odContent .promo.left-image .odBraveFaith .bf-section.right
+		width: 100%
+		order: -1
+	#wrapper .container .odContent .promo.left-image .odBraveFaith .bf-section .bf-info .bf-description
+		display: block
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-image
+		width: 150px
+		margin: 0 0 0 auto
+	.brave-faith-section .promo.left-image
+		padding: 14px 0 23px
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-info .bf-description
+		line-height: 21px
+	#wrapper .container .odContent .brave-faith-section .promo.left-image .odBraveFaith .bf-section .bf-image .smile-1
+		width: 70px
+		bottom: -33px
+		left: 50%
+		transform: translateX(-50%)
+	.nano-section .columns-info
+		margin-bottom: 30px
+	#wrapper .container .odContent .promo.left-image .odBraveFaith
+		min-height: auto
 
 
 @media only screen and (max-width:500px)
