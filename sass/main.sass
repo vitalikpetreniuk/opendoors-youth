@@ -496,7 +496,6 @@ b, strong
 				max-width: 325px
 		.btn
 			min-width: 194px
-			margin: -4px 0 0
 			font-weight: 800
 			text-align: center
 			&:hover
@@ -2156,6 +2155,12 @@ b, strong
 .getting-started
 	max-width: 795px
 	margin: 0 auto 106px
+	position: relative
+	.pattern
+		top: 50%
+		right: -229px
+		margin-top: 77px
+		transform: translateY(-50%)
 	.title
 		margin: 0 0 50px
 	.text
@@ -2633,6 +2638,7 @@ b, strong
 	color: #75747B
 	font-size: 16px
 	line-height: 26px
+	margin: 0 0 142px
 	position: relative
 	&:before
 		content: '***'
@@ -2649,6 +2655,50 @@ b, strong
 		margin: 0 0 33px
 	p
 		margin: 0
+.sign-up-block
+	display: flex
+	flex-wrap: wrap
+	max-width: 1095px
+	margin: 0 auto 134px
+	.text
+		width: 45%
+		padding: 37px 70px 0 0
+		line-height: 21px
+	.image
+		max-width: 563px
+		position: relative
+		.pattern
+			top: -140px
+			left: 77px
+			transform: rotate(-90deg)
+		.smile-1
+			position: absolute
+			bottom: -52px
+			left: -55px
+			width: 193px
+	.title
+		line-height: 52px
+		margin: 0 0 28px
+	.btn
+		width: 195px
+		text-align: center
+		font-weight: 600
+.mark-list
+	color: #f47a87
+	line-height: 25px
+	margin: 0 0 22px
+	li
+		padding: 0 0 0 23px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 9px
+			left: 10px
+			width: 3px
+			height: 3px
+			border-radius: 50px
+			background: #f47a87
 
 
 
@@ -2792,6 +2842,19 @@ p.list-mark
 		right: -15px
 	.comment-block .text
 		width: 60%
+	.brave-faith-block
+		.text
+			padding-left: 10px
+			padding-right: 10px
+		.pattern
+			left: 15px
+		.notes
+			.subtitle-note.last,
+			.btn
+				margin-left: -10px
+	.comment-block .author
+		max-width: 380px
+		margin-top: 30px
 
 @media only screen and (max-width:1365px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -2984,6 +3047,31 @@ p.list-mark
 	.nano-section .article-column .pattern
 		bottom: -50px
 		right: 30px
+	.brave-faith-block
+		padding: 50px 30px 0
+		margin: 0 0 70px
+		.pattern
+			display: none
+		.text
+			padding: 38px 50px 0 0
+		.notes
+			.btn, .subtitle-note.last
+				margin-left: 30px
+		.bf-logo
+			bottom: 190px
+			right: -8px
+			width: 180px
+	.comment-block.other .image .smile-1
+		right: -40px
+	.comment-block .author
+		max-width: 315px
+	.blockquote-box
+		padding-left: 30px
+		padding-right: 30px
+		margin: 0 0 50px
+	.sign-up-block .text
+		width: 43%
+		padding-right: 30px
 
 @media only screen and (max-width:1023px)
 	#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info
@@ -3286,6 +3374,34 @@ p.list-mark
 		bottom: -60px
 		left: -30px
 		width: 170px
+	.brave-faith-block
+		.text
+			padding: 15px 30px 0 0
+		.image
+			width: 342px
+			height: 395px
+		.notes
+			.btn, .subtitle-note.last
+				margin-left: 20px
+	.comment-block.other .image .smile-1
+		width: 130px
+	.comment-block
+		.author
+			max-width: 100%
+		.btn
+			position: static
+	.sign-up-block
+		margin-bottom: 60px
+		.text
+			width: 58%
+			padding-top: 0
+		.image
+			max-width: 309px
+			height: fit-content
+			.smile-1
+				width: 150px
+		.title
+			line-height: 40px
 	.modal-text-block
 		padding: 40px 20px
 
@@ -3942,13 +4058,19 @@ p.list-mark
 	.getting-started
 		line-height: 25px
 		padding: 0 15px
-		margin-bottom: 0
+		margin-bottom: 70px
 		.title
 			margin: 0 0 45px
 			text-align: center
 		.text
 			text-align: left
 			padding-top: 13px
+		.btn
+			display: block
+			margin: 0 auto
+			&.more
+				margin: 0
+				width: 208px
 	.custom-mark-list
 		width: 100%
 		line-height: 18px
@@ -4123,9 +4245,6 @@ p.list-mark
 			margin: 0 0 16px
 		p
 			margin: 0 0 21px
-	.getting-started .btn
-		display: block
-		margin: 0 auto
 	.comment-block
 		margin: 32px 0 81px
 		.text
@@ -4182,7 +4301,91 @@ p.list-mark
 		margin-bottom: 30px
 	#wrapper .container .odContent .promo.left-image .odBraveFaith
 		min-height: auto
-
+	.brave-faith-block
+		padding: 15px 15px 40px
+		.text
+			width: 100%
+			padding: 0
+			.description
+				max-width: 100%
+		.image
+			width: 345px
+			height: 153px
+			margin: 0 auto 20px
+			order: -1
+			img
+				display: none
+				&.mobile
+					display: block
+		.title
+			font-size: 20px
+			line-height: 26px
+			margin: 0 0 12px
+		.notes
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			.subtitle-note
+				width: 48%
+				height: fit-content
+				padding: 22px 10px
+				margin: 0 0 40px
+			.btn, .subtitle-note.last
+				position: relative
+				left: auto
+				bottom: auto
+				margin-left: 0
+			.subtitle-note.last
+				margin: -50px 0 35px
+			.btn
+				margin: 0 auto
+		.bf-logo
+			display: none
+	.blockquote-box
+		margin-left: 15px
+		margin-right: 15px
+	.sign-up-block
+		margin-bottom: 83px
+		.text
+			width: 100%
+			padding: 0 15px
+		.image
+			display: none
+		.title
+			line-height: 26px
+			margin: 0 0 15px
+		p
+			margin: 0 0 15px
+	.comment-block.other
+		margin-bottom: 57px
+		.text
+			line-height: 21px
+			.title
+				text-align: left
+				margin: 0 0 14px
+		.image
+			width: 344px
+			height: 340px
+			.smile-1
+				display: none
+		.author
+			text-align: left
+			margin: 0 0 22px
+	.blockquote-box
+		font-size: 14px
+		line-height: 22px
+		padding: 47px 20px 21px
+		margin-bottom: 57px
+		&:before
+			font-size: 25px
+			top: 22px
+		blockquote
+			font-size: 14px
+			line-height: 22px
+			margin: 0 0 18px
+	.mark-list
+		line-height: 21px
+		margin: 0 0 13px
 
 @media only screen and (max-width:500px)
 	.map-info
