@@ -389,6 +389,11 @@ $(function() {
         return false;
     });
 
+    /* Check All Select */
+    $("#check-all").click(function () {
+        $('input:checkbox').not(this).prop('checked', this.checked);
+    });
+
 
 
     /* Gallery Slider */
