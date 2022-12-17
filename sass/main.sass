@@ -2070,23 +2070,63 @@ b, strong
 	.goods-slider-prev, 
 	.goods-slider-next
 		top: 113px
-.goods-slider-collection .goods-post-collection,
+.goods-slider-collection
+	.pagination
+		display: flex
+		justify-content: center
+		margin: 0 -2px
+		li
+			margin: 0 2px
+		a
+			color: #A19FBB
+			display: block
+			text-align: center
+			border: 1px solid #A19FBB
+			min-width: 29px
+			height: 29px
+			font-size: 16px
+			line-height: 29px
+			&:hover
+				background: #6B3267
+				color: #fff
+				border-color: #6B3267
+		.prev,
+		.next
+			&:hover	a
+				background-color: #6B3267
+		.prev a
+			background: #ABABAB url(../img/double-arrow-left.svg) 50% 50% no-repeat
+			background-size: 21px
+		.next a
+			background: #ABABAB url(../img/double-arrow-right.svg) 50% 50% no-repeat
+			background-size: 21px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .goods-post-collection
 	display: flex
 	flex-wrap: wrap
-	>div
+	padding: 67px 0 0
+	margin: 0 -35px
+	.goods-post
 		width: 20%
 		padding: 0 35px 30px
-	.goods-post .text-container
-		padding: 12px 10px
-.goods-slider-collection .goods-slider-next,
-.goods-slider-collection .goods-slider-prev
-	display: none
-#wrapper .container .odContent .odNeeds.goods-slider-collection
-	margin-top: 4px
-.goods-post-collection
-	padding: 25px 0 0
-	margin: 0 -35px
+		margin: 0
+		.text-container
+			padding: 12px 10px
 .custom-checkbox-list
 	display: flex
 	&.color
@@ -3028,8 +3068,7 @@ p.list-mark
 		padding-right: 60px
 	.goods-post-collection
 		margin: 0 -20px
-	.goods-post-collection>div, 
-	.goods-slider-collection .goods-post-collection>div
+	.goods-post-collection .goods-post
 		padding-left: 20px
 		padding-right: 20px
 	.form-column .pattern
@@ -3222,8 +3261,7 @@ p.list-mark
 		margin: -41px 0 -105px -75px
 	.goods-post-collection
 		margin: 0 -10px
-	.goods-post-collection>div, 
-	.goods-slider-collection .goods-post-collection>div
+	.goods-post-collection .goods-post
 		padding-left: 10px
 		padding-right: 10px
 	#wrapper .container .odContent .secret-section .promo .odBraveFaith .bf-section .bf-info
@@ -3557,12 +3595,11 @@ p.list-mark
 	.accordion
 		padding-right: 0
 	.goods-post-collection
-		padding: 0
-	.goods-post-collection>div, 
-	.goods-slider-collection .goods-post-collection>div
+		padding: 30px 0 0
+	.goods-post-collection .goods-post
 		width: 25%
 		padding-bottom: 10px
-	.goods-slider-collection .goods-post .title
+	.goods-post-collection .goods-post .title
 		font-size: 18px
 	#wrapper .container .odContent .worldwatch-list-section .map-section
 		margin: 0
@@ -4447,12 +4484,10 @@ p.list-mark
 			padding-top: 7px
 			&:before
 				top: 0
-	.goods-post-collection>div, 
-	.goods-slider-collection .goods-post-collection>div
+	.goods-post-collection .goods-post
 		width: 50%
 		max-width: 207px
-	#wrapper .container .odContent .odNeeds.goods-slider-collection .swiper
-		margin: 0
+		margin: 0 auto
 	.secret-section .promo
 		padding: 14px 0 8px
 	.secret-section .promo .bf-info .mark
@@ -4930,26 +4965,29 @@ p.list-mark
 		min-width: 345px
 	.user-form.category .category-text
 		width: 273px
-	#wrapper .container .odContent .odNeeds.goods-slider-collection .content
-		margin-top: 30px
-	.goods-slider-collection .goods-post .image
-		height: 196px
 	.goods-post-collection
-		margin: 0 -5px
-	.goods-post-collection>div, 
-	.goods-slider-collection .goods-post-collection>div
-		max-width: 163px
-		padding: 0 5px 10px
-	.goods-slider-collection .goods-post .title
-		font-size: 16px
-		line-height: 21px
+		margin: 0
+		.goods-post
+			max-width: 163px
+			padding: 0 5px 10px
+			.image
+				height: 196px
+			.title
+				font-size: 16px
+				line-height: 21px
 	.goods-slider .goods-post .price .price-new, 
-	.goods-slider-collection .goods-post .price .price-new
+	.goods-post-collection .goods-post .price .price-new
 		font-size: 16px
 		line-height: 26px
 	.goods-slider .goods-post .price .price-old, 
-	.goods-slider-collection .goods-post .price .price-old
+	.goods-post-collection .goods-post .price .price-old
 		font-size: 12px
+	.goods-slider-collection .pagination
+		a
+			min-width: 25px
+		.prev a,
+		.next a
+			background-size: 16px
 	#wrapper .container .odContent .odDouble.full-odPrayers .odPrayers .image, 
 	.full-odPrayers .odPrayers .image
 		height: 311px
@@ -4958,6 +4996,8 @@ p.list-mark
 		justify-content: center
 	.product-info-section .product-info-text .basket-form .basket-result .btn
 		width: 170px
+	.user-form input
+		width: 100%
 	.modal-text-block
 		padding: 15px
 		font-size: 14px
