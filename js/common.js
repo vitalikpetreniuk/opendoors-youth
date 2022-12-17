@@ -364,6 +364,16 @@ $(function() {
         $('input:checkbox').not(this).prop('checked', this.checked);
     });
 
+    /* Search */
+    $('.search-form-btn').on('click', function(){
+      $(this).closest('.search-form').toggleClass('open');
+      return false;
+    });
+    $(document).click(function(event) {
+      if ($(event.target).closest(".search-form .search").length) return;
+      $(".search-form").removeClass('open');
+      event.stopPropagation();
+    });
 
 
     /* Gallery Slider */
