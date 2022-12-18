@@ -142,35 +142,6 @@ $(function() {
         $('.news-slider .swiper .news-slider-next').trigger('click');
     })
 
-    // const videoSlider = new Swiper('.video-slider .swiper', {
-    //     loop: true,
-    //     slidesPerView: 2,
-    //     spaceBetween: 15,
-    //     breakpoints: {
-    //         // when window width is >= 320px
-    //         1024: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 15
-    //         },
-    //         320: {
-    //             slidesPerView: 2,
-    //             spaceBetween: 15
-    //         }
-    //     },
-    //     navigation: {
-    //         nextEl: '.button-next',
-    //         prevEl: '.button-prev',
-    //     }
-    // });
-
-    // $('.button-prev').on('click', function(){
-    //     $('.video-slider .swiper .button-prev').trigger('click');
-    // })
-
-    // $('.button-next').on('click', function(){
-    //     $('.video-slider .swiper .button-next').trigger('click');
-    // })
-
     const mapInfoSlider = new Swiper('.map-info-slider .swiper', {
         loop: true,
         slidesPerView: 1,
@@ -377,39 +348,9 @@ $(function() {
 
     /* custom-select-currency */
     $(document).ready(function(){                    
-        $( ".currency-gbp.active" ).change(function () {            
+        $( "#currency" ).change(function () {            
             $( ".category-text" ).toggleClass( "eur" );
         });
     }); 
-
-
-    /* Gallery Slider */
-    // const gallerySlider = new Swiper('.gallery-slider .mySwiper', {
-    //     loop: true,
-    //     spaceBetween: 15,
-    //     slidesPerView: 3,
-    //     freeMode: true,
-    //     watchSlidesProgress: true
-    // });
-
-    // const gallerySliderNav = new Swiper('.gallery-slider .mySwiper2', {
-    //     loop: true,
-    //     spaceBetween: 15,
-    //     navigation: {
-    //         nextEl: '.button-next',
-    //         prevEl: '.button-prev',
-    //     },
-    //     thumbs: {
-    //       swiper: swiper,
-    //     },
-    // });
-
-    // $('.gallery-slider .button-prev').on('click', function(){
-    //     $('.gallery-slider .swiper .button-prev').trigger('click');
-    // })
-
-    // $('.gallery-slider .button-next').on('click', function(){
-    //     $('.gallery-slider .swiper .button-next').trigger('click');
-    // })
 
 });

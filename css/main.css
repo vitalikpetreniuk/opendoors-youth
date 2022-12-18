@@ -200,6 +200,7 @@ body{
 	font-family:DINNextLTPro-Regular,sans-serif;
 	font-size:14px;
 	line-height:1.33;
+	letter-spacing: -0.04em;
 	color:#000
 }
 body input,body textarea{
@@ -2567,9 +2568,9 @@ ul{
 	}
 }
 @media only screen and (max-width:500px){
-	#wrapper .container .odContent .odBraveFaith .bf-section {
+	/* #wrapper .container .odContent .odBraveFaith .bf-section {
 		flex-direction: column;
-	}
+	} */
 	#wrapper .container .odContent .odBraveFaith .bf-section .bf-image {
 		transform: translateY(0);
 		width: 50%;

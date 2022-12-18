@@ -2371,6 +2371,8 @@ b, strong
 		display: none
 		&.active
 			display: block
+#wrapper .container .odContent .odBraveFaith .bf-section.right .particles-mobile
+	display: none
 .give-section
 	.columns-info
 		margin-top: 40px
@@ -2428,8 +2430,14 @@ b, strong
 		font-size: 20px
 		line-height: 27px
 		color: #6B3267
-		i
-			font-style: normal
+		&:before
+			content: '£'
+			display: inline-block
+			vertical-align: middle
+			margin-right: 5px
+		&.eur
+			&:before
+				content: '€'
 	.custom-checkbox
 		margin: 0
 		.checkbox-container
@@ -4167,6 +4175,13 @@ p.list-mark
 			font-size: 14px
 			line-height: 25px
 			margin-bottom: 9px
+	#wrapper .container .odContent .odBraveFaith .bf-section.right .particles-mobile
+		display: block
+		position: absolute
+		top: 34%
+		right: 9%
+		max-width: 70px
+		max-height: 255px
 	#wrapper .container .odContent .brave-faith-section .odDouble .odStories
 		.title
 			margin-bottom: 25px
@@ -4471,7 +4486,7 @@ p.list-mark
 	.btn.inverted
 		font-size: 16px
 	#wrapper .container .odContent .give-section .odBraveFaith .bf-section.right .bf-info
-		margin-bottom: 0
+		margin-bottom: 20px
 		width: 100%
 		max-width: 50%
 	#wrapper .container .odContent .give-section .odBraveFaith .bf-section .bf-info
