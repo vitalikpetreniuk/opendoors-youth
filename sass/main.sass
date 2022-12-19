@@ -2389,6 +2389,19 @@ b, strong
 		background: none
 		padding: 0
 		color: #AF83AC
+#gift-form
+	&.gbp
+		.category-text:before
+			content: '£'
+			display: inline-block
+			vertical-align: middle
+			margin-right: 5px
+	&.euro
+		.category-text:before
+			content: '€'
+			display: inline-block
+			vertical-align: middle
+			margin-right: 5px
 .user-form.category
 	margin-top: 53px
 	.custom-select
@@ -2414,14 +2427,6 @@ b, strong
 		font-size: 20px
 		line-height: 27px
 		color: #6B3267
-		&:before
-			content: '£'
-			display: inline-block
-			vertical-align: middle
-			margin-right: 5px
-		&.eur
-			&:before
-				content: '€'
 	.custom-checkbox
 		margin: 0
 		.checkbox-container

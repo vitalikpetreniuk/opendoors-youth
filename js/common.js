@@ -347,10 +347,19 @@ $(function() {
     });
 
     /* custom-select-currency */
-    $(document).ready(function(){                    
-        $( "#currency" ).change(function () {            
-            $( ".category-text" ).toggleClass( "eur" );
-        });
-    }); 
+	$('.custom-select__option').on('click', function () {
+		$('#currency').val($(this).data('value'))
+		console.log($('#currency').val());
+		$('#gift-form').removeClass().addClass($('#currency').val());
+	})
+
+    let sum
+    $( ".wrap-input input" ).on('input', function () {            
+        sum = 0
+        $('.wrap-input input:not(.total)').each(function (){
+            sum += Number($(this).val())
+        })
+        $('.total').val(sum)
+    });
 
 });

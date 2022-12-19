@@ -257,18 +257,18 @@
 							<div class="form-column">
 								<div class="title">Give now</div>
 								<div class="user-form category">
-									<form action="#" method="post">
+									<form id="gift-form" action="#" method="post" class="gbp">
 										<p><b class="mark">Choose currency</b></p>
 										<div class="wrap-input">
 											<div class="custom-select" data-id="currency">
 												<span>GBP £</span>
 												<ul>
-													<li class="currency-gbp">GBP £</li>
-													<li class="currency-euro">Euro €</li>
+													<li class="custom-select__option currency-gbp" data-value="gbp">GBP £</li>
+													<li class="custom-select__option currency-euro" data-value="euro">Euro €</li>
 												</ul>
 												<select hidden name="currency" id="currency">
-													<option value="1">GBP £</option>
-													<option value="2">Euro €</option>
+													<option value="gbp">GBP £</option>
+													<option value="euro">Euro €</option>
 												</select>
 											</div>
 										</div>
@@ -293,7 +293,7 @@
 											<span class="category-text">to Choose to Lose sponsorship</span>
 										</div>
 										<div class="wrap-input">
-											<input type="text" name="category6">
+											<input class="total" type="text" name="category6" readonly>
 											<span class="category-text">TOTAL</span>
 										</div>
 										<p><b class="mark">Please also send me...</b></p>
