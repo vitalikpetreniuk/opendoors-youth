@@ -5,7 +5,6 @@ $(function() {
 	initSlickSlider();
 	initSlickSlider2();
 	initTabs();
-	initOpenFilter();
 });
 
 function initFixedHeader() {
@@ -104,23 +103,5 @@ function initTabs(){
 			.addClass('active').siblings().removeClass('active')
 			.closest('.tabset-catalog').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
 			return false;
-	});
-	$('.tabset-delivery .tab-control-delivery').on('click', 'li:not(.active)', function() {
-		$(this)
-			.addClass('active').siblings().removeClass('active')
-			.closest('.tabset-delivery').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-			return false;
-	});
-}
-function initOpenFilter(){
-	$('.expanded-opener').on('click', function() {
-		$(this).closest('.filter-options-item').toggleClass('open-drop');
-		$(this).siblings('.expanded').slideToggle();
-		return false;
-	});
-	$('.open-filter').on('click', function(){
-		$(this).toggleClass('open');
-		$('.filter-options .filter-options-form').slideToggle('slow')
-		return false;
 	});
 }
