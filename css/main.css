@@ -51,7 +51,9 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
   background: rgba(0,0,0,.85);
 }
 .fancybox-slide--html .fancybox-close-small{
-  background: #fff url(../img/icon-clouse-pink.svg) no-repeat;
+	background-color: #fff;
+  background-image: url(../img/icon-clouse-pink.svg);
+  background-repeat: no-repeat;
   background-position: 50% 50%;
   border: 2px solid #fab59c;
   width: 38px;
@@ -80,6 +82,7 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 	font-family:DINNextLTPro-Medium,sans-serif;
 	font-size:12px;
 	line-height:1;
+	opacity: 1;
 	text-transform:uppercase
 }
 :-ms-input-placeholder{
@@ -264,13 +267,65 @@ a:hover{
 	background:0 0;
 	height:38px;
 	padding:0 15px;
+	text-align: center;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	font-family:DINNextLTPro-Medium,sans-serif;
+	font-weight: 800;
+	font-size:20px;
+	line-height:39px;
+	text-transform:uppercase;
+	color:#6b3267;
+	white-space:nowrap;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-transition:all .15s linear;
+	-o-transition:all .15s linear;
+	transition:all .15s linear
+}
+.btn.small{
+	font-size:14px;
+	line-height:26px;
+	height: 28px;
+	color: #fff;
+	background: #6b3267;
+	border-left-width: 2px;
+	padding: 0 0 0 15px;
+	min-width: 150px;
+}
+.btn.small:before{
+	content: "";
+	display: block;
+	width: 15px;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	left: 0;
+}
+.btn.small:hover{
+	background: #fbc6a2;
+	border-color: #fbc6a2;
+	color: #fff;
+}
+.btn_white {
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+	border:2px solid #fff;
+	border-left-width:23px;
+	outline:0;
+	background:0 0;
+	height:38px;
+	padding:0 15px;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	font-family:DINNextLTPro-Medium,sans-serif;
 	font-size:20px;
 	line-height:39px;
 	text-transform:uppercase;
-	color:#6b3267;
+	color:#fff;
 	white-space:nowrap;
 	-webkit-user-select:none;
 	-moz-user-select:none;
@@ -300,7 +355,8 @@ a:hover{
 	position:absolute;
 	left:0
 }
-.btn:hover{
+.btn:hover,
+.btn_white:hover{
 	border-color:#fab59c;
 	color:#fab59c
 }
@@ -318,7 +374,6 @@ ul{
 	font-size:40px;
 	text-transform:uppercase;
 	color:#6b3267;
-	text-decoration-line: underline;
 }
 #wrapper{
 	background:url(../img/pattern.png) repeat left top;
@@ -483,7 +538,7 @@ ul{
 	margin-right: 10px;
 }
 #wrapper .container .odContent{
-	padding:40px 0 50px
+	padding:40px 0 64px
 }
 #wrapper .container .odContent .pattern{
 	position:absolute;
@@ -697,6 +752,7 @@ ul{
 #wrapper .container .odContent .odBraveFaith{
 	position:relative;
 	margin-top:-100px;
+	margin-bottom: 70px;
 	padding-top:20px;
 	min-height:50vh;
 	background:-webkit-gradient(linear,left top,left bottom,from(#ff7e99),to(#51255c));
@@ -728,7 +784,6 @@ ul{
 	font-family:DINNextLTPro-Bold,sans-serif;
 	font-size:24px;
 	text-transform:uppercase;
-	text-decoration:underline;
 	text-decoration-thickness:1px;
 	text-underline-offset:6px
 }
@@ -748,11 +803,14 @@ ul{
 	width:50%;
 	padding-left:30px;
 	max-height:300px;
-	transform: translateY(-185px);
+	transform: translateY(-45px);
 }
 #wrapper .container .odContent .odBraveFaith .bf-section .bf-image img{
 	display:block;
 	width:100%
+}
+#wrapper .container .odContent .odBraveFaith .bf-section .bf-image img.mobile{
+	display: none;
 }
 #wrapper .container .odContent .odBraveFaith .bf-section.right .bf-info{
 	-webkit-box-ordinal-group:1;
@@ -1112,7 +1170,7 @@ ul{
 	width:100%
 }
 #wrapper .container .odContent .odSubscribe form p span.wpcf7-form-control-wrap{
-	width:26%;
+	width:27%;
 	margin-right:10px
 }
 #wrapper .container .odContent .odSubscribe form p span.wpcf7-form-control-wrap input{
@@ -1153,7 +1211,7 @@ ul{
 	font-size:20px
 }
 #wrapper .container .odContent .odSubscribe form button{
-	width:calc(22% - 30px);
+	width:calc(19% - 30px);
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	text-align:left
@@ -1347,11 +1405,12 @@ ul{
 	padding:15px;
 	background:-webkit-gradient(linear,left top,left bottom,from(#fbc6a2),to(#f47986));
 	background:-o-linear-gradient(top,#fbc6a2 0,#f47986 100%);
-	background:linear-gradient(180deg,#fbc6a2 0,#f47986 100%)
+	background:linear-gradient(180deg,#fbc6a2 0,#f47986 100%);
+	margin: 0 0 63px;
 }
 #wrapper .container .odContent .odEvent .video .video-container{
 	position:relative;
-	padding-bottom:56.25%
+	padding-bottom:57.25%
 }
 #wrapper .container .odContent .odEvent .video .video-container iframe{
 	position:absolute;
@@ -1483,6 +1542,977 @@ ul{
 #wrapper .container .odContent .odDouble .odPrayers .content .title{
 	color: #fff;
 }
+/* .basket-form .quantity{
+	opacity: 0;
+} */
+.basket-form .basket-list li:hover {
+    background: none;
+}
+.basket-form .btn:disabled{
+	border-color: #ccc;
+	color: #ccc;
+}
+.basket-form .product-remove{
+	position: absolute;
+	top: 30px;
+	right: 15px;
+}
+.basket-form .basket-list li{
+	position: relative;
+}
+.basket-form .actions{
+	margin-top: 20px;
+}
+.header_bottom-nav .sub-menu li {
+    width: 100%;
+}
+.give-form h3{
+	font-family: DINNextLTPro-Bold,sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #6b3267;
+    text-decoration-line: underline;
+	margin: 0 0 20px;
+}
+#ship-to-different-address label span{
+	font-family: DINNextLTPro-Bold,sans-serif;
+    font-size: 20px;
+	color: #6b3267;
+}
+.give-form label{
+	display: block;
+	font-size: 16px;
+    line-height: 16px;
+	font-family: DINNextLTPro-Bold,sans-serif;
+    color: #121212;
+    margin: 0 0 5px;
+}
+.give-form input{
+	width: auto;
+}
+.give-form .button{
+	display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #6b3267;
+    border-left-width: 23px;
+    outline: 0;
+    background: none;
+    height: 38px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: DINNextLTPro-Medium,sans-serif;
+    font-size: 20px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #6b3267;
+    white-space: nowrap;
+    user-select: none;
+    transition: all .15s linear;
+}
+.give-form .button:hover {
+    border-color: #fab59c;
+    color: #fab59c;
+}
+.card-info-form textarea{
+	resize: vertical;
+	vertical-align: top;
+	resize: none;
+	width: 100%;
+	max-width: 397px;
+	height: 66px;
+}
+.form-row.notes{
+	display: block;
+}
+.give-form #customer_details .item:last-child{
+	width: 100%;
+}
+.basket-form .basket-list ul li{
+	min-height: 0;
+}
+.give-form p:last-child{
+	margin: 0 0 1rem;
+}
+#order_review .amount{
+	color: #6b3267;
+	font-size: 20px;
+}
+.visual-section .visual-image{
+	height: 540px !important;
+	object-fit: cover;
+}
+.visual-section .stayInTouch a svg{
+	width: 18px;
+	height: 18px;
+}
+.user-form .custom-checkbox input{
+	width: auto;
+}
+.user-form .custom-checkbox .wpcf7-list-item{
+	margin: 0;
+}
+.search-block{
+	max-width: 875px;
+	margin: 47px auto 53px;
+}
+.search-block .search-form .search{
+	display: block;
+}
+.search-block .search-form .search .btn-search{
+	width: 39px;
+	height: 39px;
+	background-size: 25px;
+}
+.search-result .search-result-text{
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 40px;
+	color: #6B3267;
+	margin: 0 0 34px;
+}
+.search-result .search-result-text .mark,
+.search-result-content .mark{
+	background: #F47A87;
+	padding: 3px 3px 0;
+	color: #000;
+}
+.search-result-content.no-result{
+	text-align: center;
+	color: #21150B;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 800;
+}
+.search-result-content.no-result .search-result-icon{
+	font-size: 40px;
+	line-height: 64px;
+	font-weight: 800;
+	color: #F47A87;
+	margin: 0 0 14px;
+}
+.search-result-content.no-result .title{
+	text-decoration: none;
+	margin: 0 0 35px;
+}
+.search-result-content .news-collection .posts{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -7px;
+}
+.search-result-content .news-collection .posts .post{
+	width: 33.3%;
+	padding: 0 7px;
+	margin: 0 0 65px;
+}
+#wrapper .container .odContent .promo .odBraveFaith .bf-description.comment{
+	background:url(../img/bg-comment.png) no-repeat;
+	background-size: 100%;
+	width: 319px;
+	height: 150px;
+	color: #fff;
+	padding: 26px;
+	margin: -10px 0 10px auto;
+}
+#wrapper .container .odContent .promo .odBraveFaith .bf-section .bf-info .bf-description a{
+	text-decoration: underline;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble{
+	max-width: 100%;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble:last-child{
+	margin-bottom: 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories{
+	width: 100%;
+	margin: 0 0 76px;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories:last-child{
+	margin: 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block{
+	width: 100%;
+	margin: 0 0 21px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 20px;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content{
+	padding: 0 43px 40px;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .btn:hover{
+	border-color: #fff
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .image{
+	width: 269px;
+	height: 279px;
+	margin: 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .image img{
+	width: 100%;
+	height: 100% !important;
+	object-fit: cover;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content .description{
+	color: #51255c;
+	max-width: 330px;
+	font-size: 20px;
+	line-height: 26px;
+	margin: 3px 0 12px;
+}
+.brave-faith-section.send-hope .odPrayers.pink-block .shot-text{
+	margin: 0 0 0 185px;
+	color: #51255c;
+}
+.brave-faith-section.send-hope .odPrayers.pink-block .shot-text p{
+	max-width: 250px;
+	margin: 17px 0 10px;
+}
+.brave-faith-section.send-hope .odPrayers.pink-block .shot-text .stamps{
+	right: auto;
+	left: -196px;
+	top: -17px;
+}
+.brave-faith-section.send-hope .odPrayers.pink-block .shot-text .btn{
+	min-width: 195px;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post{
+	flex-wrap: wrap;
+	padding: 15px 0 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .image img{
+	width: 207px;
+	height: 214px !important;
+	object-fit: cover;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text{
+	width: 48%;
+	padding: 11px 10px 0 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title{
+	line-height: 27px;
+	margin: 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post p {
+  margin: 0 0 13px;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new{
+	display: flex;
+	justify-content: space-between;
+	width: 32.5%;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .btn.more{
+	display: block;
+	margin: 31px auto 0;
+}
+#wrapper .container .odContent .odNeeds.needs-top .content,
+#wrapper .container .odContent .odNeeds.blog-slider .content{
+	display: flex;
+	justify-content: space-between;
+}
+#wrapper .container .odContent .odNeeds.needs-top .content.news-content{
+	display: block;
+}
+#wrapper .container .odContent .odNeeds.needs-top .post,
+#wrapper .container .odContent .odNeeds.blog-slider .post{
+	width: 48%;
+}
+#wrapper .container .odContent .odNeeds.needs-top .btn,
+#wrapper .container .odContent .odNeeds.blog-slider .btn{
+	display: block;
+	width: 195px;
+	margin: 0 auto;
+}
+#wrapper .container .odContent .odNeeds.needs-top .swiper .btn{
+	margin: 0;
+}
+.stock-block .icon-stock{
+	background: linear-gradient(180deg, #6B3267 0%, #AF83AC 100%);
+}
+.promo .title.icon-circle{
+	padding-left: 3px;
+	margin: 0 0 20px;
+	position: relative;
+}
+.promo .title.icon-circle:before{
+	content: "";
+  position: absolute;
+  top: -30px;
+  left: -13px;
+  width: 87px;
+  height: 87px;
+  border-radius: 500px;
+  background: linear-gradient(180deg,#ffdac1 0,#f47a87 100%);
+  z-index: -1;
+}
+.news-inner-section .bg-pink-box,
+.news-inner-section .bg-gray-box{
+	margin: 0;
+}
+.news-inner-section .bg-pink-box{
+	margin: 30px 0 103px;
+}
+#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .pattern{
+	bottom: auto;
+	top: 21px;
+	right: -247px;
+}
+#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image{
+	width: 49.3%;
+	padding-left: 87px;
+}
+#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-info{
+	margin: -670px 186px 0 0;
+	padding: 0 0 0 10px;
+}
+#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image .smile-1{
+	bottom: -60px;
+  left: 30px;
+  width: 190px;
+}
+.give-section .note-block{
+	text-align: left;
+}
+.give-section .notes{
+	flex-wrap: wrap;
+}
+.give-section .subtitle-note{
+	width: 100%;
+	margin: 0;
+	padding: 32px 28px 20px;
+	min-height: 132px;
+}
+.give-section .subtitle-note:last-child{
+	background: #51255C;
+}
+.give-section .subtitle-note:before{
+		content: "";
+	  position: absolute;
+	  top: 15px;
+	  left: 15px;
+	  width: 54px;
+	  height: 54px;
+	  border-radius: 500px;
+	  background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%);
+}
+.give-section .subtitle-note strong,
+.give-section .subtitle-note p{
+	position: relative;
+}
+.give-section .promo .bf-info .subtitle-note p,
+.give-section .subtitle-note p{
+	margin: 0;
+}
+#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section .bf-image{
+	width: 444px;
+	height: 425px;
+	max-height: 100%;
+	transform: translateY(-169px);
+	padding: 0;
+	margin: -21px 41px -115px 166px;
+}
+#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .bf-image{
+	transform: translateY(0);
+	margin: 0 223px 0 -47px;
+}
+#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section .bf-image img{
+	width: 100%;
+	height: 100% !important;
+	object-fit: cover;
+}
+#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .bf-info{
+	padding: 0 32px; 
+}
+.article-column .heading{
+	display: block;
+	text-transform: uppercase;
+	color: #F47A87;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 29px;
+}
+.article-column .heading .icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 29px;
+	height: 29px;
+	text-align: center;
+}
+.article-column .heading .icon img{
+	width: auto;
+}
+.odSubscribe-footer .title{
+	font-size: 20px;
+	line-height: 26px;
+	color: #fff;
+	margin: 0 0 26px;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap{
+	display: block;
+	width: 350px;
+	margin: 0 0 11px;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap input{
+	width: 100%;
+	height: 38px;
+	border: 2px solid #fff;
+	background: none;
+	color: #fff;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 26px;
+	padding: 4px 10px 0;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap input::-webkit-input-placeholder{
+	color:#fff;
+	font-family:DINNextLTPro-Medium,sans-serif;
+	font-size:20px;
+	line-height:1;
+	text-transform:uppercase;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap input::-moz-placeholder{
+	color:#fff;
+	font-family:DINNextLTPro-Medium,sans-serif;
+	font-size:20px;
+	line-height:1;
+	opacity: 1;
+	text-transform:uppercase;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap input:-ms-input-placeholder{
+	color:#fff;
+	font-family:DINNextLTPro-Medium,sans-serif;
+	font-size:20px;
+	line-height:1;
+	text-transform:uppercase;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap input::-ms-input-placeholder{
+	color:#fff;
+	font-family:DINNextLTPro-Medium,sans-serif;
+	font-size:20px;
+	line-height:1;
+	text-transform:uppercase;
+}
+.odSubscribe-footer .wpcf7-form-control-wrap input::placeholder{
+	color:#fff;
+	font-family:DINNextLTPro-Medium,sans-serif;
+	font-size:20px;
+	line-height:1;
+	text-transform:uppercase;
+}
+.odSubscribe-footer .btn.filled{
+	width: 214px;
+	color: #1F0F00;
+	text-align: left;
+	background: #fff;
+	border-color: #fff;
+	margin: 10px 0 0;
+}
+.odSubscribe-footer .btn.filled:before{
+	background: #1F0F00;
+}
+.odSubscribe-footer .btn.filled:hover{
+	background: #fab59c;
+	color: #fff;
+	border-color: #fab59c;
+}
+.three-columns-info{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 0 83px;
+}
+.three-columns-info .column{
+	width: 32.6%;
+	height: max-content;
+	background: linear-gradient(180deg, #FBC6A2 0%, #F47986 100%, #F47986 100%);
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 29px;
+	padding: 36px 20px 20px;
+	position: relative;
+}
+.three-columns-info .column.gray{
+	background: #F2F2F2;
+	color: #6B3267;
+	height: auto;
+}
+.three-columns-info .text-mobile{
+	display: none;
+}
+.three-columns-info .title{
+	color: inherit;
+	font-size: 20px;
+	line-height: 26px;
+	margin: 0 0 17px;
+}
+.three-columns-info .title .icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 25px;
+	margin: 0 5px;
+}
+.three-columns-info .title .icon img{
+	width: auto;
+}
+.three-columns-info .column p{
+	margin: 0;
+}
+.three-columns-info .column .wrap-img{
+	height: 200px;
+	margin: 24px 0 0;
+}
+.three-columns-info .column .wrap-img img{
+	width: 100%;
+	height: 100% !important;
+	object-fit: cover;
+}
+.three-columns-info .column .logo-brave{
+	position: absolute;
+	bottom: -73px;
+	right: -134px;
+	width: 226px;
+	z-index: 1;
+}
+.three-columns-info .column .img-books{
+	position: absolute;
+	top: 85%;
+	left: 46%;
+	transform: translateX(-50%);
+	width: 472px;
+}
+.three-columns-info .column .text-last{
+	margin: 20px 0;
+}
+.three-columns-info a{
+	text-decoration: underline;
+}
+.three-columns-info .list{
+	font-style: italic;
+	margin: 14px 20px;
+}
+.three-columns-info .list li{
+	padding-left: 15px;
+	position: relative;
+}
+.three-columns-info .list li:before{
+	content: '';
+	position: absolute;
+	top: 11px;
+	left: 0;
+	width: 3px;
+	height: 3px;
+	background: #6B3267;
+	border-radius: 50px;
+}
+.three-columns-info .accordion{
+	font-size: 16px;
+	line-height: 29px;
+	font-weight: 600;
+	padding: 0;
+	margin: 0 0 166px;
+}
+.three-columns-info .accordion li{
+	margin-bottom: 6px;
+}
+.three-columns-info .accordion .opener{
+	text-decoration: none;
+	color: #21150B;
+	background: #fff;
+	padding: 6px 13px;
+	padding-right: 40px;
+	min-height: 55px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+}
+.three-columns-info .accordion .opener:before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 13px;
+	width: 26px;
+	height: 26px;
+	background:url(../img/check-circle.svg) no-repeat;
+	transform: translateY(-50%);
+}
+.three-columns-info .accordion .accordion-slide{
+	padding: 14px;
+	color: #75747B;
+	background: #F2F2F2;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: normal;
+}
+.three-columns-form{
+	max-width: 1117px;
+	padding: 0 15px;
+	margin: 0 auto 106px;
+}
+.three-columns-form .user-form{
+	margin: 43px 0;
+	max-width: 982px;
+}
+.three-columns-form .user-form p{
+	margin: 0 0 23px;
+}
+.three-columns-form .form-columns{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.three-columns-form .form-columns .column{
+	width: 32%;
+}
+.three-columns-form .user-form input{
+	width: 100%;
+	height: 38px;
+}
+.three-columns-form .user-form .text-short{
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 29px;
+	margin: 33px 15px 0 0;
+}
+.three-columns-form .user-form a{
+	color: #F47986;
+	text-decoration: underline;
+}
+.three-columns-form .user-form a:hover{
+	color: #6b3267;
+}
+.three-columns-form .user-form .wrap-input.inline{
+	display: flex;
+	align-items: center;
+	margin: 0 0 38px;
+}
+.three-columns-form .user-form .wrap-input.inline p,
+.three-columns-form .user-form .wrap-input.inline div{
+	margin: 0 10px 0 0;
+}
+.three-columns-form .user-form .custom-checkbox{
+	margin: 0;
+}
+.three-columns-form .user-form .wrap-input.button{
+	text-align: right;
+	margin: -11px 0 0;
+}
+.archive-section{
+	padding-top: 20px;
+}
+.archive-section .btn-go{
+	padding: 0;
+	margin: 0;
+}
+.archive-section .news-description-block .content-block{
+	width: 85%;
+	padding: 0 20px 0 113px;
+}
+.archive-section .no-result .content-block{
+	color: #6B3267;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 27px;
+	text-align: left;
+}
+.archive-section .aside-block{
+	width: 15.5%;
+	margin: -108px 0 0;
+}
+.archive-list{
+	color: #21150B;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 22px;
+}
+.archive-list li{
+	padding: 7px 15px;
+	margin: 0 0 4px;
+}
+.archive-list li:hover{
+	background: #F2F2F2;
+}
+.archive-list .title{
+	display: block;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 27px;
+	text-transform: none;
+	margin: 0 0 4px;
+}
+.archive-list .title a{
+	text-decoration: underline;
+}
+.hide-text .expanded-opener{
+	color: #F47A87;
+	font-size: 16px;
+	line-height: 29px;
+	cursor: pointer;
+}
+.hide-text .expanded{
+	display: none;
+}
+#wrapper .container .odContent .odBraveFaith.purple-block .bf-section .bf-info .bf-description{
+	margin-bottom: 50px;
+}
+.problem .promo .title {
+  margin: 58px 0 21px;
+}
+.problem .promo .title.icon-circle{
+	padding-left: 3px;
+}
+.problem .promo .title.icon-circle:before{
+	top: -31px;
+	left: -15px;
+}
+.custom-mark-list li:first-child a{
+	text-decoration: underline;
+}
+#wrapper .container .odContent .promo .odBraveFaith.problem .bf-section .bf-info{
+	margin-top: -704px;
+}
+#wrapper .container .odContent .promo .odBraveFaith.problem .bf-section.right .bf-image .img-note{
+	right: -84px;
+	bottom: -55px;
+}
+.problem .subtitle-note{
+	padding: 13px 20px;
+}
+.problem .subtitle-note strong{
+	font-size: 20px;
+	line-height: 27px;
+	margin: 0;
+}
+.map-section .text-mobile{
+	display: none;
+}
+.stories-section{
+	margin: 0 0 70px;
+}
+.bg-pink-box .inner-text .text.mobile{
+	display: none;
+}
+.brave-faith-block.choose-page .notes .subtitle-note{
+	padding: 26px 28px 17px;
+	margin: 0 0 39px;
+}
+.brave-faith-block.choose-page .notes .subtitle-note.last{
+	margin: 0 0 54px 44px;
+}
+.brave-faith-block.choose-page .notes .subtitle-note strong{
+	position: absolute;
+	top: -19px;
+	font-size: 20px;
+	line-height: 27px;
+	z-index: 1;
+}
+.brave-faith-block.choose-page .notes .subtitle-note strong:before{
+	content: '';
+	position: absolute;
+	top: -15px;
+	left: -13px;
+	width: 54px;
+	height: 54px;
+	background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%);
+	border-radius: 500px;
+	z-index: -1;
+}
+.blockquote-box p{
+	font-style: italic;
+}
+.form-column p a{
+	text-decoration: underline;
+}
+.goods-slider-collection .goods-post .image{
+	position: relative;
+}
+.price-menu{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.price-menu li{
+	width: 33.3%;
+	height: 26px;
+	text-align: center;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 26px;
+	border: 1px solid #F2F2F2;
+}
+.price-menu li.long{
+	width: 50%;
+}
+.price-menu li.active a,
+.price-menu a:hover{
+	background: #6B3267;
+	color: #fff;
+}
+.price-menu a{
+	background: #fff;
+	color: #6B3267;
+}
+.price-menu a:before{
+	display: none;
+}
+.contacts-block{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1095px;
+	margin: 36px auto 0;
+}
+.contacts-block > div{
+	width: 50%;
+}
+.contacts-block .title{
+	font-size: 20px;
+	line-height: 26px;
+	text-transform: none;
+}
+.contacts-block .user-form input{
+	line-height: 32px;
+}
+.contacts-block .user-form textarea{
+	height: 140px;
+	padding: 9px 15px;
+	resize: none;
+}
+.contacts-block .user-form .btn{
+	min-width: 214px;
+	text-align: left;
+}
+.contacts-block-text{
+	line-height: 21px;
+}
+.contacts-block-text .item{
+	margin: 0 0 30px;
+}
+.contacts-block-text .title{
+	margin: 0 0 4px;
+}
+.contacts-block-text a{
+	text-decoration: underline;
+}
+.contacts-block-text .socials{
+	display: flex;
+	flex-wrap: wrap;
+}
+.contacts-block-text .socials li{
+	margin: 0 17px 0 0;
+}
+.contacts-block-text .socials svg path{
+	transition: all .15s linear;
+}
+.contacts-block-text .socials a:hover svg path{
+	fill: #fab59c;
+}
+#wrapper .container .odContent .about-section .video{
+	margin: 0 0 80px;
+	position: relative;
+	z-index: 1;
+}
+#wrapper .container .odContent .about-section .pattern{
+	top: 67%;
+	left: 8.8%;
+	z-index: 0;
+}
+.history-section .title{
+	margin: 0 0 83px;
+}
+.history-list{
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 600;
+	max-width: 990px;
+	margin: 0 auto 107px 220px;
+}
+.history-list li{
+	max-width: 66%;
+	padding-left: 128px;
+	margin: 0 0 65px;
+	position: relative;
+}
+.history-list li:nth-child(2n){
+	margin-left: auto;
+}
+.history-list .history-year{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 52px;
+	color: #6B3267;
+}
+.history-list .history-year small{
+	font-size: 20px;
+	line-height: 26px;
+	margin: 0 4px;
+}
+.history-list li:before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	width: 96px;
+	height: 96px;
+	border-radius: 500px;
+	background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%);
+	transform: translateY(-50%);
+	z-index: 0;
+}
+.history-list li:nth-child(2n):before{
+	background: #6B3267;
+}
+.history-list li:nth-child(2n) .history-year{
+	background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.history-list li.long .history-year{
+	top: -24px;
+}
+.history-list li.long:before{
+	top: -73px;
+	transform: translateY(0);
+}
+.history-section .history-text .title{
+	margin: 0 0 30px;
+}
+.history-section .history-text .btn{
+	display: block;
+	width: 214px;
+	margin: 0 auto;
+	background: #6B3267;
+	color: #fff;
+	text-align: left;
+}
+.history-section .history-text .btn:hover{
+	background: #fab59c;
+}
+.history-section .history-text .btn:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -21px;
+	width: 23px;
+	height: 100%;
+	background: #fff;
+}
+#wrapper .container .odContent .about-section .content .description p{
+	text-transform: none;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
 	.title{
@@ -1502,13 +2532,13 @@ ul{
 		 width:calc(50% - 15px);
 		 margin-right: 15px;
 	}
-	.custom-select span{
+/* 	.custom-select span{
 		 font-size:18px
 	}
 	.custom-select span:after{
 		 width:20px;
 		 height:9px
-	}
+	} */
 	#wrapper .container .odContent .odDouble .odPrayers .content .description{
 		 padding-right:0
 	}
@@ -1526,14 +2556,53 @@ ul{
 		 width: calc(50% - 15px);
 		 margin-left: 15px;
 	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .image img{
+		width: 95%;
+		height: 195px !important;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text{
+		padding-top: 5px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content {
+	  padding: 0 25px 40px;
+	}
+	.three-columns-info .column .img-books{
+		left: 50%;
+		width: 425px;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-info{
+		margin: -500px 170px 0 0;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .bf-info {
+	  padding: 0;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .bf-image{
+		margin: 0 150px 0 -24px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section .bf-image{
+		margin-left: 80px;
+	}
+	#wrapper .container .odContent .promo .odBraveFaith.problem .bf-section .bf-info{
+		margin-top: -40%;
+	}
+	.brave-faith-block.choose-page .notes .subtitle-note.last {
+	  margin: 0 0 54px 0;
+	}
+	.brave-faith-block.choose-page .notes .btn, 
+	.brave-faith-block.choose-page .notes .subtitle-note.last {
+	  margin-left: 0;
+	}
 }
 @media only screen and (max-width:1365px){
-	#wrapper .container .odContent .odDouble
-	.btn{
-		 font-size:16px
+	#wrapper .container .odContent .odDouble .btn{
+		 font-size:16px;
+	}
+	#wrapper .container .odContent .odDouble .btn.small{
+		font-size:14px;
+		font-weight: 500;	
 	}
 	#wrapper .container .odContent .odCarousel .stayInTouch{
-		 left:25px
+		 left:25px;
 	}
 	#wrapper .container .odContent .discover{
 		 right:35px
@@ -1551,7 +2620,8 @@ ul{
 		 font-size:16px
 	}
 	#wrapper .container .odContent .odDouble .odPrayers .content form input[type=text]::-moz-placeholder{
-		 font-size:16px
+		 font-size:16px;
+		 opacity: 1;
 	}
 	#wrapper .container .odContent .odDouble .odPrayers .content form input[type=text]:-ms-input-placeholder{
 		 font-size:16px
@@ -1562,9 +2632,9 @@ ul{
 	#wrapper .container .odContent .odDouble .odPrayers .content form input[type=text]::placeholder{
 		 font-size:16px
 	}
-	.custom-select span{
+/* 	.custom-select span{
 		 font-size:16px
-	}
+	} */
 	#wrapper .container header .header_bottom .header_bottom-nav ul li a{
 		 font-size:18px;
 		 line-height:32px
@@ -1588,7 +2658,7 @@ ul{
 	#wrapper .container .odContent .odBraveFaith .bf-section .bf-image{
 		 margin-top:0px;
 		 max-height:22vw;
-		 transform: translateY(-130px);
+		 transform: translateY(-25px);
 	}
 	#wrapper .container .odContent .odBraveFaith .bf-logo{
 		 width:20%;
@@ -1685,7 +2755,7 @@ ul{
 		 justify-content:center
 	}
 	#wrapper footer .container .footer-top .column:last-child ul li{
-		 margin:0 5px
+		 margin:0 7px
 	}
 	#wrapper .container .odContent .promo .odBraveFaith .pattern.long {
 	    top: 100%;
@@ -1696,6 +2766,51 @@ ul{
 	}
 	.gallery-slider .slider-nav .slick-next{
 	  right: 0;
+	}
+	.archive-section .news-description-block .content-block{
+		width: 83%;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-info{
+		margin-right: 95px;
+	}
+	.brave-faith-block.choose-page .notes .btn, 
+	.brave-faith-block.choose-page .notes .subtitle-note.last{
+	  margin-left: 44px;
+	}
+}
+@media only screen and (max-width:1199px){
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content{
+		width: 33%;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text{
+		margin-left: 160px;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text p{
+		max-width: 205px;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text .stamps{
+		width: 150px;
+		left: -160px;
+	}
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-1{
+		left: -45px;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-info{
+		margin: -380px 80px 0 0;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section{
+		max-width: 980px;
+		margin: 0 auto;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section .bf-image {
+	  margin-left: 30px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .bf-image {
+	  margin: 0 30px 0 0;
 	}
 }
 @media only screen and (max-width:1023px){
@@ -1820,6 +2935,193 @@ ul{
 	}
 	#wrapper .container .odContent .odSubscribe form p span.wpcf7-form-control-wrap:nth-child(3){
 		 margin-right:0
+	}
+	.search-result .search-result-text{
+		font-size: 27px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble{
+		margin: 0;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new{
+		width: 100%;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new:nth-child(2n) .text{
+		order: -1;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .image{
+		margin: 0;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .image img{
+		width: 167px;
+		height: 173px !important;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text{
+		width: 75%;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title {
+    font-size: 16px;
+    line-height: 21px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content {
+	  width: 60%;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .title{
+		text-align: left;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text{
+		width: 230px;
+		padding: 0;
+		margin: 0 0 0 auto;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text p{
+		max-width: 230px;
+	}
+	.news-collection .posts-row.two{
+		margin: 0;
+	}
+	#wrapper .container .odContent .pray-section .odNeeds.needs-top .content,
+	#wrapper .container .odContent .odNeeds.blog-slider .content, 
+	#wrapper .container .odContent .odNeeds.needs-top .content{
+		margin: 24px 0 9px;
+	}
+	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-next, 
+	#wrapper .container .odContent .odNeeds.news-slider .content .news-slider-prev{
+		top: 55px;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap{
+		width: 100%;
+	}
+	.search-result-content .news-collection .posts .post{
+		margin: 0 0 35px;
+	}
+	.archive-section .news-description-block .content-block {
+	  padding: 0 20px 0 60px;
+	}
+	#wrapper .container .odContent .brave-faith-section .odBraveFaith{
+		margin-bottom: 0;
+	}
+	.three-columns-info .column{
+		width: 100%;
+	}
+	.three-columns-info .column .logo-brave,
+	.three-columns-info .column .img-books{
+		display: none;
+	}
+	.three-columns-info .accordion{
+		margin: 0 0 37px;
+	}
+	.three-columns-form .user-form input{
+		padding: 4px 5px 0;
+	}
+	#wrapper .container .odContent .promo .odBraveFaith .bf-description.comment{
+		width: 100%;
+		max-width: 319px;
+	}
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-1 {
+	  left: -30px;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image{
+		padding-left: 0;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image .smile-1{
+		width: 160px;
+		left: -21px;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-info{
+		width: 50%;
+		margin: -545px 0 0;
+	}
+	.article-column{
+		background: none;
+		border-top: 1px solid #D9D9D9;
+		line-height: 21px;
+	}
+	.article-column .content-text{
+		padding: 30px 0 10px;
+	}
+	.article-column .smile-1{
+		display: none;
+	}
+	.blockquote {
+	  padding: 20px 0 0;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block{
+		margin-top: 0;
+		padding-top: 80px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section:nth-child(2) .bf-info {
+    margin: 0 30px 0px 0;
+    width: 37%;
+	}
+	#wrapper .container .odContent .odBraveFaith .bf-section .bf-image{
+		width: 44%;
+	}
+	.btn_white{
+		font-size: 16px;
+	}
+	#wrapper .container .odContent .promo .odBraveFaith.problem .bf-section .bf-info{
+		margin-top: -60%;
+	}
+	.promo .title.icon-circle:before{
+		top: -23px;
+		left: -5px;
+		width: 70px;
+		height: 70px;
+	}
+	.map-section .text-desktop{
+		display: none;
+	}
+	.map-section .text-mobile{
+		display: block;
+		background: rgba(95,46,104,.85);
+		color: #fff;
+		padding: 23px 15px 11px;
+		line-height: 26px;
+	}
+	.map-section .text-mobile .heading{
+		font-size: 16px;
+		line-height: 21px;
+		font-weight: 600;
+		margin: 0 0 8px;
+	}
+	.map-section .text-mobile .custom-select{
+		margin: 0 0 23px;
+	}
+	.map-section .text-mobile .custom-select span, 
+	.map-section .text-mobile .custom-select ul {
+	  border-color: #fff;
+	}
+	.map-section .text-mobile .custom-select ul li{
+		border-color: rgba(95,46,104,.85);
+	}
+	#wrapper .container .odContent .map-section .odCost .title{
+		text-align: center;
+		margin: 0;
+	}
+	.map-info h5{
+		margin: 0 0 12px;
+	}
+	.visual-section .visual-image {
+    height: 350px !important;
+	}
+	.bg-pink-box .inner-text{
+		padding: 0;
+	}
+	.news-inner-section .bg-pink-box {
+	  margin: 30px 0 50px;
+	}
+	.sign-up-block .image .smile-1{
+		left: -30px;
+	}
+	.contacts-block-text{
+		padding-left: 40px;
+	}
+	#wrapper .container .odContent .about-section .odEvent,
+	#wrapper .container .odContent .about-section .content{
+		margin-top: 0;
+	}
+	.history-list{
+		margin: 0 auto;
 	}
 }
 @media only screen and (max-width:767px){
@@ -2068,7 +3370,8 @@ ul{
 		 padding:0
 	}
 	#wrapper .container .odContent{
-		 padding-bottom:40px
+		padding-top: 30px;
+		 padding-bottom:62px
 	}
 	#wrapper .container header nav.secondary{
 		 display:none
@@ -2085,9 +3388,6 @@ ul{
 	}
 	#wrapper .container header .header_bottom{
 		 display:none
-	}
-	#wrapper .container .odContent{
-		 padding-top:30px
 	}
 	#wrapper .container .odContent .discover{
 		 display:none
@@ -2237,7 +3537,7 @@ ul{
 		 text-align:right
 	}
 	#wrapper .container .odContent .odCarousel .swiper .item .item-image .image-info .ii-title{
-		 font-size:36px;
+		 font-size:32px;
 		 text-align:right;
 		 margin-bottom:40px;
 		 max-width:none;
@@ -2287,7 +3587,7 @@ ul{
 		 -webkit-box-ordinal-group:2;
 		 -ms-flex-order:1;
 		 order:1;
-		 margin:0;
+		 margin:0 0 20px;
 		 padding-right:0;
 		 width:60%
 	}
@@ -2296,7 +3596,7 @@ ul{
 	}
 	#wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) .bf-image{
 		 padding-left:0;
-		 width:45%
+		 width:85%
 	}
 	#wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) .bf-image img{
 		 position:relative;
@@ -2326,9 +3626,6 @@ ul{
 	}
 	#wrapper .container .odContent .odBraveFaith .pattern img{
 		 display:none
-	}
-	#wrapper .container .odContent .odNeeds{
-		 overflow:hidden
 	}
 	#wrapper .container .odContent .odDouble .odStories .stories-content,#wrapper .container .odContent .odDouble .odStories .stories-image{
 		 width:100%;
@@ -2404,6 +3701,7 @@ ul{
 		 margin-right:0;
 		 margin-bottom:20px;
 		 width:100%;
+		 height: 32px;
 		 font-size:16px
 	}
 	#wrapper .container .odContent .odSubscribe form p span.wpcf7-form-control-wrap input::-webkit-input-placeholder{
@@ -2412,7 +3710,8 @@ ul{
 	}
 	#wrapper .container .odContent .odSubscribe form p span.wpcf7-form-control-wrap input::-moz-placeholder{
 		 font-family:DINNextLTPro-Regular,sans-serif!important;
-		 font-size:16px!important
+		 font-size:16px!important;
+		 opacity: 1;
 	}
 	#wrapper .container .odContent .odSubscribe form p span.wpcf7-form-control-wrap input:-ms-input-placeholder{
 		 font-family:DINNextLTPro-Regular,sans-serif!important;
@@ -2427,11 +3726,21 @@ ul{
 		 font-size:16px!important
 	}
 	#wrapper .container .odContent .odSubscribe form p button{
-		 margin-top:10px
+		 margin-top:10px;
+		 font-size: 16px;
+		 height: 32px;
+		 line-height: 32px;
 	}
 	#wrapper .container .odContent .odNeeds{
 		 margin-top:30px;
-		 padding:0 15px 30px
+		 padding:0 15px 30px;
+		 overflow: hidden;
+	}
+	#wrapper .container .odContent .odNeeds:last-child{
+		padding-bottom: 0;
+	}
+	#wrapper .container .odContent .archive-section .odNeeds.needs-top{
+		padding: 0;
 	}
 	#wrapper .container .odContent .odNeeds .swiper{
 		 margin:0 30px
@@ -2529,30 +3838,52 @@ ul{
 	#wrapper footer .container .footer-top .column{
 		 width:100%!important
 	}
+	.odSubscribe-footer .title{
+		margin: 0 0 18px;
+	}
 	#wrapper footer .container .footer-top .column:last-child{
 		 -webkit-box-ordinal-group:1;
 		 -ms-flex-order:0;
 		 order:0;
 		 margin-top:0;
-		 margin-bottom:30px
+		 margin-bottom:41px
 	}
 	#wrapper footer .container .footer-top .column:nth-child(1){
 		 -webkit-box-ordinal-group:2;
 		 -ms-flex-order:1;
 		 order:1;
 		 text-align:center;
-		 margin-bottom:20px
+		 margin-bottom:20px;
+		 margin-right: 0;
 	}
 	#wrapper footer .container .footer-top .column:nth-child(2){
 		 -webkit-box-ordinal-group:3;
 		 -ms-flex-order:2;
 		 order:2;
-		 margin-bottom:20px
+		 margin-bottom:0
 	}
 	#wrapper footer .container .footer-top .column:nth-child(3){
 		 -webkit-box-ordinal-group:4;
 		 -ms-flex-order:3;
-		 order:3
+		 order:3;
+		 font-size: 14px;
+	}
+	#wrapper footer .container .footer-top .column:nth-child(2),
+	#wrapper footer .container .footer-top .column:nth-child(3){
+		padding: 10px 15px;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap input{
+		height: 32px;
+		font-size: 16px;
+		font-weight: normal;
+		padding: 4px 17px 0;
+	}
+	.odSubscribe-footer .btn.filled{
+		margin: 0;
+		width: 114px;
+		height: 32px;
+		font-size: 16px;
+		line-height: 32px;
 	}
 	#wrapper footer .container .footer-logo{
 		 margin-top:75px
@@ -2564,7 +3895,664 @@ ul{
 		 display:none
 	}
 	#wrapper .container .odContent .odSubscribe form button{
-		 width:auto
+		 width:auto;
+		 min-width: 114px;
+	}
+	.basket-form .basket-list .basket-quantity {
+		margin-top: 20px;
+	}
+	.basket-form .actions {
+		margin-left: 15px;
+	}
+	.basket-form .basket-list .basket-description{
+		align-items: flex-start;
+	}
+	.basket-form .basket-list .basket-total{
+		min-height: 126px;
+	}
+	.product-info-section .product-info-text .desktop{
+		display: none;
+	}
+	.product-info-section p:last-child{
+		margin: 0 0 20px;
+	}
+	.search-section,
+	.archive-section{
+		padding: 0 15px;
+	}
+	.search-block{
+		margin: 18px auto 12px;
+	}
+	.search-block .search-form .search{
+		right: 0;
+	}
+	.search-result .search-result-text{
+		font-size: 20px;
+		line-height: 26px;
+		margin: 0 0 28px;
+	}
+	.search-result-content.no-result .search-result-icon{
+		font-size: 26px;
+		line-height: 32px;
+		margin: 0 0 -4px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .image{
+		width: 100%;
+	}
+	.news-collection .posts,
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .image img{
+		display: none;
+	}
+	.news-collection .posts.mobile{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .image,
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .image img.mobile{
+		display: block;
+	}
+	.news-collection .post .image img {
+    height: 170px!important;
+    object-fit: cover;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post,
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new{
+		padding: 0;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text {
+	  padding: 0 0 0 15px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new:nth-child(2n) .text{
+		padding: 0 27px 0 0;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title{
+		margin: 0 0 15px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post p {
+	  margin: 0 0 6px;
+	}
+	#wrapper .container .odContent .pray-section .odSubscribe{
+	  margin-top: 20px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content{
+		width: 100%;
+		padding: 15px 0 38px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .title{
+		text-align: center;
+		margin-bottom: 18px;
+	}
+	#wrapper .container .odContent .odBraveFaith{
+		margin-bottom: 50px;
+	}
+	.news-collection .posts .title{
+		text-transform: none;
+		margin: 0 0 23px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories{
+		margin: 0 0 35px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .image{
+		margin-left: -15px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new:nth-child(2n) .image{
+		margin: 0 -15px 0 0;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .new{
+		margin-bottom: 40px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .btn.more{
+		margin: 0 auto;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .btn.more{
+		font-weight: 500;
+		height: 32px;
+		line-height: 32px;
+	}
+	#wrapper .container .odContent .brave-faith-section .odDouble .odStories .btn.more:before{
+		width: 17px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block{
+		padding: 15px 15px 38px;
+		margin: 0 0 25px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .content .description{
+		font-size: 14px;
+		line-height: 18px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .btn{
+		font-size: 20px;
+		min-width: 195px;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text{
+		font-size: 14px;
+		line-height: 18px;
+		width: 100%;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text p{
+		max-width: 100%;
+		margin: 10px 0;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text .stamps{
+		display: none;
+		position: static;
+	}
+	.brave-faith-section.send-hope .odPrayers.pink-block .shot-text .stamps.mobile{
+		display: block;
+		width: auto;
+		margin: 0 auto;
+	}
+	#wrapper .container .odContent .pray-section .odNeeds.needs-top,
+	#wrapper .container .odContent .letter-writing-section .odNeeds.needs-top {
+	  margin-top: 54px;
+	  padding-bottom: 0;
+	}
+	#wrapper footer .container .footer-top .column ul.socials li a svg{
+		width: 46px;
+		height: 46px;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap input::-webkit-input-placeholder{
+		font-size:16px;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap input::-moz-placeholder{
+		font-size:16px;
+		opacity: 1;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap input:-ms-input-placeholder{
+		font-size:16px;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap input::-ms-input-placeholder{
+		font-size:16px;
+	}
+	.odSubscribe-footer .wpcf7-form-control-wrap input::placeholder{
+		font-size:16px;
+	}
+	#wrapper .container .odContent .pray-section .odNeeds.needs-top .content .post .image{
+		height: 170px;
+	}
+	.search-result-content .news-collection .posts{
+		margin: 0 -20px 25px;
+	}
+	.search-result-content .news-collection .posts:last-child{
+		margin-bottom: 0;
+	}
+	.search-result-content .news-collection .posts .post{
+		width: 50%;
+		margin: 0;
+	}
+	.search-result-content .mark{
+		padding: 0 3px;
+	}
+	.archive-section .aside-block{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 40px 0 0;
+	}
+	.archive-section .aside-block .banner{
+		width: 33.3%;
+	}
+	.archive-section .news-description-block{
+		padding: 0;
+	}
+	.archive-section .news-description-block .content-block{
+		width: 100%;
+		padding: 0;
+	}
+	.archive-section .btn-go{
+		margin: 0 0 5px;
+	}
+	.archive-section .btn-go .btn-back{
+		padding: 2px;
+		padding-left: 13px;
+	}
+	.archive-section .btn-go .btn-back:before{
+		width: 8px;
+		height: 18px;
+	}
+	.archive-section .no-result .content-block{
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.archive-section .search-result .search-result-text{
+		margin: 0 0 14px;
+	}
+	.archive-list{
+		margin: 0 -15px;
+	}
+	.archive-list .title{
+		font-size: 14px;
+		line-height: 19px;
+	}
+	.three-columns-info{
+		margin: 64px 0 37px;
+	}
+	.three-columns-info .text-desktop{
+		display: none;
+	}
+	.three-columns-info .text-mobile{
+		display: block;
+	}
+	.three-columns-info .title{
+		padding-left: 35px;
+		margin: 0 0 14px;
+		position: relative;
+	}
+	.three-columns-info .title .icon{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin: 0;
+		transform: translateY(-50%);
+	}
+	.three-columns-info .column p {
+	  margin: 0 0 5px;
+	}
+	.three-columns-info .column .wrap-img {
+    margin: 14px 0 0;
+	}
+	.three-columns-form{
+		margin-bottom: 60px;
+	}
+	.three-columns-form .form-columns .column{
+		width: 100%;
+	}
+	.three-columns-form .user-form p {
+	  margin: 0 0 13px;
+	}
+	.three-columns-form .user-form .wrap-input {
+	  margin: 0 0 12px;
+	}
+	.three-columns-form .user-form .form-columns .wrap-input {
+		margin: 0 0 20px;
+	}
+	.three-columns-form .user-form .custom-select span{
+		min-width: 59px;
+		height: 33px;
+		font-size: 16px;
+		line-height: 31px;
+		text-align: center;
+	}
+	.three-columns-form .user-form input{
+		height: 32px;
+		padding: 0 17px;
+	}
+	.three-columns-form .user-form .text-short{
+		display: none;
+		font-size: 14px;
+		line-height: 25px;
+		margin: -11px 0 13px;
+	}
+	.three-columns-form .user-form .text-short.mobile{
+		display: block;
+	}
+	.three-columns-form .user-form .wrap-input.inline{
+		flex-wrap: wrap;
+	}
+	.three-columns-form .user-form .wrap-input.inline p, 
+	.three-columns-form .user-form .wrap-input.inline div{
+		width: 100%;
+	}
+	.three-columns-form .user-form .wrap-input.inline p{
+		margin: 0 0 10px;
+	}
+	.three-columns-form .user-form .wrap-input.button{
+		margin: 19px auto 0;
+		text-align: center;
+	}
+	#wrapper .container .odContent .odEvent .video{
+		margin: 59px 0 58px;
+	}
+	.three-columns-info .accordion .opener{
+		padding-right: 50px;
+	}
+	#wrapper .container .odContent .promo .odBraveFaith .bf-description.comment{
+		margin: 0 15px -15px;
+		padding: 24px;
+		line-height: 18px;
+	}
+	.letter-writing-section{
+		padding-top: 14px;
+	}
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith .bf-section.right .bf-image .smile-1{
+		display: none;
+	}
+	#wrapper .container .odContent .letter-writing-section .odBraveFaith{
+		margin-bottom: 0;
+	}
+	#wrapper .container .odContent .letter-writing-section .odSubscribe{
+		margin: 20px 0 0;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-info{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.give-section .promo.left-image{
+		padding-bottom: 47px;
+	}
+	.give-section .promo.left-image .odBraveFaith{
+		flex-wrap: wrap;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section,
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image{
+		width: 100%;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section.right{
+		justify-content: center;
+		padding: 33px 0 0;
+		order: 0;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image img.mobile{
+		display: none;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image .smile-1{
+		width: 84px;
+		left: 21px;
+		bottom: -21px;
+	}
+	.give-section .note-block{
+		text-align: center;
+	}
+	.give-section .promo .bf-info p {
+	  margin: 0 0 13px;
+	}
+	.give-section .subtitle-note{
+		width: 47.5%;
+		padding: 32px 40px 10px 10px;
+		min-height: 154px;
+		line-height: 18px;
+	}
+	.give-section .subtitle-note:before{
+		width: 44px;
+		height: 44px;
+		top: 4px;
+		left: 7px;
+	}
+	.give-section .subtitle-note strong{
+		margin-bottom: -10px;
+	}
+	.user-form.category .custom-select {
+	  margin-bottom: 15px;
+	}
+	.user-form.category .custom-select span{
+		border-left-width: 19px;
+	}
+	.user-form.category .category-text{
+		padding: 5px 10px;
+	}
+	.user-form.category input{
+		width: 94px;
+	}
+	.user-form.category .wrap-input {
+	  margin: 0 0 18px;
+	}
+	.custom-select span{
+		height: 32px;
+		font-size: 16px;
+		line-height: 32px;
+		padding: 0 18px;
+	}
+	.custom-select span:after{
+		width: 14px;
+		right: 11px;
+	}
+	.article-column{
+		padding: 4px 30px 0;
+	}
+	.article-column .title:first-child{
+		margin: 0 0 17px;
+	}
+	.article-column .heading{
+		line-height: 21px;
+		padding-left: 31px;
+		margin: 0 0 4px;
+		position: relative;
+	}
+	.article-column .heading .icon{
+		position: absolute;
+		top: -5px;
+		left: 0;
+	}
+	.article-column p {
+	  margin: 0 0 23px;
+	}
+	.blockquote {
+	  padding: 15px 0 0;
+	}
+	.blockquote p{
+		margin: 0;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section .bf-image{
+		width: 212px;
+		height: 204px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block{
+		padding-top: 51px;
+		padding-bottom: 21px;
+		margin-bottom: -62px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith .bf-logo{
+		top: 59px;
+		width: 128px;
+		left: 264px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right{
+		z-index: 3;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .particles-mobile{
+		top: 74%;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section.right .bf-image {
+	  margin: 0 0 35px;
+	}
+	#wrapper .container .odContent .odBraveFaith.purple-block .bf-section .bf-info .bf-description{
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+	#wrapper .container .odContent .odBraveFaith.purple-block .bf-section.right .bf-info .bf-description{
+		max-width: 210px;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section:nth-child(2) .bf-info{
+		text-align: left;
+		margin: 36px 0 0;
+		width: 35%;
+		order: -1;
+	}
+	#wrapper .container .odContent .give-section .odBraveFaith.purple-block .bf-section .bf-image{
+		margin: 26px -15px 0 auto;
+		transform: translateY(0);
+	}
+	.purple-block .btn{
+		height: 32px;
+		line-height: 32px;
+		border-left-width: 20px;
+		padding: 0 20px;
+	}
+	.btn_white {
+	  font-size: 14px;
+	  border-left-width: 21px;
+	  padding: 0 6px;
+	}
+	.promo .title.icon-circle{
+		margin: 0 0 14px;
+	}
+	.promo .title.icon-circle:before {
+    top: -14px;
+    left: -9px;
+    width: 44px;
+    height: 44px;
+	}
+	.problem .subtitle-note {
+	  padding: 13px 12px 7px;
+	  height: auto;
+	  margin: 0 0 11px;
+	}
+	.problem .subtitle-note strong {
+    font-size: 16px;
+    line-height: 21px;
+	}
+	#wrapper .container .odContent .promo .odBraveFaith.problem .bf-description.mobile{
+		line-height: 25px;
+	}
+	.stories-section{
+		margin: 0 0 49px;
+	}
+	.visual-section .visual-image {
+	  height: 250px !important;
+	}
+	.visual-section .stayInTouch li{
+		margin: 0 0 7px;
+	}
+	.visual-section .stayInTouch a svg {
+    width: 14px;
+    height: 14px;
+	}
+	.news-description-block .new-columns{
+		column-count: 1;
+		margin: 0;
+	}
+	.bg-pink-box .inner-text .text{
+		flex-wrap: wrap;
+	}
+	.bg-pink-box .inner-text .text .boxes{
+		width: 48%;
+	}
+	.bg-pink-box .title {
+	  margin: 0 0 43px;
+	}
+	.bg-pink-box .inner-text .text{
+		display: none;
+	}
+	.bg-pink-box .inner-text .text.mobile{
+		display: flex;
+	}
+	.news-inner-section .bg-pink-box{
+		margin-bottom: 0;
+	}
+	.bg-gray-box .inner-text .list p {
+	  margin: 0 0 19px;
+	}
+	.news-inner-section .bg-gray-box:last-child{
+		margin-bottom: -62px;
+	}
+	.brave-faith-block.choose-page .notes .subtitle-note{
+		padding: 22px 13px 24px;
+	}
+	.brave-faith-block.choose-page .notes .subtitle-note strong{
+		font-size: 16px;
+		line-height: 21px;
+		top: -15px;
+	}
+	.brave-faith-block.choose-page .notes .subtitle-note strong:before{
+		width: 44px;
+		height: 44px;
+		top: -13px;
+	}
+	.brave-faith-block.choose-page .notes .subtitle-note.last{
+		margin: -18px 0 24px;
+	}
+	.brave-faith-block.choose-page .notes .btn{
+		margin: 0 auto;
+	}
+	.brave-faith-block .title{
+		text-decoration: underline;
+	}
+	.contacts-block{
+		padding: 0 15px;
+		margin-top: 22px;
+	}
+	.contacts-block > div{
+		width: 100%;
+	}
+	.contacts-block .contacts-block-text{
+		padding: 0 0 30px;
+		order: -1;
+	}
+	.contacts-block .user-form .wrap-input:last-child{
+		margin: 0;
+	}
+	.contacts-block .user-form .title{
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.contacts-block .user-form p{
+		line-height: 22px;
+		text-align: center;
+	}
+	.contacts-block .user-form input,
+	.contacts-block .user-form textarea {
+	  line-height: 27px;
+	  width: 100%;
+	}
+	.contacts-block .user-form .btn{
+		display: block;
+		font-size: 16px;
+		text-align: center;
+		min-width: 114px;
+		margin: 0 auto;
+	}
+	#wrapper .container .odContent .about-section .pattern{
+		display: none;
+	}
+	#wrapper .container .odContent .about-section .content{
+		margin-top: 0;
+	}
+	#wrapper .container .odContent .about-section .content .description p{
+		line-height: 18px;
+	}
+	#wrapper .container .odContent .about-section .video{
+		margin: 42px 0 30px;
+	}
+	.history-section{
+		padding: 0 15px;
+	}
+	.history-section .title{
+		margin: 0 0 29px;
+	}
+	.history-list{
+		font-size: 14px;
+		line-height: 21px;
+		margin: 0 auto 65px;
+	}
+	.history-list li{
+		display: flex;
+		align-items: center;
+		max-width: 96%;
+		min-height: 35px;
+		padding-left: 58px;
+		margin: 0 0 15px;
+	}
+	.history-list li:before{
+		width: 35px;
+		height: 35px;
+		top: 0;
+		left: 11px;
+		transform: translateY(0);
+	}
+	.history-list li:nth-child(2n){
+		margin-left: 0;
+	}
+	.history-list .history-year{
+		font-size: 14px;
+		line-height: 18px;
+		top: 10px;
+		left: 4px;
+		transform: translateY(0);
+	}
+	.history-list .history-year small {
+    font-size: 14px;
+    line-height: 18px;
+	}
+	.history-list li.long{
+		margin-top: 49px;
+	}
+	.history-list li.long:before{
+		top: -35px;
+	}
+	.history-section .history-text .title {
+	  margin: 0 0 16px;
 	}
 }
 @media only screen and (max-width:500px){
@@ -2582,4 +4570,57 @@ ul{
   #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) .bf-info {
 		width: 100%;
   }
+  .search-result .search-result-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .search-result-content.no-result .title{
+  	max-width: 260px;
+  	margin: 0 auto 10px;
+  }
+	.news-collection .post .image img {
+    height: 108px!important;
+	}
+	#wrapper .container .odContent .pray-section .odNeeds.needs-top .content .post .image {
+	  height: 108px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odPrayers.pink-block .image{
+		height: 145px;
+	}
+	#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text {
+	  padding: 0 0 0 27px;
+	}
+	.three-columns-info .column .wrap-img {
+    height: 176px;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image img.desktop{
+		display: none;
+	}
+	#wrapper .container .odContent .give-section .promo.left-image .odBraveFaith .bf-section .bf-image img.mobile{
+		display: block;
+	}
+	.btn_white{
+		margin: 0 0 0 -70px;
+	}
+	#wrapper .container .odContent .promo .odBraveFaith.problem .bf-section .bf-info {
+	  margin-top: -97%;
+	}
+	#wrapper .container .odContent .blog-section .odNeeds.blog-slider{
+		padding-bottom: 18px;
+	}
+	.visual-section .visual-image {
+    height: 200px !important;
+    min-height: 0;
+	}
+	.brave-faith-block.choose-page .notes .subtitle-note.last {
+	  margin-top: -50px;
+	}
+	.price-menu li{
+		font-size: 13px;
+	}
+}
+
+#countries-watch {
+	overflow: auto;
+	height: 405px;
 }

@@ -197,42 +197,6 @@ $(function() {
         $('.goods-slider .swiper .goods-slider-next').trigger('click');
     })
 
-    const blogSlider = new Swiper('.blog-slider .swiper', {
-        loop: true,
-        slidesPerView: 1,
-        breakpoints: {
-            // when window width is >= 320px
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 44
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 15
-            },
-            320: {
-                slidesPerView: 2,
-                spaceBetween: 15
-            }
-        },
-        navigation: {
-            nextEl: '.blog-slider-next',
-            prevEl: '.blog-slider-prev',
-        },
-        pagination: {
-            el: '.blog-slider-pagination',
-            clickable: true,
-        }
-    });
-
-    $('.blog-slider-prev').on('click', function(){
-        $('.blog-slider .swiper .blog-slider-prev').trigger('click');
-    })
-
-    $('.blog-slider-next').on('click', function(){
-        $('.blog-slider .swiper .blog-slider-next').trigger('click');
-    })
-
     c_select.find('span').on('click', function(){
         let parent_select = $(this).parent();
         if(parent_select.hasClass('in-action'))
@@ -362,4 +326,34 @@ $(function() {
         $('.total').val(sum)
     });
 
+});
+
+$('.added-goods-modal .btn-clouse').on('click', function () {
+    $('.added-goods-modal').css({
+        'opacity': '0'
+    });
+});
+
+$('.basket-description .color .checkbox-container span').on('click', function () {
+    color = $(this).attr('class').replace('checkmark ', '');
+    $('.color-text span').text(color);
+});
+
+
+$('body .quantity').on('click', function () {
+    $("button[name='update_cart']").attr('disabled', false);
+});
+
+function runSpinner() {
+    $('.spinner').spinner({
+        min: 1,
+        spin: function (event, ui) {
+            $('.woocommerce-cart-form :input[name="update_cart"]').prop('disabled', false).attr('aria-disabled', false);
+        }
+    })
+}
+$('.expanded-opener').on('click', function() {
+  $(this).closest('.hide-text').toggleClass('open');
+  $(this).siblings('.expanded').slideToggle();
+  return false;
 });
