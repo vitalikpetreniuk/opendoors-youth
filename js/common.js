@@ -311,11 +311,11 @@ $(function() {
     });
 
     /* custom-select-currency */
-	$('.custom-select__option').on('click', function () {
-		$('#currency').val($(this).data('value'))
-		console.log($('#currency').val());
-		$('#gift-form').removeClass().addClass($('#currency').val());
-	})
+    $('.custom-select__option').on('click', function () {
+        $('#currency').val($(this).data('value'))
+        console.log($('#currency').val());
+        $('#gift-form').removeClass().addClass($('#currency').val());
+    })
 
     let sum
     $( ".wrap-input input" ).on('input', function () {            
