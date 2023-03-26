@@ -1156,7 +1156,7 @@ ul{
 #wrapper .container .odContent .odSubscribe{
     margin-top:50px;
     background:#f2f2f2;
-    padding:30px 10px 45px
+    padding:30px 30px 45px
 }
 #wrapper .container .odContent .odSubscribe .description{
     max-width:50%;
@@ -2678,6 +2678,12 @@ ul{
 }
 .odPrayers.pink-block .wpcf7-not-valid-tip{
     margin-top: -25px;
+    color: #fff;
+}
+.odPrayers.pink-block .wpcf7 form.invalid .wpcf7-response-output{
+    border-color: #fff;
+    margin-left: 0;
+    margin-right: 0;
 }
 .wpcf7-not-valid-tip{
     margin: 0 0 15px;
@@ -2775,14 +2781,14 @@ ul{
 #wrapper .container header .header_bottom .header_bottom-nav .sub-menu li:last-child{
     border: none;
 }
-#wrapper .container .odContent .odNeeds.blog-slider .content .post .description{
+/* #wrapper .container .odContent .odNeeds.blog-slider .content .post .description{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
+} */
 .blog-slider .description:after{
-    height: 18px;
+    height: 70%;
 }
 .praver-tabset{
     padding: 7px 0 0;
@@ -2813,8 +2819,112 @@ ul{
     border: 2px solid #6b3267;
     border-top: none;
 }
+.basket-section,
+.basket-section.goods-card .product-info-section .product-info-text{
+    position: relative;
+}
+.basket-section form.donate{
+    position: absolute;
+    bottom: 140px;
+}
+.basket-section.goods-card form.donate{
+    bottom: 5px;
+    right: 0;
+}
+.basket-section.goods-card .basket-result .btn{
+    margin-right: 180px;
+}
+.praver-generator-section .wpcf7 form.sent .wpcf7-response-output{
+    border: none;
+}
+.banner-list{
+    column-fill: inherit;
+    height: auto;
+    margin: 0 0 20px;
+}
+.news-boxes-links.only-one .item h3 .mark{
+    font-style: normal;
+}
+#wrapper .container .odContent .odNeeds.needs-top .post, #wrapper .container .odContent .odNeeds.blog-slider .post{
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 480px;
+}
+#wrapper .container .odContent .odNeeds.needs-top .content.news-content .btn{
+    position: absolute;
+    bottom: 0;
+}
+.odPrayers-purple-block .text-list{
+    width: 57%;
+}
+.odPrayers-purple-block .list li{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.odPrayers-purple-block .list p{
+    width: 55%;
+    margin: 25px 0 0;
+}
+.news-description-block .wp-block-advgb-columns.advgb-columns-wrapper .advgb-columns-container .advgb-columns.mbl-layout-stacked>.advgb-column{
+    padding: 0 5px;
+}
+.basket-list .custom-select{
+    max-width: 60%;
+    margin: 0 0 -35px auto;
+}
+.goods-slider-collection .goods-post .custom-select{
+    margin-top: 15px;
+}
+.goods-slider-collection .goods-post .custom-select span,
+.goods-slider-collection .goods-post .custom-select ul,
+.goods-slider-collection .goods-post .custom-select ul li,
+.basket-list .custom-select span,
+.basket-list .custom-select ul,
+.basket-list .custom-select ul li{
+    border-color: #6b3267;
+    color: #6b3267;
+}
+.goods-slider-collection .goods-post .custom-select span:after,
+.basket-list .custom-select span:after{
+    background: url(../img/arrow-down-purple.svg) no-repeat center;
+    background-size: contain;
+}
+.basket-form .basket-list .custom-select li{
+    padding: 10px 15px 7px;
+    transition: 0s;
+}
+.basket-form .basket-list .custom-select ul li.active, 
+.basket-form .basket-list .custom-select ul li:hover {
+    background: #f8e7dc;
+    color: #6b3267;
+}
+.basket-section.goods-card .basket-list .basket-description{
+    width: 75%;
+}
+.basket-section.goods-card .custom-select li{
+    border-bottom: 2px solid #6b3267;
+}
+.news-description-block .content-block p strong{
+    color: #6b3267;
+}
+.news-description-block .content-block p strong a{
+    text-decoration: underline;
+}
+.news-description-block .content-block h3{
+    font-family: DINNextLTPro-Bold,sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #6b3267;
+}
+.news-description-block .content-block h3.has-luminous-vivid-orange-color{
+    color: #6b3267 !important;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
+    .odPrayers-purple-block .text-list{
+        width: 55%;
+        font-size: 14px;
+    }
     .title{
         font-size:34px
     }
@@ -3083,6 +3193,16 @@ ul{
     }
 }
 @media only screen and (max-width:1199px){
+    .odPrayers-purple-block .image-list{
+        width: 140px;
+        height: 140px;
+    }
+    .odPrayers-purple-block .text-list{
+        width: 50%;
+    }
+    .odPrayers-purple-block .list p{
+        width: 70%;
+    }
     #wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title{
         font-size: 18px;
         line-height: 22px;
@@ -3118,6 +3238,16 @@ ul{
     }
 }
 @media only screen and (max-width:1023px){
+    .odPrayers-purple-block .list p {
+        width: 100%;
+    }
+    .odPrayers-purple-block .image-list {
+        width: 150px;
+        height: 150px;
+    }
+    .odPrayers-purple-block .text-list {
+        width: 200px;
+    }
     .title{
         font-size:27px
     }
@@ -3434,8 +3564,26 @@ ul{
         font-size: 16px !important;
         padding: 0 15px;
     }
+    #wrapper .container .odContent .odNeeds.needs-top .post, #wrapper .container .odContent .odNeeds.blog-slider .post {
+        min-height: 420px;
+    }
+    .basket-section.goods-card .basket-list .basket-description{
+        width: 100%;
+    }
 }
 @media only screen and (max-width:767px){
+    .basket-list .custom-select {
+        max-width: 85%;
+        margin: 0 0 15px;
+    }
+    .basket-list .custom-select span{
+        padding: 0 10px;
+        padding-right: 30px;
+    }
+    .basket-form .basket-list .custom-select li,
+    .basket-section.goods-card .basket-list .custom-select li{
+        padding: 5px 10px;
+    }
     #wrapper .container .mobile .mobile-bar._scroll {
         position: fixed;
         z-index: 101;
@@ -4915,6 +5063,18 @@ ul{
     .odPrayers.pink-block .wpcf7-not-valid-tip{
         margin-top: -35px;
     }
+    .basket-section form.donate {
+        bottom: 125px;
+        left: 15px;
+    }
+    .basket-section.goods-card form.donate{
+        left: auto;
+        bottom: 28px;
+        right: 15px;
+    }
+    #wrapper .container .odContent .odNeeds.needs-top .post, #wrapper .container .odContent .odNeeds.blog-slider .post{
+        min-height: 0;
+    }
 }
 @media only screen and (max-width:500px){
     /* #wrapper .container .odContent .odBraveFaith .bf-section {
@@ -4992,6 +5152,12 @@ ul{
     }
     #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) .bf-image img{
         width: calc(100% + 15px);
+    }
+    .basket-section.goods-card .basket-result .btn {
+        margin-right: 165px;
+    }
+    .odPrayers-purple-block .text-list {
+        width: 190px;
     }
 }
 
