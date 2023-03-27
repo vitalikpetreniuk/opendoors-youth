@@ -47,6 +47,9 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
     padding: 15px;
     background: linear-gradient(180deg, #F47B87 0%, #FAB39B 100%)
 }
+.fancybox-bg{
+    background: none;
+}
 .fancybox-is-open .fancybox-bg{
     background: rgba(0,0,0,.85);
 }
@@ -2570,7 +2573,7 @@ ul{
     margin: 0 0 20px;
 }
 #modal-thanks .modal-text-block .mark{
-    font: normal 20px/36px LeituraNews-Roman4;
+    font: normal 20px/36px DINNextLTPro-Bold;
     background: none;
     padding: 0;
     margin: 0 0 30px;
@@ -2620,6 +2623,7 @@ ul{
 }
 .select2-container {
     min-width: 100%;
+    max-width: 100%;
     margin: 0 0 20px;
 }
 .select2-container--default .select2-selection--single {
@@ -2896,7 +2900,7 @@ ul{
     justify-content: flex-start;
 }
 .odPrayers-purple-block .list p{
-    width: 55%;
+    width: 100%;
     margin: 25px 0 0;
 }
 .news-description-block .wp-block-advgb-columns.advgb-columns-wrapper .advgb-columns-container .advgb-columns.mbl-layout-stacked>.advgb-column{
@@ -2963,6 +2967,84 @@ ul{
     width: 266px;
     height: 501px !important;
     object-fit: cover;
+}
+.single-post ul,
+.single-new ul,
+.single-countries-watch ul{
+    list-style: inherit;
+    padding: 0 0 20px 15px;
+}
+.single-post .visual-section .stayInTouch ul,
+.single-new .visual-section .stayInTouch ul,
+.single-countries-watch .visual-section .stayInTouch ul,
+.single-post #wrapper .container header nav.secondary ul,
+.single-new #wrapper .container header nav.secondary ul,
+.single-countries-watch #wrapper .container header nav.secondary ul,
+.single-post #wrapper footer .container .footer-top .column ul.socials,
+.single-new #wrapper footer .container .footer-top .column ul.socials,
+.single-countries-watch #wrapper footer .container .footer-top .column ul.socials,
+.single-post .visual-section .list-links,
+.single-new .visual-section .list-links,
+.single-countries-watch .visual-section .list-links,
+.single-post .bg-gray-box .inner-text .list,
+.single-new .bg-gray-box .inner-text .list,
+.single-countries-watch .bg-gray-box .inner-text .list{
+    list-style: none;
+    padding: 0;
+}
+.single-post h1,
+.single-new h1,
+.single-countries-watch h1,
+.single-post .news-description-block .content-block h1,
+.single-new .news-description-block .content-block h1,
+.single-countries-watch .news-description-block .content-block h1{
+    font: normal 35px/40px DINNextLTPro-Bold,sans-serif;
+    color: #6B3267;
+}
+.single-post h2,
+.single-new h2,
+.single-countries-watch h2,
+.single-post .news-description-block .content-block h2,
+.single-new .news-description-block .content-block h2,
+.single-countries-watch .news-description-block .content-block h2{
+    font: normal 26px/30px DINNextLTPro-Bold,sans-serif;
+    color: #6B3267;
+}
+.single-post .news-description-block .content-block h3,
+.single-new .news-description-block .content-block h3,
+.single-countries-watch .news-description-block .content-block h3{
+    font: normal 17px/20px DINNextLTPro-Bold,sans-serif;
+    margin: 0 0 20px;
+}
+.single-post h3 strong,
+.single-new h3 strong,
+.single-countries-watch h3 strong{
+    color: #fff;
+    background: #6B3167;
+    padding: 3px 10px 0;
+}
+.single-post h4,
+.single-new h4,
+.single-countries-watch h4,
+.single-post .news-description-block .content-block h4,
+.single-new .news-description-block .content-block h4,
+.single-countries-watch .news-description-block .content-block h4{
+    font: normal 17px/20px DINNextLTPro-Bold,sans-serif;
+    color: #6B3267;
+}
+.home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image img{
+    width: auto;
+}
+.home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
+    margin-left: auto;
+    margin-top: 107px;
+    margin-right: 20%;
+}
+.home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img{
+    margin: 145px 0 0 -104px;
+}
+.home #wrapper .container .odContent .odBraveFaith{
+    padding-bottom: 30px;
 }
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
@@ -3053,6 +3135,13 @@ ul{
     }
 }
 @media only screen and (max-width:1365px){
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
+        margin-right: 17%;
+        margin-top: 160px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img{
+        margin-left: -65px;
+    }
     .news-boxes .item .img {
         width: 40%;
     }
@@ -3241,15 +3330,18 @@ ul{
     }
 }
 @media only screen and (max-width:1199px){
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img{
+        width: 100%;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
+        margin-top: 205px;
+    }
     .odPrayers-purple-block .image-list{
         width: 140px;
         height: 140px;
     }
     .odPrayers-purple-block .text-list{
         width: 50%;
-    }
-    .odPrayers-purple-block .list p{
-        width: 70%;
     }
     #wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title{
         font-size: 18px;
@@ -3286,6 +3378,17 @@ ul{
     }
 }
 @media only screen and (max-width:1023px){
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image img{
+        width: 100%;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image{
+        margin-top: 30px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
+        width: 40%;
+        margin-right: 18%;
+        margin-top: 110px;
+    }
     .news-boxes .item .text{
         width: 48%;
     }
@@ -3295,9 +3398,6 @@ ul{
     .news-boxes .item .btn{
         min-width: 140px;
         padding: 0 10px;
-    }
-    .odPrayers-purple-block .list p {
-        width: 100%;
     }
     .odPrayers-purple-block .image-list {
         width: 150px;
@@ -3630,6 +3730,42 @@ ul{
     }
 }
 @media only screen and (max-width:767px){
+    .home #wrapper .container .odContent .brave-faith-section .odBraveFaith{
+        position: relative;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img{
+        position: absolute;
+        top: 100%;
+        left: -20px;
+        margin: 380px 0 0;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
+        margin-right: 0;
+        margin-top: 100px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image {
+        margin-top: 10px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image img {
+        width: 85%;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-logo{
+        left: 60%;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image{
+        padding-left: 0;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
+        margin-top: 25px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img {
+        left: -50px;
+        margin: 405px 0 0;
+        width: 90%;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) {
+        margin-top: 156px;
+    }
     .news-boxes .item .img {
         width: 44%;
         height: 178px !important;
@@ -5148,6 +5284,16 @@ ul{
         min-height: 0;
     }
 }
+@media only screen and (max-width:639px){
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) {
+        margin-top: 40px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img {
+        left: -10px;
+        margin: 350px 0 0;
+        width: 72%;
+    }
+}
 @media only screen and (max-width:500px){
     /* #wrapper .container .odContent .odBraveFaith .bf-section {
 		flex-direction: column;
@@ -5233,6 +5379,21 @@ ul{
     }
     .news-boxes-links.only-one .item .text{
         padding: 15px;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) .bf-info {
+        width: 65%;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2){
+        margin-top: 0;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .home #wrapper .container .odContent .odBraveFaith .bf-section:first-child .bf-image:first-child img {
+        left: -67px;
+        margin: 240px 0 0;
+        width: 90%;
     }
 }
 
