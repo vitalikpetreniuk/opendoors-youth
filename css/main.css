@@ -2635,10 +2635,13 @@ ul{
 }
 .select2-results__option{
     padding: 10px 15px 7px;
+    border-right: 2px solid #6b3267;
     border-bottom: 2px solid #6b3267;
     border-left: 23px solid #6b3267;
     background: #fff;
     color: #6b3267;
+    font-family: DINNextLTPro-Medium,sans-serif;
+    font-size: 20px;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected],
 .select2-container--default .select2-results__option[aria-selected=true] {
@@ -2653,6 +2656,7 @@ ul{
 .select2-results{
     border: none;
     top: auto;
+    width: 100%;
 }
 .wpcf7-form-control-wrap.specific-place + p{
     text-align: center;
@@ -2789,6 +2793,7 @@ ul{
 } */
 .blog-slider .description:after{
     height: 70%;
+    background: linear-gradient(180deg,rgba(255,255,255,0) 0,#fff 100%);
 }
 .praver-tabset{
     padding: 7px 0 0;
@@ -2847,8 +2852,7 @@ ul{
 }
 #wrapper .container .odContent .odNeeds.needs-top .post, #wrapper .container .odContent .odNeeds.blog-slider .post{
     position: relative;
-    padding-bottom: 50px;
-    min-height: 480px;
+    padding-bottom: 20px;
 }
 #wrapper .container .odContent .odNeeds.needs-top .content.news-content .btn{
     position: absolute;
@@ -2918,6 +2922,12 @@ ul{
 }
 .news-description-block .content-block h3.has-luminous-vivid-orange-color{
     color: #6b3267 !important;
+}
+.news-boxes-links .item .text.text-vertical-center{
+    padding-top: 15px;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder{
+    color: #6b3267;
 }
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
@@ -3572,6 +3582,15 @@ ul{
     }
 }
 @media only screen and (max-width:767px){
+    .news-boxes-links.only-one .item h3,
+    .news-boxes-links .item h3,
+    .news-boxes-links.other-boxes .item.only-picture h3{
+        margin-bottom: 10px;
+    }
+    .news-boxes-links.only-one .item .text p,
+    .news-boxes-links .item p{
+        margin: 0 0 5px;
+    }
     .basket-list .custom-select {
         max-width: 85%;
         margin: 0 0 15px;
@@ -5158,6 +5177,9 @@ ul{
     }
     .odPrayers-purple-block .text-list {
         width: 190px;
+    }
+    .news-boxes-links.only-one .item .text{
+        padding: 15px;
     }
 }
 

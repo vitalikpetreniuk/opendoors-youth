@@ -288,6 +288,7 @@ $(function() {
 
     /* Tabs */
     $('.tabset .tab-control').on('click', 'li:not(.active)', function() {
+      $('#shown-tab').val($(this).index() + 1).change();
       $(this)
         .addClass('active').siblings().removeClass('active')
         .closest('.tabset').find('.tab').removeClass('active').eq($(this).index()).addClass('active');
