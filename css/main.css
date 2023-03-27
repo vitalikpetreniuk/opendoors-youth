@@ -1801,6 +1801,32 @@ ul{
     width: 48%;
     padding: 11px 10px 0 0;
 }
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text .btn{
+    display: block;
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
+    color: #fff;
+    background: #6b3267;
+    border-left-width: 2px;
+    padding: 0 0 0 15px;    
+    width: 150px;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text .btn:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+}
+#wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .text .btn:hover {
+    background: #fbc6a2;
+    border-color: #fbc6a2;
+    color: #fff;
+}
 #wrapper .container .odContent .brave-faith-section.send-hope .odDouble .odStories .post .title{
     line-height: 27px;
     margin: 0;
@@ -2588,6 +2614,10 @@ ul{
 .map-section .btn.long{
     font-size: 14px !important;
 }
+.map-section .btn.long:hover{
+    border-color: #fab59c !important;
+    color: #fab59c !important;
+}
 .select2-container {
     min-width: 100%;
     margin: 0 0 20px;
@@ -2929,6 +2959,11 @@ ul{
 .select2-container--default .select2-selection--single .select2-selection__placeholder{
     color: #6b3267;
 }
+.news-boxes .item .img{
+    width: 266px;
+    height: 501px !important;
+    object-fit: cover;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
     .odPrayers-purple-block .text-list{
@@ -3018,6 +3053,9 @@ ul{
     }
 }
 @media only screen and (max-width:1365px){
+    .news-boxes .item .img {
+        width: 40%;
+    }
     #wrapper .container .odContent .odDouble .btn{
         font-size:16px;
     }
@@ -3248,6 +3286,16 @@ ul{
     }
 }
 @media only screen and (max-width:1023px){
+    .news-boxes .item .text{
+        width: 48%;
+    }
+    .news-boxes .item .img{
+        width: 53%;
+    }
+    .news-boxes .item .btn{
+        min-width: 140px;
+        padding: 0 10px;
+    }
     .odPrayers-purple-block .list p {
         width: 100%;
     }
@@ -3582,6 +3630,11 @@ ul{
     }
 }
 @media only screen and (max-width:767px){
+    .news-boxes .item .img {
+        width: 44%;
+        height: 178px !important;
+        margin: 0 0 0 auto;
+    }
     .news-boxes-links.only-one .item h3,
     .news-boxes-links .item h3,
     .news-boxes-links.other-boxes .item.only-picture h3{
