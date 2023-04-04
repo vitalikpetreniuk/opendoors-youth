@@ -3046,6 +3046,39 @@ ul{
 .home #wrapper .container .odContent .odBraveFaith{
     padding-bottom: 30px;
 }
+.praver-generator-section .odPrayers-purple-block{
+    padding-bottom: 125px;
+}
+.goods-post-collection .goods-post{
+    width: 25%;
+}
+.gallery-slider .post{
+    height: auto;
+}
+.gallery-slider .post-text{
+    height: 0;
+}
+.gallery-slider .post-text .item{
+    padding: 0;
+}
+.gallery-slider .post h5{
+    position: absolute;
+    top: -21px;
+    left: 0;
+    color: #fff;
+    background: #6b3267;
+    padding: 3px 7px 0;
+    margin: 0;
+    width: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.gallery-slider .post .post-time,
+.gallery-slider .post-text .item p{
+    display: none;
+}
 @media (prefers-reduced-motion:no-preference){:root{scroll-behavior:auto}}
 @media only screen and (max-width:1439px){
     .odPrayers-purple-block .text-list{
@@ -3135,6 +3168,9 @@ ul{
     }
 }
 @media only screen and (max-width:1365px){
+    .gallery-slider .post h5{
+        top: -19px;
+    }
     .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-info{
         margin-right: 17%;
         margin-top: 160px;
@@ -3378,6 +3414,12 @@ ul{
     }
 }
 @media only screen and (max-width:1023px){
+    .goods-post-collection .goods-post {
+        width: 33%;
+    }
+    .praver-generator-section .odPrayers-purple-block .text-bottom{
+        bottom: -85px;
+    }
     .home #wrapper .container .odContent .odBraveFaith .bf-section .bf-image img{
         width: 100%;
     }
@@ -3730,6 +3772,18 @@ ul{
     }
 }
 @media only screen and (max-width:767px){
+    .gallery-slider .post h5 {
+        top: -21px;
+        font-size: 11px;
+        font-weight: normal;
+        max-width: 70%;
+    }
+    .goods-post-collection .goods-post {
+        width: 50%;
+    }
+    .praver-generator-section .odPrayers-purple-block .text-bottom {
+        bottom: -90px;
+    }
     .home #wrapper .container .odContent .brave-faith-section .odBraveFaith{
         position: relative;
     }
@@ -5283,6 +5337,9 @@ ul{
     #wrapper .container .odContent .odNeeds.needs-top .post, #wrapper .container .odContent .odNeeds.blog-slider .post{
         min-height: 0;
     }
+    .modal .gallery-slider .post h5{
+        max-width: 100%;
+    }
 }
 @media only screen and (max-width:639px){
     .home #wrapper .container .odContent .odBraveFaith .bf-section:nth-child(2) {
@@ -5394,6 +5451,16 @@ ul{
         left: -67px;
         margin: 240px 0 0;
         width: 90%;
+    }
+    .praver-generator-section .odPrayers-purple-block {
+        padding-bottom: 80px;
+    }
+    .praver-generator-section .odPrayers-purple-block .text-bottom {
+        bottom: -60px;
+    }
+    .gallery-slider .post h5{
+        max-width: 60%;
+        padding: 3px 4px 0;
     }
 }
 
