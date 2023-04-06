@@ -2886,7 +2886,7 @@ ul{
 }
 #wrapper .container .odContent .odNeeds.needs-top .post, #wrapper .container .odContent .odNeeds.blog-slider .post{
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 #wrapper .container .odContent .odNeeds.needs-top .content.news-content .btn{
     position: absolute;
@@ -5153,7 +5153,7 @@ ul{
         margin-bottom: 0;
     }
     .bg-gray-box .inner-text .list p {
-        margin: 0 0 19px;
+        /* margin: 0 0 19px; */
     }
     .news-inner-section .bg-gray-box:last-child{
         margin-bottom: -62px;

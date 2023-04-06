@@ -5588,23 +5588,23 @@ h4
 	.list
 
 		& li
-			flex-direction: column
+			// flex-direction: column
 			width: 100%!important
 
 		&__left
-			flex: 0 1 auto
-			width: 100%
-			padding-bottom: 100%
+			flex: 0 0 auto
+			width: 115px
+			padding-bottom: 16%
 
-			& span
-				width: 40px
-				height: 40px
-				font-size: 16px
-				top: 20px
-				left: 20px
+		&__name
+			margin-bottom: 5px
+
+		& span
+			width: 30px
+			height: 30px
+			font-size: 16px
 
 	.about-author
-		flex-direction: column
 		padding: 20px
 
 
@@ -5612,3 +5612,335 @@ h4
 	
 	.three-columns-info .column:nth-child(3)
 		padding-bottom: 270px
+
+//<================================================================ COUNTRY ===============================================================>\\
+
+.country-content
+	display: flex
+	gap: 14px
+
+	&__left
+		flex: 0 0 207px
+
+	&__right
+		flex: 1 1 auto
+
+.country-left
+
+	&__name
+		font: 700 40px/1.3 'DINNextLTPro-Bold'
+		color: #51255C
+		text-transform: uppercase
+		margin-bottom: 0
+
+	& .rank-number
+		display: none
+
+	&__map
+		position: relative
+		width: 100%
+		padding-bottom: 97%
+		margin-bottom: 20px
+
+		& img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%!important
+			object-fit: cover
+
+	&__info
+		margin-bottom: 30px
+
+	&__give
+		margin-bottom: 15px
+	
+.info-left
+
+	&__item
+
+		&:not(:last-child)
+			margin-bottom: 30px
+
+	&__title
+		display: inline-block
+		font: 500 16px/1.75 'DINNextLTPro-Medium'
+		color: #fff
+		background: #F47A87
+		text-align: center
+		padding: 2px 7px
+		margin-bottom: 5px
+
+	&__text
+		font: 700 14px/1.78 'DINNextLTPro-Bold'
+		color: #272C49
+		margin: 0
+
+	&__list
+		font: 700 14px/1.78 'DINNextLTPro-Bold'
+		color: #272C49
+		max-width: 160px
+
+		& li
+			position: relative
+			padding-left: 10px
+
+		& li::before
+			content: ""
+			position: absolute
+			top: 10px
+			left: 0
+			width: 4px
+			height: 4px
+			background: #272C49
+			border-radius: 50%
+
+.give-left
+
+	&__cont
+		margin-bottom: 15px
+
+	&__item
+		padding: 25px 15px 15px 25px
+		background: #F47A87
+
+		&:nth-child(2)
+			background: #51255C
+
+	&__heading
+		position: relative
+		font: 700 24px/1.33 'DINNextLTPro-Bold'
+		color: #fff
+		margin-bottom: 12px
+
+		&::before
+			content: ""
+			position: absolute
+			top: -15px
+			left: -10px
+			width: 54px
+			height: 54px
+			background: linear-gradient(180deg, #FFDAC1 0%, #F47A87 100%)
+			border-radius: 50%
+
+		& span
+			position: relative
+			z-index: 2
+		
+
+	&__text
+		font: 500 14px/1.28 'DINNextLTPro-Medium'
+		color: #fff
+
+.country-right
+
+	&__rank
+		margin-bottom: 10px
+
+	&__ibox
+		position: relative
+		padding-bottom: 49%
+		margin-bottom: 40px
+
+		& img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%!important
+			object-fit: cover
+
+	&__tbox
+
+		&:not(:last-child)
+			margin-bottom: 30px
+
+		& h2
+			margin-bottom: 20px
+
+		& p
+			font: 500 14px/1.28 'DINNextLTPro-Medium'
+			color: #272C49
+
+		& p:not(:last-child)
+			margin-bottom: 30px
+
+
+	&__person
+		margin-bottom: 30px
+
+	&__pray
+		
+		& h3
+			margin-bottom: 5px
+			background: #F47A87
+			text-transform: none
+
+		& p
+			font: 700 20px/1.8 'DINNextLTPro-Bold'
+			color: #51255C
+
+.rank-number
+	font: 700 14px/1.78 'DINNextLTPro-Bold'
+	color: #272C49
+	text-align: right
+
+	& span
+		display: inline-block
+		font: 700 40px/1 'DINNextLTPro-Bold'
+		background: -webkit-linear-gradient(#F47A87, #FFDAC1)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	
+.country-person
+
+	&__name
+		font: 700 24px/1.15 'DINNextLTPro-Bold'
+		color: #51255C
+		margin-bottom: 10px
+
+	&__quote
+		position: relative
+		display: inline-block
+		font: 700 24px/1.29 'DINNextLTPro-Bold'
+		color: #F47A87
+
+		&::before
+			content: ""
+			position: absolute
+			top: 15px
+			left: 0
+			width: 100%
+			height: 12px
+			background: #FFDAC1
+
+		& span
+			position: relative
+			z-index: 2
+
+	&__signature
+		font: 700 16px/1.31 'DINNextLTPro-Bold'
+		text-transform: uppercase
+		color: #272C49
+		max-width: 400px
+
+.country-slider
+	
+	&__content
+		display: flex
+
+	&__left
+		font: 700 14px/1.28 'DINNextLTPro-Bold'
+		color: #6B3267
+		border-right: 1px solid #E6E6E6
+
+	&__left,
+	&__right
+		width: 50%
+		padding: 15px 20px
+
+	&__country
+		text-transform: uppercase
+		margin: 0
+
+	&__right
+		
+		& p
+			display: -webkit-box
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+			overflow: hidden
+			font: 400 14px/1.28 'DINNextLTPro-Medium'
+			color: #21150B
+
+@media (max-width: 992px)
+
+	.country-slider
+
+		&__left
+			font-size: 12px
+
+		&__left,
+		&__right
+			width: 50%
+			padding: 10px
+
+		&__right
+			
+			& p
+				font-size: 12px
+
+@media (max-width: 768px)
+
+	.country-content
+		flex-direction: column
+		gap: 60px
+
+		&__left
+			flex: 0 1 auto
+
+		&__right
+			flex: 0 1 auto
+
+	.give-left
+		text-align: center
+
+		&__cont
+			text-align-last: left
+
+	.country-left
+		padding: 0 15px
+
+		&__top
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+
+		&__name
+			font-size: 20px
+
+		& .rank-number
+			display: block
+
+	.country-right
+		padding: 0 15px
+
+		&__rank
+			display: none
+
+		&__ibox
+			margin-bottom: 30px
+
+		&__tbox
+
+			&:not(:last-child)
+				margin-bottom: 20px
+
+			& h2
+				margin-bottom: 10px
+
+			& p:not(:last-child)
+				margin-bottom: 20px
+
+
+		&__person
+			margin-bottom: 20px
+
+		&__pray
+
+			& p
+				font-size: 16px
+
+	.country-slider
+
+		&__content
+			flex-direction: column
+
+		&__left
+			border-right: none
+
+		&__left,
+		&__right
+			width: 100%
+			padding: 10px 0 0
